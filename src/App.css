@@ -38,8 +38,21 @@
 }
 
 
+/* GLOBALS */
+p {
+  line-height: .4;
+}
+
+
+/* GAME */
+
+.gameWrapper {
+  margin-top: 60px;
+}
+
 .carrotTopLogo {
   background-color: lightblue;
+  height: 70px;
 }
 
 .gameTitle {
@@ -48,6 +61,7 @@
 
 .stats {
   background-color: lightgoldenrodyellow;
+  height: 200px;
 }
 
 .enemyDisplay {
@@ -60,5 +74,6 @@
 
 .mainDisplay {
   background-color: lightpink;
+   height: 270px;
 }
 

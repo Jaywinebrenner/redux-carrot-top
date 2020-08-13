@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {useSelector, useDispatch} from 'react-redux';
 
+
 import { increment } from "./actions";
 import { decrement } from "./actions";
 import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
@@ -9,10 +10,10 @@ import Game from "./Game";
 
 
 function App() {
-
-  const counter = useSelector(state => state.counter)
-  const isLogged = useSelector(state => state.isLogged)
-  const dispatch = useDispatch();
+  // const playerHitpoints = useSelector(state => state.playerHitpoints)
+  // const counter = useSelector(state => state.counter)
+  // const isLogged = useSelector(state => state.isLogged)
+  // const dispatch = useDispatch();
 
   return (
 

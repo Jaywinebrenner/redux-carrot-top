@@ -1,10 +1,10 @@
-const armor = (state = "Naked", action) => {
+const weapon = (state = "Fists", action) => {
   switch (action.type) {
-    case "CHANGE_ARMOR":
+    case "CHANGE_WEAPON":
       return action.payload;
     default:
       return state;
   }
 };
 
-export default armor;
+export default weapon;

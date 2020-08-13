@@ -1,8 +1,8 @@
 const playerHitpoints = (state = 50, action) => {
   switch (action.type) {
-    case "INCREMENT":
+    case "INCREMENT_PLAYER_HP":
       return state + action.payload;
-    case "DECREMENT":
+    case "DECREMENT_PLAYER_HP":
       return state - action.payload;
     default:
       return state;

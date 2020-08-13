@@ -1,15 +1,24 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, changeName, decrementPlayerHp, incrementPlayerHp, changeArmor } from "../actions";
+import {
+  increment,
+  decrement,
+  changeName,
+  decrementPlayerHp,
+  incrementPlayerHp,
+  changeArmor,
+} from "../actions";
+
+
+
+// Examples of how to change state
 
 const MainDisplay = () => {
-
   const dispatch = useDispatch();
-  const [localName, setLocalName] = useState("")
+  const [localName, setLocalName] = useState("");
   const [localArmor, setLocalArmor] = useState("");
-
 
   return (
     <React.Fragment>

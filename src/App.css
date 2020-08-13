@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+
+.carrotTopLogo {
+  background-color: lightblue;
+}
+
+.gameTitle {
+  background-color: lavender;
+}
+
+.stats {
+  background-color: lightgoldenrodyellow;
+}
+
+.enemyDisplay {
+  background-color: lightsalmon;
+}
+
+.enemyImage {
+  background-color: royalblue;
+}
+
+.mainDisplay {
+  background-color: lightpink;
+}
+

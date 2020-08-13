@@ -7,6 +7,7 @@ import {createStore, combineReducers } from 'redux';
 // don't need to add index below, auto added from index tag
 import allReducer from './reducers';
 import { Provider } from "react-redux";
+import "bootstrap/dist/css/bootstrap.css";
 
  
 const store = createStore(

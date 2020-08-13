@@ -1,12 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+
+/* GLOBALS */
+
+h1, h2, h3, h4, h5, h6, p {
+  color: white;
+  margin-bottom: 3;
+  font-family: 'Red Rose', cursive;
+}
+
 .App {
   text-align: center;
 }
 
-
-
-/* GLOBALS */
 p {
   line-height: .4;
+}
+
+.bodyOfGame {
+  background-color: lightpink;
 }
 
 
@@ -14,32 +27,54 @@ p {
 
 .gameWrapper {
   margin-top: 60px;
+   border: 5px double #5c5959;
+   background-color: #1d211e;
 }
 
 .carrotTopLogo {
-  background-color: lightblue;
-  height: 70px;
+ border: 5px double #5c5959;
+  /* height: 70px; */
+  background-color: #1d211e;
 }
 
 .gameTitle {
-  background-color: lavender;
+border: 5px double #5c5959;
+   background-color: #1d211e;
 }
 
 .stats {
-  background-color: lightgoldenrodyellow;
+  border: 5px double #5c5959;
+ background-color: #1d211e;
   height: 200px;
 }
 
 .enemyDisplay {
-  background-color: lightsalmon;
+  border: 5px double #5c5959;
+ background-color: #1d211e;
 }
 
 .enemyImage {
-  background-color: royalblue;
+  border: 5px double #5c5959;
+ background-color: #1d211e;
 }
 
 .mainDisplay {
-  background-color: lightpink;
+  border: 5px double #5c5959;
+ background-color: #1d211e;
    height: 270px;
+}
+
+
+
+
+.gameTitleText {
+  font-family: 'Metal Mania', cursive;
+  text-align: center;
+  font-size: 48px;
+  color :#8a0303;
+}
+
+.carrotTopThumbNail {
+  height: 65px;
 }
 

@@ -6,6 +6,7 @@ import Stats from './components/Stats'
 import EnemyDisplay from "./components/EnemyDisplay";
 import EnemyPicture from "./components/EnemyPicture";
 import MainDisplay from "./components/MainDisplay";
+import carrotTop from "./media/carrot-top-10.png";
 
 const Game = () => {
 
@@ -16,9 +17,11 @@ const Game = () => {
       <Container className="gameWrapper">
         <Row>
           <Col className="carrotTopLogo" xs={1.5}>
-            CarrotTop Logo
+            <img className="carrotTopThumbNail" src={carrotTop} />
           </Col>
-          <Col className="gameTitle">KILLING CARROT TOP</Col>
+          <Col className="gameTitle">
+            <h1 className="gameTitleText">KILLING CARROT TOP</h1>
+          </Col>
         </Row>
         <Row>
           <Col className="stats">
@@ -28,10 +31,14 @@ const Game = () => {
             {" "}
             <EnemyDisplay />
           </Col>
-          <Col className="enemyImage"><EnemyPicture/> </Col>
+          <Col className="enemyImage">
+            <EnemyPicture />{" "}
+          </Col>
         </Row>
         <Row>
-          <Col className="mainDisplay">Main Display <MainDisplay/></Col>
+          <Col className="mainDisplay">
+            <MainDisplay />
+          </Col>
         </Row>
       </Container>
     );

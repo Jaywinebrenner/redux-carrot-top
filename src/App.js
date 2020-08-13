@@ -17,7 +17,7 @@ function App() {
 
   return (
 
-        <Router>
+    <Router>
       <Switch>
         {/* <Route path="/" exact={true} component={Landing} />
         <Route path="/Intro" exact={true} component={Intro} /> */}

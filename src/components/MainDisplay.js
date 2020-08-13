@@ -13,7 +13,7 @@ const MainDisplay = () => {
 
   return (
     <React.Fragment>
-      <h5>You have encountered a Foe</h5>
+
       <h6 onClick={() => dispatch(decrementPlayerHp(5))}>Hurt Player</h6>
       <h6 onClick={() => dispatch(incrementPlayerHp(5))}>Heal Player</h6>
 

@@ -36,7 +36,7 @@ const Game = () => {
           </Col>
         </Row>
         <Row>
-          <Col className="mainDisplay">
+          <Col className="mainDisplayOne">
             <MainDisplay />
           </Col>
         </Row>

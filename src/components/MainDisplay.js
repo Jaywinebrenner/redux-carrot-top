@@ -9,34 +9,38 @@ import {
   decrementPlayerHp,
   incrementPlayerHp,
   changeArmor,
-  changeMainDisplay,
+  changeMainDisplayOne,
+  changeMainDisplayTwo,
 } from "../actions";
 
 const MainDisplay = () => {
 
   const dispatch = useDispatch();
 
-  const [localDisplay, setLocalDisplay] = useState("");
+  const [localDisplayOne, setLocalDisplayOne] = useState("");
 
+  const mainDisplayOne = useSelector((state) => state.mainDisplayOne);
+  const mainDisplayTwo = useSelector(
+    (state) => state.changeMainDisplayTwo,
+  );
 
-    const mainDisplay = useSelector((state) => state.mainDisplay);
-
-    console.log(mainDisplay);
+    console.log(mainDisplayTwo);
 
 
   return (
     <React.Fragment>
       <input
         className="submitNameInput"
-        onChange={(event) => setLocalDisplay(event.target.value)}
-        value={localDisplay}
+        onChange={(event) => setLocalDisplayOne(event.target.value)}
+        value={localDisplayOne}
         placeholder="Change Display"
       />
-      <h6 onClick={() => dispatch(changeMainDisplay(localDisplay))}>
+      <h6 onClick={() => dispatch(changeMainDisplayOne(localDisplayOne))}>
         Add Stuff to display
       </h6>
       <Container>
-        <h3>{mainDisplay}</h3>
+        <p>{mainDisplayOne}</p>
+        <p>{mainDisplayTwo}</p>
       </Container>
     </React.Fragment>
   );

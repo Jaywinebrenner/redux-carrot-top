@@ -47,9 +47,16 @@ export const changeDefence = (number) => {
   };
 };
 
-export const changeMainDisplay = (text) => {
+export const changeMainDisplayOne = (text) => {
   return {
-    type: "CHANGE_MAIN_DISPLAY",
+    type: "CHANGE_MAIN_DISPLAY_ONE",
+    payload: text,
+  };
+};
+
+export const changeMainDisplayTwo = (text) => {
+  return {
+    type: "CHANGE_MAIN_DISPLAY_TWO",
     payload: text,
   };
 };

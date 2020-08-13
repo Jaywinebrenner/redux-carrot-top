@@ -11,3 +11,10 @@ export const decrement = (number) => {
     payload: number
   };
 };
+
+export const changeArmor = (armor) => {
+  return {
+    type: "CHANGE_ARMOR",
+    payload: armor,
+  };
+};

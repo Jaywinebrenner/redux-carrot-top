@@ -5,7 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 const Stats = () => {
 
   const playerHitpoints = useSelector((state) => state.playerHitpoints);
-  
+  const armor = useSelector((state) => state.armor);
+
   const counter = useSelector((state) => state.counter);
   const isLogged = useSelector((state) => state.isLogged);
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ const Stats = () => {
 
       <p>Hit Points: {playerHitpoints}</p>
 
-      <p>Armor:</p>
+      <p>Armor: {armor}</p>
 
       <p>Defence:</p>
 

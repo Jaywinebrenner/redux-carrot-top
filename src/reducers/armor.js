@@ -1,14 +1,10 @@
-
-
-const playerArmor = (state = "Naked", action) => {
+const armor = (state = "Naked", action) => {
   switch (action.type) {
-    case "INCREMENT":
-      return state + action.payload;
-    case "DECREMENT":
-      return state - action.payload;
+    case "CHANGE_ARMOR":
+      return state = state;
     default:
       return state;
   }
 };
 
-export default playerArmor;
+export default armor;

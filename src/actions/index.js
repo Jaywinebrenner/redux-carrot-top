@@ -61,9 +61,23 @@ export const changeMainDisplayTwo = (text) => {
   };
 };
 
+export const changeMainDisplayButtons = (text) => {
+  return {
+    type: "CHANGE_MAIN_DISPLAY_BUTTONS",
+    payload: text,
+  };
+};
+
 export const toggleCreateCharacter = (boolean) => {
   return {
     type: "TOGGLE_CREATE_CHARACTER",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterOne = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_ONE",
     payload: boolean,
   };
 };

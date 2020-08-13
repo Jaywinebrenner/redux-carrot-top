@@ -7,8 +7,16 @@ import EnemyDisplay from "./EnemyDisplay";
 import EnemyPicture from "./EnemyPicture";
 import MainDisplay from "./MainDisplay";
 import carrotTop from "../media/carrot-top.png";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleCreateCharacter } from "../actions";
+import CreateCharacter from "./CreateCharacter";
 
 const Game = () => {
+
+  const dispatch = useDispatch();
+
+   const createCharacter = useSelector((state) => state.createCharacter);
+
 
 
 
@@ -37,7 +45,10 @@ const Game = () => {
         </Row>
         <Row>
           <Col className="mainDisplayOne">
-            <MainDisplay />
+            <h5>
+              <MainDisplay />
+              {createCharacter && <CreateCharacter />}
+            </h5>
           </Col>
         </Row>
       </Container>

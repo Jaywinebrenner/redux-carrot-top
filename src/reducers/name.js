@@ -1,4 +1,4 @@
-const name = (state = "", action) => {
+const name = (state = " ", action) => {
   switch (action.type) {
     case "CHANGE_NAME":
       return action.payload;

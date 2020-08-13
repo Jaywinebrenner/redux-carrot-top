@@ -11,7 +11,10 @@ import {
   changeArmor,
   changeMainDisplayOne,
   changeMainDisplayTwo,
+  changeMainDisplayButtons,
   toggleCreateCharacter,
+  toggleChapterOne,
+  toggleChapterTwo,
 } from "../actions";
 
 
@@ -19,25 +22,26 @@ const MainDisplay = () => {
 
   const dispatch = useDispatch();
 
-  const [localName, setLocalName] = useState("");
-  const [localDisplayOne, setLocalDisplayOne] = useState("");
-  const [localCharacter, setLocalCharacter] = useState();
-
-
   //STATE
   const mainDisplayOne = useSelector((state) => state.mainDisplayOne);
   const mainDisplayTwo = useSelector(
     (state) => state.changeMainDisplayTwo,
   );
-   const createCharacter = useSelector((state) => state.createCharacter);
+  const mainDisplayButtons = useSelector((state) => state.changeMainDisplayButtons);
 
-  console.log(mainDisplayOne);
-  console.log(createCharacter);
-
+  const createCharacter = useSelector((state) => state.createCharacter);
+  const chapterOne = useSelector((state) => state.chapterOne);
+  const chapterTwo = useSelector((state) => state.chapterTwo);
+  console.log("main dispaly on MD", mainDisplayOne);
 
   return (
     <React.Fragment>
-      <input
+      <Container>
+        {mainDisplayOne}
+        {mainDisplayTwo}
+        {mainDisplayButtons}
+      </Container>
+      {/* <input
         // ref={(input) => input && input.focus()}
         className="submitNameInput"
         onChange={(event) => setLocalName(event.target.value)}
@@ -61,7 +65,7 @@ const MainDisplay = () => {
         <p>{mainDisplayTwo}</p>
         <p onClick={() => dispatch(toggleCreateCharacter())}>CHAGE CHAR STATE</p>
 
-      </Container>
+      </Container> */}
     </React.Fragment>
   );
 };

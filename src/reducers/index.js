@@ -9,7 +9,10 @@ import playerDefence from "./playerDefence";
 import playerDamage from "./playerDamage";
 import mainDisplayOne from "./mainDisplayOne";
 import mainDisplayTwo from "./mainDisplayTwo";
+import mainDisplayButtons from "./mainDisplayButtons";
 import createCharacter from "./createCharacter";
+import chapterOne from "./chapterOne";
+import chapterTwo from "./chapterTwo";
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -23,6 +26,9 @@ const allReducers = combineReducers({
   mainDisplayOne: mainDisplayOne,
   mainDisplayTwo: mainDisplayTwo,
   createCharacter: createCharacter,
+  chapterOne: chapterOne,
+  chapterTwo: chapterTwo,
+  mainDisplayButtons: mainDisplayButtons,
 });
 
 export default allReducers

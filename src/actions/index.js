@@ -60,3 +60,10 @@ export const changeMainDisplayTwo = (text) => {
     payload: text,
   };
 };
+
+export const toggleCreateCharacter = (boolean) => {
+  return {
+    type: "TOGGLE_CREATE_CHARACTER",
+    payload: boolean,
+  };
+};

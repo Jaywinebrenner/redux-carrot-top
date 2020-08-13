@@ -46,3 +46,10 @@ export const changeDefence = (number) => {
     payload: number,
   };
 };
+
+export const changeMainDisplay = (text) => {
+  return {
+    type: "CHANGE_MAIN_DISPLAY",
+    payload: text,
+  };
+};

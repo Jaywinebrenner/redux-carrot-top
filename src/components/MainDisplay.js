@@ -2,37 +2,42 @@ import React, {useState} from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement, changeName, decrementPlayerHp, incrementPlayerHp, changeArmor } from "../actions";
+import {
+  increment,
+  decrement,
+  changeName,
+  decrementPlayerHp,
+  incrementPlayerHp,
+  changeArmor,
+  changeMainDisplay,
+} from "../actions";
 
 const MainDisplay = () => {
 
   const dispatch = useDispatch();
-  const [localName, setLocalName] = useState("")
-  const [localArmor, setLocalArmor] = useState("");
+
+  const [localDisplay, setLocalDisplay] = useState("");
+
+
+    const mainDisplay = useSelector((state) => state.mainDisplay);
+
+    console.log(mainDisplay);
 
 
   return (
     <React.Fragment>
-
-      <h6 onClick={() => dispatch(decrementPlayerHp(5))}>Hurt Player</h6>
-      <h6 onClick={() => dispatch(incrementPlayerHp(5))}>Heal Player</h6>
-
-      <input
-        // ref={(input) => input && input.focus()}
-        className="submitNameInput"
-        onChange={(event) => setLocalName(event.target.value)}
-        value={localName}
-        placeholder="Change Name"
-      />
-      <h6 onClick={() => dispatch(changeName(localName))}>Change Name</h6>
-
       <input
         className="submitNameInput"
-        onChange={(event) => setLocalArmor(event.target.value)}
-        value={localArmor}
-        placeholder="Change Armor"
+        onChange={(event) => setLocalDisplay(event.target.value)}
+        value={localDisplay}
+        placeholder="Change Display"
       />
-      <h6 onClick={() => dispatch(changeArmor(localArmor))}>Change Armor</h6>
+      <h6 onClick={() => dispatch(changeMainDisplay(localDisplay))}>
+        Add Stuff to display
+      </h6>
+      <Container>
+        <h3>{mainDisplay}</h3>
+      </Container>
     </React.Fragment>
   );
 };

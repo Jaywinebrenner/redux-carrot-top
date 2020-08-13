@@ -6,7 +6,9 @@ import {useSelector, useDispatch} from 'react-redux';
 import { increment } from "./actions";
 import { decrement } from "./actions";
 import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
-import Game from "./Game";
+import Game from "./components/Game";
+import Landing from './components/Landing'
+import Intro from "./components/Intro";
 
 
 function App() {
@@ -19,8 +21,8 @@ function App() {
 
     <Router>
       <Switch>
-        {/* <Route path="/" exact={true} component={Landing} />
-        <Route path="/Intro" exact={true} component={Intro} /> */}
+         <Route path="/" exact={true} component={Landing} />
+        <Route path="/Intro" exact={true} component={Intro} /> 
         <Route path="/Game" exact={true} component={Game} />
         {/* <Route path="/Dead" exact={true} component={Dead} />
         <Route path="/Run" exact={true} component={Run} />

@@ -2,11 +2,11 @@ import React from "react";
 import Container  from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Stats from './components/Stats'
-import EnemyDisplay from "./components/EnemyDisplay";
-import EnemyPicture from "./components/EnemyPicture";
-import MainDisplay from "./components/MainDisplay";
-import carrotTop from "./media/carrot-top-10.png";
+import Stats from './Stats'
+import EnemyDisplay from "./EnemyDisplay";
+import EnemyPicture from "./EnemyPicture";
+import MainDisplay from "./MainDisplay";
+import carrotTop from "../media/carrot-top.png";
 
 const Game = () => {
 
@@ -43,8 +43,6 @@ const Game = () => {
       </Container>
     );
   }
-
-
 
   return (
     <React.Fragment>

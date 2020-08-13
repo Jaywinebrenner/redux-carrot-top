@@ -7,6 +7,7 @@ import name from "./name";
 import weapon from "./weapon";
 import playerDefence from "./playerDefence";
 import playerDamage from "./playerDamage";
+import mainDisplay from "./mainDisplay";
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -16,7 +17,8 @@ const allReducers = combineReducers({
   playerDefence: playerDefence,
   name: name,
   playerDamage: playerDamage,
-  weapon: weapon
+  weapon: weapon,
+  mainDisplay: mainDisplay,
 });
 
 export default allReducers

@@ -26,7 +26,6 @@ let enemyAttackRange = null;
 
 const Battle = (enemy) => {
 
-  console.log("IS EMO HEREEEEERRRE", enemy);
 
   const dispatch = useDispatch();
 
@@ -52,6 +51,7 @@ const Battle = (enemy) => {
   const [enemyHitpoints, setEnemyHitpoints] = useState();
   const playerHitpoints = useSelector((state) => state.playerHitpoints);
   const playerDamage = useSelector((state) => state.playerDamage);
+  const playerDefence = useSelector((state) => state.playerDefence);
 
   useEffect(() => {
     const loadEmo = () => {
@@ -60,6 +60,16 @@ const Battle = (enemy) => {
 
     loadEmo();
   }, []);
+
+
+
+
+    console.log("STAT-DEFENCE", playerDefence);
+    console.log("STAT-DAMAGE", playerDamage);
+     console.log("STAT-HITPOINTS", playerHitpoints);
+     console.log("STAT-ENEMY HITPOINS", enemyHitpoints);
+     console.log("EMO", enemy)
+
 
   //RENDER TO DOM
   const renderPlayerWonInitiative = (initiativeRoll) => {
@@ -225,13 +235,13 @@ const Battle = (enemy) => {
 
   const playerAttack = () => {
     playerAttackRoll = Math.floor(Math.random() * 20) + 1;
-    playerAttackRange = Math.floor(Math.random() * playerDefence) + 1;
+    playerAttackRange = Math.floor(Math.random() * playerDamage) + 1;
 
     setIsDoubleDamageVsEnemy(false);
     setIsPlayerAttackVisible(false);
     setPlayerMissed(false);
     console.log("PLAYER ATTACK ROLL ________", playerAttackRoll);
-    if (playerAttackRoll > 10) {
+    if (playerAttackRoll === 20) {
       setIsDoubleDamageVsEnemy(true);
       doubleDamageVsEnemy(playerAttackRange);
       return;
@@ -259,7 +269,7 @@ const Battle = (enemy) => {
     setIsDoubleDamageVsPlayer(false);
     setIsEnemyAttackVisible(false);
     setEnemyMissed(false);
-    if (enemyAttackRoll > 10) {
+    if (enemyAttackRoll === 20) {
       doubleDamageVsPlayer(enemyAttackRange);
       return;
     } else if (enemyAttackRoll >= playerDefence) {

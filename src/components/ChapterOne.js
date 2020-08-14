@@ -21,6 +21,8 @@ const ChapterOne = ({
   const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
   const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
 
+  
+
   const armor = useSelector((state) => state.armor);
   const [battleEmo, setBattleEmo] = useState(false);
 

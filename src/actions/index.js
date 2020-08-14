@@ -28,7 +28,7 @@ export const changeName = (name) => {
 
 export const changeDamage = (number) => {
   return {
-    type: "CHANGE_DAMAGE",
+    type: "CHANGE_PLAYER_DAMAGE",
     payload: number,
   };
 };

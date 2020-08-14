@@ -10,13 +10,18 @@ import carrotTop from "../media/carrot-top.png";
 import { useSelector, useDispatch } from "react-redux";
 import { toggleCreateCharacter } from "../actions";
 import CreateCharacter from "./CreateCharacter";
+import ChapterOne from './ChapterOne';
+import Battle from "./Battle";
+import { emoPhilips } from "../constants/Monsters";
 
 const Game = () => {
 
   const dispatch = useDispatch();
 
    const createCharacter = useSelector((state) => state.createCharacter);
+   const chapterOne = useSelector((state) => state.chapterOne);
 
+   console.log(chapterOne)
 
 
 
@@ -45,10 +50,10 @@ const Game = () => {
         </Row>
         <Row>
           <Col className="mainDisplayOne">
-       
-              <MainDisplay />
-       
-            {createCharacter && <CreateCharacter />}
+            <MainDisplay />
+            {/* {createCharacter && <CreateCharacter />}
+            {chapterOne && <ChapterOne/>} */}
+            <Battle emoPhilips={emoPhilips} />
           </Col>
         </Row>
       </Container>

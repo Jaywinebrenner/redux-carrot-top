@@ -48,6 +48,10 @@ border: 5px double #5c5959;
   min-height: 200px;
 }
 
+.comedianText {
+  margin-top: 10px;
+}
+
 .enemyDisplay {
   border: 5px double #5c5959;
   background-color: #1d211e;
@@ -78,6 +82,10 @@ border: 5px double #5c5959;
 
 .carrotTopThumbNail {
   height: 65px;
+}
+
+.statText {
+  line-height: .9;
 }
 
 
@@ -168,15 +176,7 @@ border: 5px double #5c5959;
   border-width: 0 0 2px;
 }
 
-.buttonText {
-   text-align: center;
- font-size: 30px;
-  border: double white;
-  width: 190px;
-  height: 40px;
-  margin: 0 auto;
-  margin-top: 50px;
-}
+
 
 .mainDisplayOneText {
   color: white;
@@ -186,4 +186,27 @@ border: 5px double #5c5959;
 
 .mainDisplayTwoText {
   
+}
+
+/* BUTTONS */
+
+.buttonText {
+  text-align: center;
+  font-size: 30px;
+  border: double white;
+  width: 190px;
+  height: 40px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.beginThyAdventureButtonText {
+  text-align: center;
+  font-size: 30px;
+  border: double white;
+  width: 260px;
+  height: 70px;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 1;
 }

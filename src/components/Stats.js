@@ -17,18 +17,18 @@ const Stats = () => {
 
   return (
     <React.Fragment>
-      <h5>The Comedian Slayer</h5>
-      <p>Name:{name}</p>
+      <h6 className="comedianText">The Comedian Slayer</h6>
+      <h6 className="statText">Name:{name}</h6>
 
-      <p>Hit Points: {playerHitpoints}</p>
+      <h6 className="statText">Hit Points: {playerHitpoints}</h6>
 
-      <p>Armor: {armor}</p>
+      <h6 className="statText">Armor: {armor}</h6>
 
-      <p>Defence: {playerDefence} </p>
+      <h6 className="statText">Defence: {playerDefence} </h6>
 
-      <p>Weapon: {weapon}</p>
+      <h6 className="statText">Weapon: {weapon}</h6>
 
-      <p>Damage: {playerDamage} </p>
+      <h6 className="statText">Damage: {playerDamage} </h6>
     </React.Fragment>
   );
 }

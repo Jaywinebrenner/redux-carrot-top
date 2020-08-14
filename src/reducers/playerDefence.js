@@ -1,4 +1,4 @@
-const playerDefence = (state = 0, action) => {
+const playerDefence = (state = 5, action) => {
   switch (action.type) {
     case "CHANGE_PLAYER_DEFENCE":
       return action.payload;

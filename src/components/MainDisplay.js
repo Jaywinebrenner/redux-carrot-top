@@ -17,15 +17,15 @@ const MainDisplay = () => {
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
 
-  console.log("MD2 on MD", mainDisplayTwo);
+
 
   return (
     <React.Fragment>
-      <Container>
+    
         {/* <h6>{mainDisplayOne}</h6>
         <h6>{mainDisplayTwo}</h6>
         {mainDisplayButtons} */}
-      </Container>
+ 
     </React.Fragment>
   );
 };

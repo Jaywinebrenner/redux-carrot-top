@@ -8,13 +8,16 @@ import EnemyPicture from "./EnemyPicture";
 import MainDisplay from "./MainDisplay";
 import carrotTop from "../media/carrot-top.png";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleCreateCharacter } from "../actions";
 import CreateCharacter from "./CreateCharacter";
 import ChapterOne from './ChapterOne';
 import Battle from "./Battle";
-import { emoPhilips } from "../constants/Monsters";
+// import { emoPhilips } from "../constants/Monsters";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
+import {
+  toggleCreateCharacter,
+  toggleBattleDisplay
+} from "../actions";
 
 const Game = () => {
 
@@ -22,16 +25,21 @@ const Game = () => {
 
    const createCharacter = useSelector((state) => state.createCharacter);
    const chapterOne = useSelector((state) => state.chapterOne);
+  const enemyDisplayVisible = useSelector(
+    (state) => state.enemyDisplayVisible,
+  );
+    const battleVisible = useSelector(
+      (state) => state.battleVisible,
+    );
 
-   console.log(chapterOne)
+  //  console.log("EMO ON GAME", enemy);
+
 
   const [isGameMusicPlaying, setIsGameMusicPlaying] = useState(true);
 
   const turnOffGamePlayMusic = () => {
     setIsGameMusicPlaying(false);
   };
-
-
 
   const renderGameWindow = () => {
     return (
@@ -50,7 +58,7 @@ const Game = () => {
           </Col>
           <Col className="enemyDisplay" xs={6}>
             {" "}
-            <EnemyDisplay />
+            {enemyDisplayVisible &&<EnemyDisplay />}
           </Col>
           <Col className="enemyImage">
             <EnemyPicture />{" "}
@@ -61,7 +69,7 @@ const Game = () => {
             <MainDisplay />
             {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
-            {/* <Battle emoPhilips={emoPhilips} /> */}
+            {/* {battleVisible && <Battle/>} */}
           </Col>
         </Row>
         <ReactHowler

@@ -227,3 +227,17 @@ border: 5px double #5c5959;
 .attackRoll {
   margin-bottom: 0;
 }
+
+/* VICTORY */
+
+.victoryWrapper{
+  padding: 20px;
+ text-align: center;
+ border: 5px double white;
+width: 1000px;
+min-height: 550px;
+margin: 0 auto;
+margin-top: 30px;
+ background-image: url(./media/blood_pix.png);
+   background-color: #1d211e;
+}

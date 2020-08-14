@@ -3,6 +3,7 @@ export const emoPhilips = {
     hitPoints: 30,
     damage: 2,
     defence: 3,
+    intro: "You stand face to face with the Lilth Menace himself..."
   };
 
   export const timAllen = {

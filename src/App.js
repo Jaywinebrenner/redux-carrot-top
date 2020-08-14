@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Switch, Link, Route } from "react-router-dom";
 import Game from "./components/Game";
 import Landing from './components/Landing'
 import Intro from "./components/Intro";
+import Dead from "./components/Dead";
+import Victory from "./components/Victory";
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
         <Route path="/" exact={true} component={Landing} />
         <Route path="/Intro" exact={true} component={Intro} />
         <Route path="/Game" exact={true} component={Game} />
-    
+        <Route path="/Dead" exact={true} component={Dead} />
+        <Route path="/Victory" exact={true} component={Victory} />
 
         <Game />
       </Switch>

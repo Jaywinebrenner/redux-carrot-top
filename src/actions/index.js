@@ -102,3 +102,17 @@ export const setEnemyHp = (number) => {
     payload: number,
   };
 };
+
+export const toggleEnemyDisplay = (boolean) => {
+  return {
+    type: "TOGGLE_ENEMY_DISPLAY",
+    payload: boolean,
+  };
+};
+
+export const toggleBattleDisplay = (boolean) => {
+  return {
+    type: "TOGGLE_BATTLE_DISPLAY",
+    payload: boolean,
+  };
+};

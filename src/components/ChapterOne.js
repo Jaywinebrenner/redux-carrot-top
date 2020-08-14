@@ -17,14 +17,13 @@ import {
   toggleChapterOne,
   toggleChapterTwo,
   changeDefence,
+  toggleEnemyDisplay,
+  toggleBattleDisplay
 } from "../actions";
+import Game from './Game';
 
-const ChapterOne = ({
-  // armor,
-  // setBattleEmo,
-  // battleEmo,
-  // setIsEmoImageVisible,
-}) => {
+const ChapterOne = () => {
+
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(false);
   const [isAreaOneDisplayed, setIsAreaOneDisplayed] = useState(false);
@@ -118,6 +117,9 @@ const ChapterOne = ({
               setBattleEmo(true);
               // setIsEmoImageVisible(true);
               setIsAreaOneThreeDisplayed(false);
+              dispatch(toggleEnemyDisplay(true));
+              // dispatch(toggleChapterOne(false));
+              dispatch(toggleBattleDisplay(true));
             }}
             className="continueButtonWrapper"
           >
@@ -141,6 +143,9 @@ const ChapterOne = ({
           onClick={() => {
             setIsAreaOneFourDisplayed(false);
             setBattleEmo(true);
+            dispatch(toggleEnemyDisplay(true));
+            // dispatch(toggleChapterOne(false));
+            dispatch(toggleBattleDisplay(true));
             // setIsEmoImageVisible(true);
           }}
           className="continueButtonWrapper"
@@ -164,6 +169,9 @@ const ChapterOne = ({
             setBattleEmo(true);
             // setIsEmoImageVisible(true);
             setIsAreaOneFiveDisplayed(false);
+            dispatch(toggleEnemyDisplay(true));
+            // dispatch(toggleChapterOne(false));
+            dispatch(toggleBattleDisplay(true));
           }}
           className="continueButtonWrapper"
         >
@@ -187,8 +195,10 @@ const ChapterOne = ({
             setBattleEmo(true);
             // setIsEmoImageVisible(true);
             setIsAreaOneSixDisplayed(false);
+            dispatch(toggleEnemyDisplay(true));
             // dispatch(toggleCreateCharacter(false));
             // dispatch(toggleChapterOne(false));
+            dispatch(toggleBattleDisplay(true))
           }}
           className="emoButtonWrapper"
         >
@@ -206,8 +216,11 @@ const ChapterOne = ({
       {isAreaOneFourDisplayed && renderAreaOneFour()}
       {isAreaOneFiveDisplayed && renderAreaOneFive()}
       {isAreaOneSixDisplayed && renderAreaOneSix()}
+
       {battleEmo && <Battle enemy={emoPhilips}/>}
       {/* {battleEmo && Battle(emoPhilips)} */}
+      {/* {battleEmo && <Game enemy={emoPhilips}/>} */}
+
     </div>
   );
 };

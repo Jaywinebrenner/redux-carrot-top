@@ -1,4 +1,4 @@
-const enemyHitpoints = (state = 1, action) => {
+const enemyHitpoints = (state = '', action) => {
   switch (action.type) {
     case "INCREMENT_ENEMY_HP":
       return state + action.payload;

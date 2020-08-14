@@ -10,6 +10,10 @@ import {
   incrementPlayerHp,
   changeArmor,
 } from "../actions";
+import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
 
 
 let initiativeRoll = null;
@@ -61,7 +65,7 @@ const Battle = (enemy) => {
   const renderPlayerWonInitiative = (initiativeRoll) => {
     console.log("INITAITVE ROLLLLLL", initiativeRoll);
     return (
-      <React.Fragment>
+      <Container>
         {/* <Typewriter
           className="initiativeRoll"
           onInit={(typewriter) => {
@@ -80,63 +84,63 @@ const Battle = (enemy) => {
           }}
         /> */}
         <h5 className="initiativeRoll">INITIATIVE ROLL - {initiativeRoll}</h5>
-        <h5 className="initiativeText">
+        <h6 className="initiativeText">
           You have won intiiative and attack the foul creature
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
 
   const renderEnemyWonInitiative = (initiativeRoll) => {
     return (
-      <React.Fragment>
+      <Container>
         <h5 className="initiativeRoll">INITIATIVE ROLL - {initiativeRoll}</h5>
-        <h5 className="initiativeText">
+        <h6 className="initiativeText">
           Your foe has won initiative and attacks!
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
 
   const renderPlayerAttack = (playerAttackRoll, playerAttackRange) => {
     return (
-      <React.Fragment>
+      <Container>
         <h5 className="attackRoll"> You have rolled a {playerAttackRoll}</h5>
-        <h5 className="attackText">
+        <h6 className="attackText">
           You have thrashed your foe for {playerAttackRange} damage!
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
 
   const renderEnemyAttack = (enemyAttackRoll) => {
     return (
-      <React.Fragment>
+      <Container>
         <h5 className="attackRoll">Your foe has rolled a {enemyAttackRoll}</h5>
-        <h5 className="attackText">
+        <h6 className="attackText">
           A virulent blow across your face sprays a fine mist of blood into the
           air for {enemyAttackRange} damage.
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
 
   const renderEnemyMissed = (enemyAttackRoll) => {
     return (
-      <React.Fragment>
+      <Container>
         <h5 className="attackRoll">Your foe has rolled a {enemyAttackRoll}</h5>
-        <h5 className="attackText">
+        <h6 className="attackText">
           Your foe stumbles and clumsily misses you!
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
   const renderPlayerMissed = (playerAttackRoll) => {
     return (
-      <React.Fragment>
+      <div>
         <h5 className="attackRoll">You have rolled {playerAttackRoll}</h5>
-        <h5 className="attackText">You swing wildly and miss!</h5>
-      </React.Fragment>
+        <h6 className="attackText">You swing wildly and miss!</h6>
+      </div>
     );
   };
 
@@ -147,14 +151,14 @@ const Battle = (enemy) => {
     console.log("DOULBE DAMAGE vs PLAYER", doubleDamageVsPlayerAmount);
 
     return (
-      <React.Fragment>
+      <Container>
         <h5 className="attackRoll">Your foe has rolled a {enemyAttackRoll}</h5>
-        <h5 className="attackText">
+        <h6 className="attackText">
           YOUR FOE ROLLED A 20 AND RIPS A WET GAPING WOUND IN YOUR CHEST FOR
           DOUBLE DAMAGE! Blood paints the wall in a Pollock-esque splatter as
           you suffer {doubleDamageVsPlayerAmount} damage.
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
 
@@ -165,13 +169,13 @@ const Battle = (enemy) => {
     console.log("DOULBE DAMAGE vs ENEMY", doubleDamageVsEnemyAmount);
 
     return (
-      <React.Fragment>
+      <Container>
         <h5 className="attackRoll">You have rolled a {playerAttackRoll}</h5>
-        <h5 className="attackText">
+        <h6 className="attackText">
           You unleash a victorious howl as you thrash your foe for DOULBLE
           DAMAGE, suffering a loss of {doubleDamageVsEnemyAmount} hit points.
-        </h5>
-      </React.Fragment>
+        </h6>
+      </Container>
     );
   };
 
@@ -201,10 +205,10 @@ const Battle = (enemy) => {
       enemyAttack();
       setIsPlayerWonInitiativeVisible(true);
       return (
-        <div>
+        <Container>
           <h5>The initiative roll is {initiativeRoll}</h5>
-          <h5>You have won intiiative and attack the foul createure</h5>
-        </div>
+          <h6>You have won intiiative and attack the foul createure</h6>
+        </Container>
       );
     } else {
       console.log("INITIATIVE ROLL= ", initiativeRoll);
@@ -370,7 +374,7 @@ const Battle = (enemy) => {
     }
     if (isPlayerWonInitiativeVisible) {
       return (
-        <React.Fragment>
+        <Container>
           {renderPlayerWonInitiative(initiativeRoll)}
           {playerMissed && renderPlayerMissed(playerAttackRoll)}
           {isPlayerAttackVisible &&
@@ -388,7 +392,7 @@ const Battle = (enemy) => {
               enemyAttackRoll,
               doubleDamageVsPlayerAmount,
             )}
-        </React.Fragment>
+        </Container>
       );
     }
   };
@@ -399,7 +403,7 @@ const Battle = (enemy) => {
     }
     if (isEnemyWonInitiativeVisible) {
       return (
-        <React.Fragment>
+        <Container>
           {renderEnemyWonInitiative(initiativeRoll)}
           {enemyMissed && renderEnemyMissed(enemyAttackRoll)}
           {isEnemyAttackVisible && renderEnemyAttack(enemyAttackRoll)}
@@ -417,27 +421,27 @@ const Battle = (enemy) => {
               playerAttackRoll,
               doubleDamageVsEnemyAmount,
             )}
-        </React.Fragment>
+        </Container>
       );
     }
   };
 
   const renderBattleButtons = () => {
     return (
-      <div>
-        <div className="battleButtonsWrapper">
-          <div className="attackButtonWrapper">
-            <h5 onClick={() => beginAttack()} className="buttonText">
+      <Container>
+        <Row className="battleButtonsWrapper">
+          <Col className="attackButtonWrapper">
+            <h5 onClick={() => beginAttack()} className="battleButtonText">
               Attack
             </h5>
-          </div>
-          <div className="runButtonWrapper">
-            <h5 onClick={() => handleRunButton()} className="buttonText">
+          </Col>
+          <Col className="runButtonWrapper">
+            <h5 onClick={() => handleRunButton()} className="battleButtonText">
               Run
             </h5>
-          </div>
+          </Col>
 
-          <div>
+          <Row>
             {isRunVisible && renderRun()}
             {isPlayerDeadCheck()}
 
@@ -446,16 +450,16 @@ const Battle = (enemy) => {
             {isPlayerWonInitiativeVisible &&
               renderBattleIfPlayerWonInitiative()}
             {isEnemyWonInitiativeVisible && renderBattleIfEnemyWonInitiative()}
-          </div>
-        </div>
-      </div>
+          </Row>
+        </Row>
+      </Container>
     );
   };
 
   return (
-    <React.Fragment>
+    <Container>
       {battleButtonsVisible && renderBattleButtons()}
-    </React.Fragment>
+    </Container>
   );
 };
 

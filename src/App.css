@@ -210,3 +210,13 @@ border: 5px double #5c5959;
   margin-top: 50px;
   line-height: 1;
 }
+
+.battleButtonText {
+  text-align: center;
+  font-size: 30px;
+  border: double white;
+  width: 190px;
+  height: 40px;
+  margin: 0 auto;
+
+}

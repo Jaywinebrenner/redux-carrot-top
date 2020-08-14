@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container  from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -13,6 +13,8 @@ import CreateCharacter from "./CreateCharacter";
 import ChapterOne from './ChapterOne';
 import Battle from "./Battle";
 import { emoPhilips } from "../constants/Monsters";
+import ReactHowler from "react-howler";
+import gamePlay from "../media/gameplay.mp3";
 
 const Game = () => {
 
@@ -22,6 +24,12 @@ const Game = () => {
    const chapterOne = useSelector((state) => state.chapterOne);
 
    console.log(chapterOne)
+
+  const [isGameMusicPlaying, setIsGameMusicPlaying] = useState(true);
+
+  const turnOffGamePlayMusic = () => {
+    setIsGameMusicPlaying(false);
+  };
 
 
 
@@ -51,11 +59,35 @@ const Game = () => {
         <Row>
           <Col className="mainDisplayOne">
             <MainDisplay />
-            {/* {createCharacter && <CreateCharacter />}
-            {chapterOne && <ChapterOne/>} */}
-            <Battle emoPhilips={emoPhilips} />
+            {createCharacter && <CreateCharacter />}
+            {chapterOne && <ChapterOne />}
+            {/* <Battle emoPhilips={emoPhilips} /> */}
           </Col>
         </Row>
+        <ReactHowler
+          src={gamePlay}
+          volume={0.4}
+          loop={true}
+          playing={isGameMusicPlaying}
+        />
+        {/* <ReactHowler
+          src={battle}
+          volume={0.3}
+          loop={true}
+          playing={isBattleMusicPlaying}
+        /> */}
+        {/* <ReactHowler
+        src={victory}
+        volume={0.3}
+        loop={true}
+        playing={isVictoryMusicPlaying}
+      />
+      <ReactHowler
+        src={death}
+        volume={0.3}
+        loop={true}
+        playing={isDeathMusicPlaying}
+      /> */}
       </Container>
     );
   }

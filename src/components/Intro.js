@@ -4,17 +4,16 @@ import carrotTop from '../media/carrot-top.png'
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
 import ReactHowler from "react-howler";
-import theme from "../media/theme1.mp3";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import theme from "../media/theme1.mp3";
 
 const Intro = () => {
   const [isCarrotTopVisible, setIsCarrotTopVisible] = useState(false)
 
     setTimeout(function () {
       setIsCarrotTopVisible(true)
-  
     }, 500)
   // its 50,000 in reality
 
@@ -39,7 +38,7 @@ const Intro = () => {
 const renderIntroText = () => {
   return (
     <div>
-      {/* <ReactAudioPlayer src="../../media/theme1.mp3" autoPlay controls /> */}
+      {/* <ReactAudioPlayer src="../media/theme1.mp3" autoPlay controls /> */}
       <h1 className="introHeader">The Beginning</h1>
 
       <h3 className="introStoryText">

@@ -6,6 +6,9 @@ import Game from "./Game";
 import { useSelector, useDispatch } from "react-redux";
 import playerDefence from "../reducers/playerDefence";
 import {
+  incrementEnemyHp,
+  setEnemyHp,
+  decrementEnemyHp,
   decrementPlayerHp,
   incrementPlayerHp,
   changeArmor,
@@ -48,14 +51,16 @@ const Battle = (enemy) => {
   const [isPlayerDead, setIsPlayerDead] = useState(true);
   const [isEnemyDead, setIsEnemyDead] = useState(true);
 
-  const [enemyHitpoints, setEnemyHitpoints] = useState();
+  // const [enemyHitpoints, setEnemyHitpoints] = useState();
   const playerHitpoints = useSelector((state) => state.playerHitpoints);
   const playerDamage = useSelector((state) => state.playerDamage);
   const playerDefence = useSelector((state) => state.playerDefence);
+  const enemyHitpoints = useSelector((state) => state.enemyHitpoints);
 
   useEffect(() => {
     const loadEmo = () => {
-      setEnemyHitpoints(enemy.hitPoints);
+      // setEnemyHitpoints(enemy.enemy.hitPoints);
+      dispatch(setEnemyHp(enemy.enemy.hitPoints));
     };
 
     loadEmo();
@@ -68,7 +73,8 @@ const Battle = (enemy) => {
     console.log("STAT-DAMAGE", playerDamage);
      console.log("STAT-HITPOINTS", playerHitpoints);
      console.log("STAT-ENEMY HITPOINS", enemyHitpoints);
-     console.log("EMO", enemy)
+    //  console.log("EMO HPS", enemy.enemy.hitPoints)
+    //  console.log("EMO HPS", enemy.enemy.hitPoints);
 
 
   //RENDER TO DOM
@@ -93,7 +99,7 @@ const Battle = (enemy) => {
               .start();
           }}
         /> */}
-        <h5 className="initiativeRoll">INITIATIVE ROLL - {initiativeRoll}</h5>
+        {/* <h5 className="initiativeRoll">INITIATIVE ROLL - {initiativeRoll}</h5> */}
         <h6 className="initiativeText">
           You have won intiiative and attack the foul creature
         </h6>
@@ -104,7 +110,7 @@ const Battle = (enemy) => {
   const renderEnemyWonInitiative = (initiativeRoll) => {
     return (
       <Container>
-        <h5 className="initiativeRoll">INITIATIVE ROLL - {initiativeRoll}</h5>
+        {/* <h5 className="initiativeRoll">INITIATIVE ROLL - {initiativeRoll}</h5> */}
         <h6 className="initiativeText">
           Your foe has won initiative and attacks!
         </h6>
@@ -147,10 +153,10 @@ const Battle = (enemy) => {
   };
   const renderPlayerMissed = (playerAttackRoll) => {
     return (
-      <div>
+      <Container>
         <h5 className="attackRoll">You have rolled {playerAttackRoll}</h5>
         <h6 className="attackText">You swing wildly and miss!</h6>
-      </div>
+      </Container>
     );
   };
 
@@ -164,7 +170,7 @@ const Battle = (enemy) => {
       <Container>
         <h5 className="attackRoll">Your foe has rolled a {enemyAttackRoll}</h5>
         <h6 className="attackText">
-          YOUR FOE ROLLED A 20 AND RIPS A WET GAPING WOUND IN YOUR CHEST FOR
+          Your foe rolled a 20 and rips a wet gaping hole in your chest for
           DOUBLE DAMAGE! Blood paints the wall in a Pollock-esque splatter as
           you suffer {doubleDamageVsPlayerAmount} damage.
         </h6>
@@ -202,8 +208,8 @@ const Battle = (enemy) => {
     // turnOffGamePlayMusic();
     initiativeRoll = Math.floor(Math.random() * 20) + 1;
 
-    playerAttackRange = Math.floor(Math.random() * enemy.damage) + 1;
-    enemyAttackRange = Math.floor(Math.random() * enemy.damage) + 1;
+    playerAttackRange = Math.floor(Math.random() * playerDamage) + 1;
+    enemyAttackRange = Math.floor(Math.random() * enemy.enemy.damage) + 1;
     setPlayerMissed(false);
     setEnemyMissed(false);
     setIsPlayerWonInitiativeVisible(false);
@@ -216,7 +222,7 @@ const Battle = (enemy) => {
       setIsPlayerWonInitiativeVisible(true);
       return (
         <Container>
-          <h5>The initiative roll is {initiativeRoll}</h5>
+          {/* <h5>The initiative roll is {initiativeRoll}</h5> */}
           <h6>You have won intiiative and attack the foul createure</h6>
         </Container>
       );
@@ -245,9 +251,10 @@ const Battle = (enemy) => {
       setIsDoubleDamageVsEnemy(true);
       doubleDamageVsEnemy(playerAttackRange);
       return;
-    } else if (playerAttackRoll > enemy.defence) {
+    } else if (playerAttackRoll > enemy.enemy.defence) {
       console.log("EMOS HP BEFORE ATTACK", enemyHitpoints);
-      setEnemyHitpoints(enemyHitpoints - playerAttackRange);
+      // setEnemyHitpoints(enemyHitpoints - playerAttackRange);
+      dispatch(decrementEnemyHp(playerAttackRange));
       console.log(
         "YOU HIT YOUR FOE AND INFLICT THIS MUCH DAMAGE",
         playerAttackRange,
@@ -331,7 +338,8 @@ const Battle = (enemy) => {
       "YOU ROLLED A 20 AND UNLEASH A DEEP BELLOWING HOWL AS YOU TRASH YOUR FOE FOR DOUBLE DAMAGE",
     );
 
-    setEnemyHitpoints(enemyHitpoints - doubleDamageVsEnemyAmount);
+    // setEnemyHitpoints(enemyHitpoints - doubleDamageVsEnemyAmount);
+    dispatch(decrementEnemyHp(enemyHitpoints - doubleDamageVsEnemyAmount));
     console.log(
       "YOU HIT YOUR FOE AND INFLICT THIS MUCH DAMAGE",
       doubleDamageVsEnemyAmount,
@@ -450,17 +458,15 @@ const Battle = (enemy) => {
               Run
             </h5>
           </Col>
+        </Row>
+        <Row>
+          {isRunVisible && renderRun()}
+          {isPlayerDeadCheck()}
 
-          <Row>
-            {isRunVisible && renderRun()}
-            {isPlayerDeadCheck()}
+          {enemyHitpoints && isEnemyDeadCheck()}
 
-            {enemyHitpoints && isEnemyDeadCheck()}
-
-            {isPlayerWonInitiativeVisible &&
-              renderBattleIfPlayerWonInitiative()}
-            {isEnemyWonInitiativeVisible && renderBattleIfEnemyWonInitiative()}
-          </Row>
+          {isPlayerWonInitiativeVisible && renderBattleIfPlayerWonInitiative()}
+          {isEnemyWonInitiativeVisible && renderBattleIfEnemyWonInitiative()}
         </Row>
       </Container>
     );

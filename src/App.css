@@ -125,7 +125,6 @@ border: 5px double #5c5959;
   border: 5px double #5c5959;
   background-color: #1d211e;
   /* padding: 20px; */
-
   text-align: center;
   border: 5px double white;
   width: 1000px;
@@ -150,7 +149,7 @@ border: 5px double #5c5959;
 }
 
 .carrotTopIntroImage {
-  height: 300px;
+  height: 400px;
   position: sticky;
   bottom: 0;
   top: 200px;
@@ -162,6 +161,8 @@ border: 5px double #5c5959;
   margin-top: 100px;
   letter-spacing: 2px;
   font-size: 20px;
+    position: sticky;
+  bottom: 0;
     /* border: 5px double white; */
 }
 
@@ -175,8 +176,6 @@ border: 5px double #5c5959;
   outline: 0;
   border-width: 0 0 2px;
 }
-
-
 
 .mainDisplayOneText {
   color: white;
@@ -219,4 +218,12 @@ border: 5px double #5c5959;
   height: 40px;
   margin: 0 auto;
 
+}
+
+.battleButtonsWrapper {
+  margin-bottom: 20px;
+}
+
+.attackRoll {
+  margin-bottom: 0;
 }

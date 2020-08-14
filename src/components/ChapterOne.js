@@ -6,6 +6,18 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from './Battle'
+import {
+  changeName,
+  changeWeapon,
+  changeDamage,
+  changeArmor,
+  changeMainDisplayOne,
+  changeMainDisplayTwo,
+  toggleCreateCharacter,
+  toggleChapterOne,
+  toggleChapterTwo,
+  changeDefence,
+} from "../actions";
 
 const ChapterOne = ({
   // armor,
@@ -21,7 +33,8 @@ const ChapterOne = ({
   const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
   const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
 
-  
+  console.log("EMO ON CHAPTER ONE", emoPhilips);
+  const dispatch = useDispatch();
 
   const armor = useSelector((state) => state.armor);
   const [battleEmo, setBattleEmo] = useState(false);
@@ -174,6 +187,8 @@ const ChapterOne = ({
             setBattleEmo(true);
             // setIsEmoImageVisible(true);
             setIsAreaOneSixDisplayed(false);
+            // dispatch(toggleCreateCharacter(false));
+            // dispatch(toggleChapterOne(false));
           }}
           className="emoButtonWrapper"
         >
@@ -191,7 +206,7 @@ const ChapterOne = ({
       {isAreaOneFourDisplayed && renderAreaOneFour()}
       {isAreaOneFiveDisplayed && renderAreaOneFive()}
       {isAreaOneSixDisplayed && renderAreaOneSix()}
-      {battleEmo && <Battle emoPhilips={emoPhilips}/>}
+      {battleEmo && <Battle enemy={emoPhilips}/>}
       {/* {battleEmo && Battle(emoPhilips)} */}
     </div>
   );

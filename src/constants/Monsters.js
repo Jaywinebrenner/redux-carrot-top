@@ -1,19 +1,19 @@
 export const emoPhilips = {
-    name: "emoPhilips",
+    name: "Emo Philips",
     hitPoints: 30,
     damage: 2,
     defence: 3,
   };
 
   export const timAllen = {
-    name: "timAllen",
+    name: "Tim ALlen",
     hitPoints: 16,
     damage: 4,
     defence: 10,
   };
 
   export const judyTenuda = {
-    name: "judyTenuda",
+    name: "Judy Tenuda",
     hitPoints: 18,
     damage: 7,
     defence: 1,

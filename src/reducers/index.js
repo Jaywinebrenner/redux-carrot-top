@@ -13,6 +13,7 @@ import mainDisplayButtons from "./mainDisplayButtons";
 import createCharacter from "./createCharacter";
 import chapterOne from "./chapterOne";
 import chapterTwo from "./chapterTwo";
+import enemyHitpoints from './enemyHitpoints';
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -29,6 +30,7 @@ const allReducers = combineReducers({
   chapterOne: chapterOne,
   chapterTwo: chapterTwo,
   mainDisplayButtons: mainDisplayButtons,
+  enemyHitpoints: enemyHitpoints,
 });
 
 export default allReducers

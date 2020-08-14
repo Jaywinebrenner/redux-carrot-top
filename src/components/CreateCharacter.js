@@ -9,13 +9,9 @@ import Col from "react-bootstrap/Col";
 import { WEAPONS } from "../constants/Weapons";
 
 import {
-  increment,
-  decrement,
   changeName,
   changeWeapon,
   changeDamage,
-  decrementPlayerHp,
-  incrementPlayerHp,
   changeArmor,
   changeMainDisplayOne,
   changeMainDisplayTwo,
@@ -27,7 +23,7 @@ import {
 
 const CreateCharacter = () => {
   const dispatch = useDispatch();
-  ;
+  
 
   //STATE
   const mainDisplayOne = useSelector((state) => state.mainDisplayOne);
@@ -118,11 +114,11 @@ const CreateCharacter = () => {
   const renderTwo = () => {
     return (
       <Container>
-        <p>
+        <h6>
           {/* {dispatch(changeMainDisplayOne("Before you empark on your perilous journey, you must pick one of three weaons at your disposal."))} */}
           Before you empark on your perilous journey, you must pick one of three
           weaons at your disposal.
-        </p>
+        </h6>
 
         <Row>
           <Col className="answerGridOne" id="butterKnifeSelection">

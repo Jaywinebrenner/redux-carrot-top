@@ -81,3 +81,24 @@ export const toggleChapterOne = (boolean) => {
     payload: boolean,
   };
 };
+
+export const decrementEnemyHp = (number) => {
+  return {
+    type: "DECREMENT_ENEMY_HP",
+    payload: number,
+  };
+};
+
+export const incrementEnemyHp = (number) => {
+  return {
+    type: "INCREMENT_ENEMY_HP",
+    payload: number,
+  };
+};
+
+export const setEnemyHp = (number) => {
+  return {
+    type: "SET_ENEMY_HP",
+    payload: number,
+  };
+};

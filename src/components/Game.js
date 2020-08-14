@@ -45,10 +45,10 @@ const Game = () => {
         </Row>
         <Row>
           <Col className="mainDisplayOne">
-            <h5>
+       
               <MainDisplay />
-              {createCharacter && <CreateCharacter />}
-            </h5>
+       
+            {createCharacter && <CreateCharacter />}
           </Col>
         </Row>
       </Container>

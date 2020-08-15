@@ -1,4 +1,4 @@
-const chapterTwo = (state = false, action) => {
+const chapterTwo = (state = true, action) => {
   switch (action.type) {
     case "TOGGLE_CHAPTER_TWO":
       return !state;

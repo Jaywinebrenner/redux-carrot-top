@@ -32,7 +32,7 @@ const ChapterOne = () => {
   const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
   const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
 
-  console.log("EMO ON CHAPTER ONE", emoPhilips);
+
   const dispatch = useDispatch();
 
   const armor = useSelector((state) => state.armor);

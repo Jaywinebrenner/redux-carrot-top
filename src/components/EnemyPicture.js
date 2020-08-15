@@ -1,10 +1,18 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import { useSelector, useDispatch } from "react-redux";
+import { emoPhilips } from "../constants/Monsters";
+import emoPhilipsPicture from "../media/emo.jpg";
 
-const EnemyPicture = () => {
+
+const EnemyPicture = (enemy) => {
+  const enemyHitpoints = useSelector((state) => state.enemyHitpoints);
+
   return (
-    <React.Fragment>
-      <h5>Picture of Enemy</h5>
-    </React.Fragment>
+    <Container className="enemyPictureContainer">
+      <img className="enemyPicture" src={emoPhilipsPicture} />
+    </Container>
   );
 };
 

@@ -10,10 +10,12 @@ import carrotTop from "../media/carrot-top.png";
 import { useSelector, useDispatch } from "react-redux";
 import CreateCharacter from "./CreateCharacter";
 import ChapterOne from './ChapterOne';
+import ChapterTwo from "./ChapterTwo";
 import Battle from "./Battle";
 // import { emoPhilips } from "../constants/Monsters";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
+import { emoPhilips } from "../constants/Monsters";
 import {
   toggleCreateCharacter,
   toggleBattleDisplay
@@ -25,14 +27,24 @@ const Game = () => {
 
    const createCharacter = useSelector((state) => state.createCharacter);
    const chapterOne = useSelector((state) => state.chapterOne);
-  const enemyDisplayVisible = useSelector(
-    (state) => state.enemyDisplayVisible,
-  );
+   const chapterTwo = useSelector((state) => state.chapterTwo);
+
+
+    const enemyDisplayVisible = useSelector(
+      (state) => state.enemyDisplayVisible,
+    );
     const battleVisible = useSelector(
       (state) => state.battleVisible,
     );
 
-  //  console.log("EMO ON GAME", enemy);
+    console.log("GAME STATE createCharacter", createCharacter);
+    console.log("GAME STATE chapterOne", chapterOne);
+    console.log("GAME STATE chapterTwo", chapterTwo);
+    console.log("GAME STATE createCharacter", createCharacter);
+    console.log("GAME STATE battleVisible", battleVisible);
+
+  //  console.log("EMO ON GAME", enemy.enemy.name);
+  console.log("ENEMY DISPLAY VISIBLE?", enemyDisplayVisible);
 
 
   const [isGameMusicPlaying, setIsGameMusicPlaying] = useState(true);
@@ -40,6 +52,19 @@ const Game = () => {
   const turnOffGamePlayMusic = () => {
     setIsGameMusicPlaying(false);
   };
+
+  const renderEnemyDisplay = () => {
+    return (
+      <EnemyDisplay enemy={emoPhilips} />
+    )
+  }
+
+    const renderEnemyPicture = () => {
+    return (
+      <EnemyPicture enemy={emoPhilips} />
+    )
+  }
+
 
   const renderGameWindow = () => {
     return (
@@ -56,12 +81,12 @@ const Game = () => {
           <Col className="stats">
             <Stats />
           </Col>
-          <Col className="enemyDisplay" xs={6}>
+          <Col className="enemyDisplay" >
             {" "}
-            {enemyDisplayVisible &&<EnemyDisplay />}
+            {enemyDisplayVisible && renderEnemyDisplay()}
           </Col>
-          <Col className="enemyImage">
-            <EnemyPicture />{" "}
+          <Col className="enemyPictureDisplay">
+            {enemyDisplayVisible && renderEnemyPicture()}
           </Col>
         </Row>
         <Row>
@@ -69,6 +94,7 @@ const Game = () => {
             <MainDisplay />
             {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
+            {chapterTwo && <ChapterTwo />}
             {/* {battleVisible && <Battle/>} */}
           </Col>
         </Row>

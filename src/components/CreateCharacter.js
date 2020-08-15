@@ -32,7 +32,7 @@ const CreateCharacter = () => {
   const weapon = useSelector((state) => state.weapon);
   const armor = useSelector((state) => state.armor);
   const playerDefence = useSelector((state) => state.playerDefence);
-    console.log(playerDefence);
+
 
   const [localName, setLocalName] = useState(" ");
   const [isOneVisible, setIsOneVisible] = useState(true);

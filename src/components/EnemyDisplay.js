@@ -5,14 +5,17 @@ import { useSelector, useDispatch } from "react-redux";
 import { emoPhilips } from "../constants/Monsters";
 
 
-const EnemyDisplay = () => {
+const EnemyDisplay = (enemy) => {
  const enemyHitpoints = useSelector((state) => state.enemyHitpoints)
 
   return (
-    <React.Fragment>
-      <h5>You have encountered a Foe</h5>
-      <h6>{enemyHitpoints}</h6>
-    </React.Fragment>
+    <Container>
+      <h5>{enemy.enemy.intro}</h5>
+      <h3>{enemy.enemy.name}</h3>
+      <h6>Hit Points: {enemyHitpoints}</h6>
+
+
+    </Container>
   );
 };
 

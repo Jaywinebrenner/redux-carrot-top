@@ -3,8 +3,9 @@ export const emoPhilips = {
     hitPoints: 30,
     damage: 2,
     defence: 3,
-    intro: "You stand face to face with the Lilth Menace himself..."
-  };
+    intro: "You stand face to face with the Lilth Menace himself...",
+    imageName: "emoPhilipsImage",
+       };
 
   export const timAllen = {
     name: "Tim ALlen",

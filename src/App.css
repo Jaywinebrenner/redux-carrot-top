@@ -38,29 +38,45 @@ p {
 }
 
 .gameTitle {
-border: 5px double #5c5959;
-   background-color: #1d211e;
+  border: 5px double #5c5959;
+  background-color: #1d211e;
 }
 
 .stats {
   border: 5px double #5c5959;
   background-color: #1d211e;
   min-height: 200px;
+  min-width: 200px;
 }
 
 .comedianText {
   margin-top: 10px;
 }
 
+/* ENEMY PICTURE DISPLAY */
+
 .enemyDisplay {
   border: 5px double #5c5959;
   background-color: #1d211e;
+  min-width: 200px;
 }
 
-.enemyImage {
-  border: 5px double #5c5959;
- background-color: #1d211e;
+.enemyPicture {
+  height: 220px;
 }
+
+.enemyPictureDisplay {
+  border: 5px double #5c5959;
+  background-color: #1d211e;
+  padding: 0;
+}
+
+.enemyPictureContainer {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 .mainDisplayOne {
   padding-top: 20px;
@@ -199,6 +215,16 @@ border: 5px double #5c5959;
   margin-top: 50px;
 }
 
+.buttonTextIntro {
+  text-align: center;
+  font-size: 30px;
+  border: double white;
+  width: 190px;
+  height: 40px;
+  /* margin: 0 auto; */
+  margin-top: 320px;
+}
+
 .beginThyAdventureButtonText {
   text-align: center;
   font-size: 30px;
@@ -232,12 +258,12 @@ border: 5px double #5c5959;
 
 .victoryWrapper{
   padding: 20px;
- text-align: center;
- border: 5px double white;
-width: 1000px;
-min-height: 550px;
-margin: 0 auto;
-margin-top: 30px;
- background-image: url(./media/blood_pix.png);
-   background-color: #1d211e;
+  text-align: center;
+  border: 5px double white;
+  width: 1000px;
+  min-height: 550px;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-image: url(./media/blood_pix.png);
+  background-color: #1d211e;
 }

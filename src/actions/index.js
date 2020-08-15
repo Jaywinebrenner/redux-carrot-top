@@ -82,6 +82,13 @@ export const toggleChapterOne = (boolean) => {
   };
 };
 
+export const toggleChapterTwo = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_TWO",
+    payload: boolean,
+  };
+};
+
 export const decrementEnemyHp = (number) => {
   return {
     type: "DECREMENT_ENEMY_HP",

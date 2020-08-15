@@ -28,8 +28,8 @@ const Intro = () => {
   const renderIntroContinueButton = () => {
     return (
       <React.Fragment>
-        <Link style={{ textDecoration: "none" }} to="/Game">
-          <h1 className="landingContinueButton">CONTINUE</h1>
+        <Link style={{ textDecoration: "none", fontFamily: 'Red Rose' }} to="/Game">
+          <h1 className="buttonTextIntro">CONTINUE</h1>
         </Link>
       </React.Fragment>
     );

@@ -1,11 +1,18 @@
 export const emoPhilips = {
     name: "Emo Philips",
+    nameInitiative: [
+      "The Lilth Menace",
+      "Emo's lanky frame",
+      " the serpentine beast",
+    ],
+    nameAttack: ["Emo", "Emo Philips", "The Lilth Menace"],
+    // emoAttack: [""]
     hitPoints: 30,
     damage: 2,
     defence: 3,
     intro: "You stand face to face with the Lilth Menace himself...",
     imageName: "emoPhilipsImage",
-       };
+  };
 
   export const timAllen = {
     name: "Tim ALlen",
@@ -22,6 +29,5 @@ export const emoPhilips = {
   };
 
 // DEFENSE IS THE NUMBER TO HIT ON A ROLL OF 20. Higher the better.
-
 
 

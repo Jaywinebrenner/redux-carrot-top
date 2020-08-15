@@ -53,6 +53,7 @@ const Battle = (enemy) => {
   const [isPlayerDead, setIsPlayerDead] = useState(true);
   const [isEnemyDead, setIsEnemyDead] = useState(true);
 
+  const weapon = useSelector((state) => state.weapon);
   const playerHitpoints = useSelector((state) => state.playerHitpoints);
   const playerDamage = useSelector((state) => state.playerDamage);
   const playerDefence = useSelector((state) => state.playerDefence);
@@ -63,6 +64,8 @@ const Battle = (enemy) => {
 
       dispatch(setEnemyHp(enemy.enemy.hitPoints));
     };
+
+    console.log("name INIT", enemy.enemy.nameInitiative);
 
     loadEmo();
   }, []);
@@ -95,9 +98,14 @@ const Battle = (enemy) => {
               .start();
           }}
         /> */}
-   
+
         <h6 className="initiativeText">
-          You have won intiiative and attack the foul creature
+          You have won intiiative and swing your {weapon} at{" "}
+          {
+            enemy.enemy.nameInitiative[
+              Math.floor(Math.random() * enemy.enemy.nameInitiative.length)
+            ]
+          }{" "}
         </h6>
       </Container>
     );
@@ -124,13 +132,34 @@ const Battle = (enemy) => {
     );
   };
 
+  const renderFoeAttackMessage = () => {
+
+    const messageArray = [
+      `A virulent blow across your face sprays a fine mist of blood into the air for ${enemyAttackRange} damage.`,
+      `${enemy.enemy.name} lands a devestating blow across your torso for ${enemyAttackRange} hit points of damage.`,
+      `Blood gushes from your nose as ${enemy.enemy.name} smashes you directly in the face for ${enemyAttackRange} damage. Blood vessels pop and gore spills from your mouth.`,
+    ];
+    return (
+      <React.Fragment>
+        {
+          messageArray[
+            Math.floor(Math.random() * messageArray.length)
+          ]
+        }
+      </React.Fragment>
+    );
+  }
+
   const renderEnemyAttack = (enemyAttackRoll) => {
     return (
       <Container>
-        <h5 className="attackRoll">{enemy.enemy.name} has rolled a {enemyAttackRoll}</h5>
+        <h5 className="attackRoll">
+          {enemy.enemy.name} has rolled a {enemyAttackRoll}
+        </h5>
         <h6 className="attackText">
-          A virulent blow across your face sprays a fine mist of blood into the
-          air for {enemyAttackRange} damage.
+          {/* A virulent blow across your face sprays a fine mist of blood into the
+          air for {enemyAttackRange} damage. */}
+          {renderFoeAttackMessage()}
         </h6>
       </Container>
     );
@@ -163,11 +192,24 @@ const Battle = (enemy) => {
 
     return (
       <Container>
-        <h5 className="attackRoll">Your foe has rolled a {enemyAttackRoll}</h5>
+        <h5 className="attackRoll">
+          {" "}
+          {
+            enemy.enemy.nameAttack[
+              Math.floor(Math.random() * enemy.enemy.nameAttack.length)
+            ]
+          }{" "}
+          has rolled a {enemyAttackRoll}
+        </h5>
         <h6 className="attackText">
-          Your foe rolled a 20 and rips a wet gaping hole in your chest for
-          DOUBLE DAMAGE! Blood paints the wall in a Pollock-esque splatter as
-          you suffer {doubleDamageVsPlayerAmount} damage.
+          {
+            enemy.enemy.nameAttack[
+              Math.floor(Math.random() * enemy.enemy.nameAttack.length)
+            ]
+          }{" "}
+          rolled a 20 and rips a wet gaping hole in your chest for DOUBLE
+          DAMAGE! Blood paints the wall in a Pollock-esque splatter as you
+          suffer {doubleDamageVsPlayerAmount} damage.
         </h6>
       </Container>
     );
@@ -312,23 +354,15 @@ const Battle = (enemy) => {
 
   const doubleDamageVsPlayer = (enemyAttackRange) => {
     setIsDoubleDamageVsPlayer(true);
-    console.log(
-      "YOUR FOE ROLLED A 20 AND SINKS HIS WEAPON DEEP INTO YOUR CHEST FOR DOUBLE DAMAGE",
-    );
     if (enemyAttackRange === 1) {
       doubleDamageVsPlayerAmount = 2;
     } else {
       doubleDamageVsPlayerAmount = enemyAttackRange * 2;
     }
     dispatch(decrementPlayerHp(doubleDamageVsPlayerAmount));
-    console.log(
-      "YOUR FOE INFLICTS THIS MUCH DAMAGE:",
-      doubleDamageVsPlayerAmount,
-    );
     return doubleDamageVsPlayerAmount;
   };
 
-  console.log("DOUBLE DAMAGE vs Player in body", doubleDamageVsPlayerAmount);
   //RUN
 
   const handleRunButton = () => {

@@ -100,7 +100,7 @@ const ChapterOne = () => {
         <div>
           <h6>{AREAONE.three}</h6>
           <div onClick={console.log("to do")} className="continueButtonWrapper">
-            <h6 className="continueButtonText">CONTINUE</h6>
+            <h6 className="buttonText">CONTINUE</h6>
           </div>
         </div>
       );
@@ -123,7 +123,7 @@ const ChapterOne = () => {
             }}
             className="continueButtonWrapper"
           >
-            <h6 className="continueButtonText">CONTINUE</h6>
+            <h6 className="buttonText">CONTINUE</h6>
           </div>
         </div>
       );
@@ -150,7 +150,7 @@ const ChapterOne = () => {
           }}
           className="continueButtonWrapper"
         >
-          <h6 className="continueButtonText">CONTINUE</h6>
+          <h6 className="buttonText">CONTINUE</h6>
         </div>
       </div>
     );
@@ -188,8 +188,8 @@ const ChapterOne = () => {
   const renderAreaOneSix = () => {
     return (
       <div>
-        <h6>{AREAONE.six}</h6>
-        <h6>{AREAONE.seven}</h6>
+        <h4>{AREAONE.six}</h4>
+        <h4>{AREAONE.seven}</h4>
         <div
           onClick={() => {
             setBattleEmo(true);
@@ -202,7 +202,7 @@ const ChapterOne = () => {
           }}
           className="emoButtonWrapper"
         >
-          <h6 className="emoButtonText">CONTINUE</h6>
+          <h6 className="buttonText">CONTINUE</h6>
         </div>
       </div>
     );

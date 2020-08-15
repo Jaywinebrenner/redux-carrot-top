@@ -39,7 +39,7 @@ const ChapterTwo = () => {
   return (
     <Container>
       <h1>Chapter Two</h1>
-      <h3> Of Tools and Treachery</h3>
+      <h3> Of Tools &/ Treachery</h3>
       <div
         onClick={() => {
           setOne(false);

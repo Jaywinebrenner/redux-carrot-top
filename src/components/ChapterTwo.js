@@ -8,28 +8,21 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
-  toggleEnemyDisplay,
-  toggleBattleDisplay,
+incrementPlayerHp, decrementPlayerHp
 } from "../actions";
 import Game from "./Game";
 
 const ChapterTwo = () => {
+
+  const dispatch = useDispatch();
+  
 
   const [isAreaOneDisplayed, setIsAreaOneDisplayed] = useState(false);
   const [isAreaOneThreeDisplayed, setIsAreaOneThreeDisplayed] = useState(false);
   const [isAreaOneFourDisplayed, setIsAreaOneFourDisplayed] = useState(false);
   const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
   const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
+
 
   const armor = useSelector((state) => state.armor);
   const [battleEmo, setBattleEmo] = useState(false);
@@ -44,7 +37,6 @@ const ChapterTwo = () => {
   const [eight, setEight ] = useState(false);
   const [nine, setNine ] = useState(false)
   const [ten, setTen] = useState(false)
-
 
   const renderOne = () => {
     return (
@@ -102,7 +94,7 @@ const ChapterTwo = () => {
       return (
         <Container>
             <h6>Tim Allen bursts from a pile of rebar and human remains. "You have little choice, Comedian Slayer," he smirks as he licks a handful of drill bits. "Either answer my
-              quesitons correctly... Or die."
+            quesitons correctly... Or die."
             </h6>
           <Row>
             <Col>
@@ -157,10 +149,12 @@ const ChapterTwo = () => {
       );
     };
 
-    const [questionTwoInput, setQuestionTwoInput] = useState('')
+      const [questionTwoInput, setQuestionTwoInput] = useState('')
 
-   
+
+
     const renderFive = () => {
+
       if (
         questionOneInput === "JONATHAN TAYLOR THOMAS" ||
         questionOneInput === "JONATHAN THOMAS"
@@ -197,7 +191,41 @@ const ChapterTwo = () => {
           </Container>
         );
       } else {
-        alert("WRONG");
+       dispatch(decrementPlayerHp(.5))
+        return (
+          <Container>
+            <h4>
+              "WRONG!" he bellows as he spits the drill bit from his taut lips
+              at an ungodly speed. It pierces your torso for 1 damage.
+            </h4>
+            <h6>
+              Tim Allen pauses, shoots you a condecending glare, flicks a
+              Phillips head screwdriver bit into the air and catches it in his
+              mouth.
+            </h6>
+            <h6>
+              "Time for question two," he says while swallowing the bit. "What
+              was the name of my characters ficticious television show?"
+            </h6>
+            <input
+              ref={(input) => input && input.focus()}
+              className="submitNameInput"
+              onChange={(event) =>
+                setQuestionTwoInput(event.target.value.toUpperCase())
+              }
+              value={questionTwoInput}
+            />
+            <h6
+              className="buttonText"
+              onClick={() => {
+                setFive(false);
+                setSix(true);
+              }}
+            >
+              SUBMIT
+            </h6>
+          </Container>
+        );
       }
     };
 
@@ -213,7 +241,7 @@ const ChapterTwo = () => {
               Flathead screwdriver bit into the air which lands on his tongue.
             </h6>
             <h6>
-              "Well," he says while swallowing the bit. "Before fellating the drummer from the band responsible for the hit "Dr.Feelgood", this model / actress honed her acting chops on my show by wearing scantily clad clothing and giggling..."
+              "Question 3," he says while swallowing the bit. "Before fellating the drummer from the band responsible for the hit "Dr.Feelgood", this model / actress honed her acting chops on my show by wearing scantily clad clothing and giggling..."
             </h6>
             <input
               ref={(input) => input && input.focus()}
@@ -233,8 +261,42 @@ const ChapterTwo = () => {
           </Container>
         );
       } else {
-        alert("WRONG");
-      }
+        dispatch(decrementPlayerHp(0.5));
+        return (
+          <Container>
+            <h4>
+              "WRONG!" he spits the bit out of his mouth at an unfathomable speed and it pierces the meat of your leg for 1 damage.
+            </h4>
+            <h6>
+              With a taut flick of his thumb, Tim Allen arches a Flathead
+              screwdriver bit into the air which lands on his tongue.
+            </h6>
+            <h6>
+              "Question 3," he says while swallowing the bit. "Before fellating the
+              drummer from the band responsible for the hit "Dr.Feelgood", this
+              model / actress honed her acting chops on my show by wearing
+              scantily clad clothing and giggling..."
+            </h6>
+            <input
+              ref={(input) => input && input.focus()}
+              className="submitNameInput"
+              onChange={(event) =>
+                setQuestionThreeInput(event.target.value.toUpperCase())
+              }
+              value={questionThreeInput}
+            />
+            <h6
+              className="buttonText"
+              onClick={() => {
+                setSix(false);
+                setSeven(true);
+              }}
+            >
+              SUBMIT
+            </h6>
+          </Container>
+        );
+}
     };
 
     const [questionFourInput, setQuestionFourInput] = useState("");
@@ -249,7 +311,7 @@ const ChapterTwo = () => {
               mouth.
             </h6>
             <h6>
-              "What was the affliction my aforementioned ficticious son Randy was
+              "Question 4. What was the affliction my aforementioned ficticious son Randy was
               diagnosed with in the episode 'The Longest Day'?""
             </h6>
             <input
@@ -270,7 +332,39 @@ const ChapterTwo = () => {
           </Container>
         );
       } else {
-        alert("WRONG");
+        dispatch(decrementPlayerHp(0.5));
+        return (
+          <Container>
+            <h4>
+              He shoots the bit out of his mouth with a deep wet coughing sound. It sinks into your shoulder for 1 point of damage.
+            </h4>
+            <h6>
+              He flicks a Counter Sink bit into the air and sucks it in his
+              mouth.
+            </h6>
+            <h6>
+              "Question 4. What was the affliction my aforementioned ficticious son Randy
+              was diagnosed with in the episode 'The Longest Day'?""
+            </h6>
+            <input
+              ref={(input) => input && input.focus()}
+              className="submitNameInput"
+              onChange={(event) =>
+                setQuestionFourInput(event.target.value.toUpperCase())
+              }
+              value={questionFourInput}
+            />
+            <h6
+              className="buttonText"
+              onClick={() => {
+                setSeven(false);
+                setEight(true);
+              }}
+            >
+              SUBMIT
+            </h6>
+          </Container>
+        );
       }
     };
 
@@ -286,8 +380,8 @@ const ChapterTwo = () => {
                 his mouth.
               </h6>
               <h6>
-                "Which season did celebrated comedian Jay Leno make a cameo in my
-                serialized situational comedy?""
+                "And the final question. Which season did celebrated comedian Jay Leno make a cameo in my
+                serialized situational comedy?"
               </h6>
               <input
                 ref={(input) => input && input.focus()}
@@ -307,11 +401,42 @@ const ChapterTwo = () => {
             </Container>
           );
         } else {
-          alert("WRONG");
+          dispatch(decrementPlayerHp(0.5));
+          return (
+            <Container>
+              <h4>
+                "BZZZZT!! WRONG!" he bellows as he spits the drill bit from his
+                taut lips at an ungodly speed. It pierces your chest for 1
+                damage.
+              </h4>
+              <h6>
+                He tosses a Hex bit into the air and catches it in his mouth.
+              </h6>
+              <h6>
+                "And the final question. Which season did celebrated comedian Jay Leno make a cameo in
+                my serialized situational comedy?"
+              </h6>
+              <input
+                ref={(input) => input && input.focus()}
+                className="submitNameInput"
+                onChange={(event) =>
+                  setQuestionFiveInput(event.target.value.toUpperCase())
+                }
+                value={questionFiveInput}
+              />
+              <h6
+                className="buttonText"
+                onClick={() => {
+                  setEight(false);
+                  setNine(true);
+                }}
+              >
+                SUBMIT
+              </h6>
+            </Container>
+          );
         }
       };
-
-      const [questionSixInput, setQuestionSixInput] = useState("");
 
       const renderNine = () => {
         if (questionFiveInput.toUpperCase() === "SEASON FOUR" || "SEASON 4" || "FOUR" || "4") {
@@ -324,7 +449,16 @@ const ChapterTwo = () => {
             </Container>
           );
         } else {
-          alert("WRONG");
+          dispatch(decrementPlayerHp(0.5));
+          return (
+           <Container>
+             <h4>"WRONG! Edd Hall would not be proud.</h4>
+             <h4>He spits the bit out of his mouth at an unfathomable speed. It pierces your torgo for 1 hit point of damage.</h4>
+             <h6 onClick={goToTen} className="buttonText">
+               CONTINUE
+             </h6>
+           </Container>
+          )
         }
       };
 
@@ -339,13 +473,15 @@ const ChapterTwo = () => {
           return (
             <Container>
               <h4>
-                "You are a Tool Time fanatic!", he exclaims. "Much as I want to
-                cut your throat and suck the air from your lungs, I can not. You are free pass.{" "}
+                "You are a Tool Time fanatic!", he exclaims.</h4>
+                <h4>
+                "Much as I yearn to
+                cut your throat and suck the air from your lungs, I can not. Your breadth of Tim Allen knowledge is far too vast. I loathe to say you are free pass.{" "}
               </h4>
 
               <h6>
                 Tim Allen makes a gesture toward the sky as a Belt Sander
-                materializes in his hand. "Ta ta," he exclaims as he evaporates
+                materializes in his hand. "Ta ta," he exclaims as he pulls the trigger on the sander and evaporates
                 into thin air.
               </h6>
               <h6 onClick={() => alert("go to Chapter 4")} className="buttonText">
@@ -354,18 +490,31 @@ const ChapterTwo = () => {
             </Container>
           );
         } else {
-          alert("something is wrong")
+          return (
+            <Container>
+              <h4>
+                "I need not mention your obvious intellectual inadequacies. Your
+                Tim Allen Knowledge is pitiful, woefully indept and deeply embarassing. And for that, you will die."{" "}
+              </h4>
+              <h4>
+                Tim Allen makes a gesture toward the sky as a Belt Sander
+                materializes in his hand. "Aeuuugh," he exclaims in his inexplicable Home Improvement noise as he pulls the
+                trigger on the sander and attacks.
+              </h4>
+            </Container>
+          );
         }
 
 
       }
 
 
-  console.log("1", questionOneInput);
-  console.log("2", questionTwoInput);
-  console.log("3",questionThreeInput);
-  console.log("4",questionFourInput);
-  console.log("5",questionFiveInput);
+  // console.log("1", questionOneInput);
+  // console.log("2", questionTwoInput);
+  // console.log("3",questionThreeInput);
+  // console.log("4",questionFourInput);
+  // console.log("5",questionFiveInput);
+
 
   return (
     <Container className="chapterTwoWrapper">
@@ -385,4 +534,10 @@ const ChapterTwo = () => {
 }
 
 export default ChapterTwo
+
+
+
+
+
+
 

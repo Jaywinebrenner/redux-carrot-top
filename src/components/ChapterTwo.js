@@ -80,7 +80,7 @@ const ChapterTwo = () => {
         <h6>
           As you approach, a bellowing voice echos throughout the
           coutryard. 'Welcome Comedian Slayer. To gain access to Ha Ha Tower,
-          you must answer 3 questions about my celebrated situational comedy
+          you must answer 5 questions about my celebrated situational comedy
           Home Improvement.'
         </h6>
         <div
@@ -101,7 +101,7 @@ const ChapterTwo = () => {
     const renderThree = () => {
       return (
         <Container>
-            <h6>Tim Allen bursts from a pile of rebar and human remains. "You have little choice, Comedian Slayer. Either answer my
+            <h6>Tim Allen bursts from a pile of rebar and human remains. "You have little choice, Comedian Slayer," he smirks as he licks a handful of drill bits. "Either answer my
               quesitons correctly... Or die."
             </h6>
           <Row>
@@ -139,8 +139,8 @@ const ChapterTwo = () => {
       return (
         <Container>
           <h6>
-            "Wise choice," he smirks as he licks a handful of drillbits. 'What
-            was the name of the revered child actor who portrayed my son Randy?'
+            "What
+            was the name of the revered child actor who portrayed my son Randy?
           </h6>
           <input
             ref={(input) => input && input.focus()}
@@ -159,45 +159,47 @@ const ChapterTwo = () => {
 
     const [questionTwoInput, setQuestionTwoInput] = useState('')
 
+   
     const renderFive = () => {
-        if (
-          questionOneInput === "JONATHAN TAYLOR THOMAS" ||
-          questionOneInput === "JONATHAN THOMAS"
-        ) {
-          return (
-            <Container>
-              <h4>"You are correct, Comedian Slayer"</h4>
-              <h6>
-                Tim Allen pauses, shoots you a condecending glare, flicks a
-                Phillips head screwdriver bit into the air and catches it in his
-                mouth.
-              </h6>
-              <h6>
-                "Time for question two," he says while swallowing the bit. "What
-                was the name of my characters ficticious television show?"
-              </h6>
-              <input
-                ref={(input) => input && input.focus()}
-                className="submitNameInput"
-                onChange={(event) => setQuestionTwoInput(event.target.value.toUpperCase())}
-                value={questionTwoInput}
-              />
-              <h6
-                className="buttonText"
-                onClick={() => {
-                  setFive(false);
-                  setSix(true);
-                }}
-              >
-                SUBMIT
-              </h6>
-            </Container>
-          ); 
-        } else {
-          alert("WRONG")
-        }
-
-    }
+      if (
+        questionOneInput === "JONATHAN TAYLOR THOMAS" ||
+        questionOneInput === "JONATHAN THOMAS"
+      ) {
+        return (
+          <Container>
+            <h4>"You are correct, Comedian Slayer"</h4>
+            <h6>
+              Tim Allen pauses, shoots you a condecending glare, flicks a
+              Phillips head screwdriver bit into the air and catches it in his
+              mouth.
+            </h6>
+            <h6>
+              "Time for question two," he says while swallowing the bit. "What
+              was the name of my characters ficticious television show?"
+            </h6>
+            <input
+              ref={(input) => input && input.focus()}
+              className="submitNameInput"
+              onChange={(event) =>
+                setQuestionTwoInput(event.target.value.toUpperCase())
+              }
+              value={questionTwoInput}
+            />
+            <h6
+              className="buttonText"
+              onClick={() => {
+                setFive(false);
+                setSix(true);
+              }}
+            >
+              SUBMIT
+            </h6>
+          </Container>
+        );
+      } else {
+        alert("WRONG");
+      }
+    };
 
      const [questionThreeInput, setQuestionThreeInput] = useState("");
 
@@ -316,7 +318,7 @@ const ChapterTwo = () => {
           return (
             <Container>
               <h4>"Edd Hall would be proud. You are correct!"</h4>
-              <h6 onClick={setNine(false)} className="buttonText">
+              <h6 onClick={goToTen} className="buttonText">
                 CONTINUE
               </h6>
             </Container>
@@ -326,6 +328,11 @@ const ChapterTwo = () => {
         }
       };
 
+      const goToTen = () => {
+        setNine(false);
+        setTen(true)
+      }
+
       const renderTen = () => {
         if ((questionOneInput === "JONATHAN TAYLOR THOMAS" || "JONATHAN THOMAS") && (questionTwoInput ===  "TOOL TIME") && (questionThreeInput === "PAMELA ANDERSON LEE" || "PAMELA ANDERSON" || "PAM ANDERSON") && (questionFourInput === "CANCER") && (questionFiveInput === "SEASON FOUR" || "SEASON 4" || "FOUR" || "4")) {
           alert("correct!")
@@ -333,7 +340,7 @@ const ChapterTwo = () => {
             <Container>
               <h4>
                 "You are a Tool Time fanatic!", he exclaims. "Much as I want to
-                cut your throat, I can not. You are freel pass.{" "}
+                cut your throat and suck the air from your lungs, I can not. You are free pass.{" "}
               </h4>
 
               <h6>
@@ -346,6 +353,8 @@ const ChapterTwo = () => {
               </h6>
             </Container>
           );
+        } else {
+          alert("something is wrong")
         }
 
 
@@ -376,3 +385,4 @@ const ChapterTwo = () => {
 }
 
 export default ChapterTwo
+

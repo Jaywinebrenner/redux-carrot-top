@@ -68,12 +68,14 @@ const Victory = (props, { isRunVisible }) => {
     return (
       <Container>
         <h4 className="lootTextSubheader">
-          You stand triumphantly over this fallen Lilth Menace and pick up the
-          severed human hand which he threw at your feet. All that make you
-          human yearns to resist feasting on this wretched thing for sustanance,
-          yet your stomach says otherwise...
+          {chapterOne && emoPhilips.lootOne}
+          {chapterTwo && timAllen.lootOne}
         </h4>
-        <h1 className="lootText">Do you eat the severed human hand?</h1>
+        <h1 className="lootText">
+          {" "}
+          {chapterOne && emoPhilips.lootTwo}
+          {chapterTwo && timAllen.lootTwo}
+        </h1>
         <Row>
           <Col>
             <h1
@@ -108,10 +110,10 @@ const Victory = (props, { isRunVisible }) => {
       return (
         <Container>
           <h4>
-            You close your eyes and dig your teeth into the meat and tendon
-            which cling to the hand. The taste of garlic, chives and sumptious
-            flesh fill your mouth. You feel no regret. You receive {tenSidedDie} hit points.
+            {chapterOne && emoPhilips.lootThree}
+            {chapterTwo && timAllen.lootThree}
           </h4>
+          <h4>You receive {tenSidedDie} hit points.</h4>
 
           <Link
             className="buttonText"
@@ -146,10 +148,8 @@ const Victory = (props, { isRunVisible }) => {
       return (
         <Container>
           <h4>
-            You are filled with disgust at the thought of entertaining eating a
-            human hand. This hand, after all, likely belonged to some poor
-            broken soul fallen victim to these vile comedic overlords. You
-            gingerly place some debris over the appendage and clench your fist.
+            {chapterOne && emoPhilips.lootFour}
+            {chapterTwo && timAllen.lootFour}
           </h4>
           <Link
             className="linkButton"

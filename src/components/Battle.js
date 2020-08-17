@@ -81,24 +81,6 @@ const Battle = (enemy) => {
   const renderPlayerWonInitiative = (initiativeRoll) => {
     return (
       <Container>
-        {/* <Typewriter
-          className="initiativeRoll"
-          onInit={(typewriter) => {
-            typewriter.changeDelay(80).typeString("INITIATIVE ROLL - ").start();
-          }}
-        />
-        <Typewriter
-          className="initiativeText"
-          onInit={(typewriter) => {
-            typewriter
-              .changeDelay(80)
-              .typeString(
-                "You have won intiiative and attack the foul creature",
-              )
-              .start();
-          }}
-        /> */}
-
         <h6 className="initiativeText">
           You have won intiiative and swing your {weapon} at{" "}
           {
@@ -157,8 +139,6 @@ const Battle = (enemy) => {
           {enemy.enemy.name} has rolled a {enemyAttackRoll}
         </h5>
         <h6 className="attackText">
-          {/* A virulent blow across your face sprays a fine mist of blood into the
-          air for {enemyAttackRange} damage. */}
           {renderFoeAttackMessage()}
         </h6>
       </Container>
@@ -348,7 +328,7 @@ const Battle = (enemy) => {
 
   const doubleDamageVsEnemy = (playerAttackRange) => {
     doubleDamageVsEnemyAmount = playerAttackRange * 2;
-    dispatch(decrementEnemyHp(enemyHitpoints - doubleDamageVsEnemyAmount));
+    dispatch(decrementEnemyHp(doubleDamageVsEnemyAmount));
     return doubleDamageVsEnemyAmount;
   };
 

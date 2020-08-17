@@ -8,13 +8,13 @@ const Dead = () => {
 
   return (
     <React.Fragment>
-      <div className="deadWrapper">
-        <h5 className="deadText">
+      <div className="landingWrapper">
+        <h2 className="deadText">
           {DEAD[Math.floor(Math.random() * DEAD.length)]}
-        </h5>
+        </h2>
         <h1 className="areDeadText">ARE DEAD!</h1>
         <h1
-          className="tryAgainButtonWrapper"
+          className="buttonText"
           onClick={() => setPushTryAgain(true)}
         >
           Try Again

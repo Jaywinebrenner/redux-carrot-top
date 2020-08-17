@@ -1,4 +1,4 @@
-const playerHitpoints = (state = 50, action) => {
+const playerHitpoints = (state = 100, action) => {
   switch (action.type) {
     case "INCREMENT_PLAYER_HP":
       return state + action.payload;

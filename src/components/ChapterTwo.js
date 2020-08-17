@@ -1,6 +1,6 @@
 
 import Container from "react-bootstrap/Container";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { emoPhilips } from "../constants/Monsters";
 import { AREAONE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
@@ -38,6 +38,18 @@ const ChapterTwo = () => {
   const [nine, setNine ] = useState(false)
   const [ten, setTen] = useState(false)
 
+  // useEffect(() => {
+  //   const listener = (event) => {
+  //     if (event.code === "Enter" || event.code === "NumpadEnter") {
+  //       console.log("Enter key was pressed. Run your function.");
+  //       submitOne();
+  //     }
+  //   };
+  //   document.addEventListener("keydown", listener);
+  //   return () => {
+  //     document.removeEventListener("keydown", listener);
+  //   };
+  // }, []);
 
 
 

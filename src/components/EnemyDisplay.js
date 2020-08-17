@@ -11,8 +11,7 @@ const EnemyDisplay = (enemy) => {
 
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
-  console.log("GAME STATE chapterOne", chapterOne);
-  console.log("GAME STATE chapterTwo", chapterTwo);
+
 
 
 

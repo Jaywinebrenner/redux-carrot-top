@@ -3,18 +3,28 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useSelector, useDispatch } from "react-redux";
 import { emoPhilips } from "../constants/Monsters";
+import { timAllen } from "../constants/Monsters";
 
 
 const EnemyDisplay = (enemy) => {
  const enemyHitpoints = useSelector((state) => state.enemyHitpoints)
 
+  const chapterOne = useSelector((state) => state.chapterOne);
+  const chapterTwo = useSelector((state) => state.chapterTwo);
+  console.log("GAME STATE chapterOne", chapterOne);
+  console.log("GAME STATE chapterTwo", chapterTwo);
+
+
+
   return (
     <Container>
-      <h5>{enemy.enemy.intro}</h5>
-      <h3>{enemy.enemy.name}</h3>
+      <h5>{chapterOne && emoPhilips.intro}</h5>
+      <h5>{chapterTwo && timAllen.intro}</h5>
+
+      <h3>{chapterOne && emoPhilips.name}</h3>
+      <h3>{chapterTwo && timAllen.name}</h3>
+
       <h6>Hit Points: {enemyHitpoints}</h6>
-
-
     </Container>
   );
 };

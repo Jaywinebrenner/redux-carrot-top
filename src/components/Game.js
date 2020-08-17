@@ -23,7 +23,7 @@ import {
 
 const Game = () => {
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
    const createCharacter = useSelector((state) => state.createCharacter);
    const chapterOne = useSelector((state) => state.chapterOne);

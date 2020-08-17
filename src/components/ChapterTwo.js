@@ -7,8 +7,11 @@ import { useSelector, useDispatch } from "react-redux";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
+import { timAllen } from "../constants/Monsters";
 import {
-incrementPlayerHp, decrementPlayerHp
+  incrementPlayerHp,
+  decrementPlayerHp,
+  toggleEnemyDisplay,
 } from "../actions";
 import Game from "./Game";
 
@@ -17,15 +20,12 @@ const ChapterTwo = () => {
   const dispatch = useDispatch();
   
 
-  const [isAreaOneDisplayed, setIsAreaOneDisplayed] = useState(false);
-  const [isAreaOneThreeDisplayed, setIsAreaOneThreeDisplayed] = useState(false);
-  const [isAreaOneFourDisplayed, setIsAreaOneFourDisplayed] = useState(false);
-  const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
-  const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
+  const battleVisible = useSelector((state) => state.battleVisible);
 
+  console.log("battle visible -", battleVisible);
 
   const armor = useSelector((state) => state.armor);
-  const [battleEmo, setBattleEmo] = useState(false);
+  const [battleTim, setBattleTim] = useState(false);
 
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(false);
@@ -37,6 +37,9 @@ const ChapterTwo = () => {
   const [eight, setEight ] = useState(false);
   const [nine, setNine ] = useState(false)
   const [ten, setTen] = useState(false)
+
+
+
 
   const renderOne = () => {
     return (
@@ -556,7 +559,7 @@ const ChapterTwo = () => {
           return (
            <Container>
              <h4>"WRONG! Edd Hall would not be proud.</h4>
-             <h4>He spits the bit out of his mouth at an unfathomable speed. It pierces your torgo for 1 hit point of damage.</h4>
+             <h4>He spits the bit out of his mouth at an unfathomable speed. It pierces your torso for 1 hit point of damage.</h4>
              <h6 onClick={goToTen} className="buttonText">
                CONTINUE
              </h6>
@@ -618,12 +621,24 @@ const ChapterTwo = () => {
                 inexplicable Home Improvement noise as he pulls the trigger on
                 the sander and attacks.
               </h6>
+              <h6
+                onClick={() => beginBattle()}
+                className="buttonText"
+              >
+                CONTINUE
+              </h6>
             </Container>
           );
         }
+      }
 
+      const beginBattle = () => {
+        setBattleTim(true);
+        setTen(false)
+        dispatch(toggleEnemyDisplay(true));
 
       }
+
 
 
   // console.log("1", questionOneInput);
@@ -647,6 +662,7 @@ const ChapterTwo = () => {
       {nine && renderNine()}
       {ten && renderTen()}
       {playerDidNotEnterAnswer && <h1>THIS IS AN UNACCEPTABLE ANSWER!</h1>}
+      {battleTim && <Battle enemy={timAllen}/>}
     </Container>
   );
 }

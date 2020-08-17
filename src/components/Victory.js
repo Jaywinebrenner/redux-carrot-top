@@ -20,6 +20,9 @@ import carrotTop from "../media/carrot-top.png";
 import MainDisplay from "./MainDisplay";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
+import { emoPhilips } from "../constants/Monsters";
+import { timAllen } from "../constants/Monsters";
+import { judyTenuda } from "../constants/Monsters";
 
 const Victory = (props, { isRunVisible }) => {
 
@@ -33,20 +36,15 @@ const Victory = (props, { isRunVisible }) => {
   const [lootResultYes, setLootResultYes] = useState(false);
   const [lootResultNo, setLootResultNo] = useState(false);
 
-  // Prop passed via Redirect Component on BattleNewApproach
-  let setCreateCharacterVisible = props.location.setCreateCharacterVisible;
-
-  console.log("HITS ON VICTORY", playerHitpoints);
+  const chapterOne = useSelector((state) => state.chapterOne);
+  const chapterTwo = useSelector((state) => state.chapterTwo);
 
   const renderVictoryMessage = () => {
     return (
       <Container>
         <h4 className="deadText">
-          With one last crushing blow, Emo Philips lets out an ungodly howl and
-          begins to convulse. His marionette-like frame swivels in your
-          direction. "You will never topple The Illuminati of Laughter," he
-          squeaks with a mild smirk on his blood-soaked face. He shoots you one
-          final wild-eyed stare and crumples to the ground. You are...
+          {chapterOne && emoPhilips.died}
+          {chapterTwo && timAllen.died}
         </h4>
         <h1 className="areDeadText">VICTORIOUS</h1>
         <h1

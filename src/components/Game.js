@@ -11,6 +11,7 @@ import { useSelector, useDispatch } from "react-redux";
 import CreateCharacter from "./CreateCharacter";
 import ChapterOne from './ChapterOne';
 import ChapterTwo from "./ChapterTwo";
+import ChapterThree from "./ChapterThree";
 import Battle from "./Battle";
 // import { emoPhilips } from "../constants/Monsters";
 import ReactHowler from "react-howler";
@@ -28,6 +29,8 @@ const Game = () => {
    const createCharacter = useSelector((state) => state.createCharacter);
    const chapterOne = useSelector((state) => state.chapterOne);
    const chapterTwo = useSelector((state) => state.chapterTwo);
+  const chapterThree = useSelector((state) => state.chapterThree);
+
    const battleVisible = useSelector(
      (state) => state.battleVisible,
    );
@@ -37,11 +40,12 @@ const Game = () => {
       (state) => state.enemyDisplayVisible,
     );
 
-    console.log("GAME STATE createCharacter", createCharacter);
-    console.log("GAME STATE chapterOne", chapterOne);
-    console.log("GAME STATE chapterTwo", chapterTwo);
-    console.log("GAME STATE createCharacter", createCharacter);
-    console.log("GAME STATE battleVisible", battleVisible);
+    console.log("GAME createCharacter", createCharacter);
+    console.log("GAME chapterOne", chapterOne);
+    console.log("GAME chapterTwo", chapterTwo);
+    console.log("GAME chapterThree", chapterThree);
+    console.log("GAME createCharacter", createCharacter);
+    console.log("GAME battleVisible", battleVisible);
 
   //  console.log("EMO ON GAME", enemy.enemy.name);
   console.log("ENEMY DISPLAY VISIBLE?", enemyDisplayVisible);
@@ -81,7 +85,7 @@ const Game = () => {
           <Col className="stats">
             <Stats />
           </Col>
-          <Col className="enemyDisplay" >
+          <Col className="enemyDisplay">
             {" "}
             {enemyDisplayVisible && renderEnemyDisplay()}
           </Col>
@@ -95,6 +99,7 @@ const Game = () => {
             {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
             {chapterTwo && <ChapterTwo />}
+            {chapterThree && <ChapterThree />}
             {/* {battleVisible && <Battle/>} */}
           </Col>
         </Row>

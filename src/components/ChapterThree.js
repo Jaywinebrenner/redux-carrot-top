@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import {emoPhilips}  from "../constants/Monsters";
+import { emoPhilips } from "../constants/Monsters";
 import { AREAONE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Battle from './Battle'
+import Battle from "./Battle";
 import {
   changeName,
   changeWeapon,
@@ -18,12 +18,11 @@ import {
   toggleChapterTwo,
   changeDefence,
   toggleEnemyDisplay,
-  toggleBattleDisplay
+  toggleBattleDisplay,
 } from "../actions";
-import Game from './Game';
+import Game from "./Game";
 
 const ChapterOne = () => {
-
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(false);
   const [isAreaOneDisplayed, setIsAreaOneDisplayed] = useState(false);
@@ -31,7 +30,6 @@ const ChapterOne = () => {
   const [isAreaOneFourDisplayed, setIsAreaOneFourDisplayed] = useState(false);
   const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
   const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
-
 
   const dispatch = useDispatch();
 
@@ -41,8 +39,8 @@ const ChapterOne = () => {
   const renderOne = () => {
     return (
       <div>
-        <h1>Chapter One</h1>
-        <h6>Domain of Thy Unspeakable Lilth Menace</h6>
+        <h1>Chapter Three</h1>
+        <h6>The Succubus of Sound</h6>
         <div
           onClick={() => {
             setOne(false);
@@ -195,7 +193,7 @@ const ChapterOne = () => {
             setBattleEmo(true);
             setIsAreaOneSixDisplayed(false);
             dispatch(toggleEnemyDisplay(true));
-            dispatch(toggleBattleDisplay(true))
+            dispatch(toggleBattleDisplay(true));
             // dispatch(toggleCreateCharacter(false));
             // dispatch(toggleChapterOne(false));
             // setIsEmoImageVisible(true);
@@ -208,21 +206,17 @@ const ChapterOne = () => {
     );
   };
 
-
-
   return (
     <div>
+
       {one && renderOne()}
-      {two && renderTwo()}
+      {/* {two && renderTwo()}
       {isAreaOneThreeDisplayed && renderAreaOneThree()}
       {isAreaOneFourDisplayed && renderAreaOneFour()}
       {isAreaOneFiveDisplayed && renderAreaOneFive()}
       {isAreaOneSixDisplayed && renderAreaOneSix()}
 
-      {battleEmo && <Battle enemy={emoPhilips}/>}
-      {/* {battleEmo && Battle(emoPhilips)} */}
-      {/* {battleEmo && <Game enemy={emoPhilips}/>} */}
-
+      {battleEmo && <Battle enemy={emoPhilips} />}  */}
     </div>
   );
 };

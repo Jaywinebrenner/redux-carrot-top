@@ -14,6 +14,7 @@ import {
   toggleBattleDisplay,
   toggleEnemyDisplay,
   toggleChapterTwo,
+  toggleChapterThree,
 } from "../actions";
 import Battle from "./Battle";
 import carrotTop from "../media/carrot-top.png";
@@ -40,6 +41,9 @@ const Victory = (props, { isRunVisible }) => {
   const chapterTwo = useSelector((state) => state.chapterTwo);
  console.log("Chapter 1 ", chapterOne);
   console.log("Chapter 2 ", chapterTwo);
+
+  console.log("on VICTORY, chapterONe", chapterOne);
+  console.log("on VICTORY, chapterTwo,", chapterTwo);
 
   const renderVictoryMessage = () => {
     return (
@@ -137,9 +141,11 @@ const Victory = (props, { isRunVisible }) => {
 
   const goBackToGame = () => {
     dispatch(toggleChapterOne(false));
+    dispatch(toggleChapterTwo(false));
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleEnemyDisplay(false))
-    dispatch(toggleChapterTwo(false));
+    chapterOne && dispatch(toggleChapterTwo(true));
+    chapterTwo && dispatch(toggleChapterThree(true));
     // setCreateCharacterVisible(false);
     // setLootResultYes(false);
     // setLootResultNo(false);

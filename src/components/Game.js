@@ -28,13 +28,13 @@ const Game = () => {
    const createCharacter = useSelector((state) => state.createCharacter);
    const chapterOne = useSelector((state) => state.chapterOne);
    const chapterTwo = useSelector((state) => state.chapterTwo);
+   const battleVisible = useSelector(
+     (state) => state.battleVisible,
+   );
 
 
     const enemyDisplayVisible = useSelector(
       (state) => state.enemyDisplayVisible,
-    );
-    const battleVisible = useSelector(
-      (state) => state.battleVisible,
     );
 
     console.log("GAME STATE createCharacter", createCharacter);
@@ -92,8 +92,8 @@ const Game = () => {
         <Row>
           <Col className="mainDisplayOne">
             <MainDisplay />
-            {/* {createCharacter && <CreateCharacter />}
-            {chapterOne && <ChapterOne />} */}
+            {createCharacter && <CreateCharacter />}
+            {chapterOne && <ChapterOne />}
             {chapterTwo && <ChapterTwo />}
             {/* {battleVisible && <Battle/>} */}
           </Col>

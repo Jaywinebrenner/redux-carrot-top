@@ -1,7 +1,6 @@
 
 import Container from "react-bootstrap/Container";
 import React, { useState, useEffect } from "react";
-import { emoPhilips } from "../constants/Monsters";
 import { AREAONE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
 import Row from "react-bootstrap/Row";
@@ -12,6 +11,8 @@ import {
   incrementPlayerHp,
   decrementPlayerHp,
   toggleEnemyDisplay,
+  toggleBattleDisplay,
+  setEnemyHp
 } from "../actions";
 import Game from "./Game";
 
@@ -22,7 +23,7 @@ const ChapterTwo = () => {
 
   const battleVisible = useSelector((state) => state.battleVisible);
 
-  console.log("battle visible -", battleVisible);
+  // console.log("battle visible -", battleVisible);
 
   const armor = useSelector((state) => state.armor);
   const [battleTim, setBattleTim] = useState(false);
@@ -389,7 +390,7 @@ const ChapterTwo = () => {
       };
 
     const [questionFourInput, setQuestionFourInput] = useState("");
-    console.log("QUESTION 3", questionThreeInput)
+    // console.log("QUESTION 3", questionThreeInput)
 
     const renderSeven = () => {
       if (
@@ -645,9 +646,11 @@ const ChapterTwo = () => {
       }
 
       const beginBattle = () => {
+        dispatch(setEnemyHp(timAllen.hitPoints));
         setBattleTim(true);
         setTen(false)
         dispatch(toggleEnemyDisplay(true));
+        dispatch(toggleBattleDisplay(true))
 
       }
 

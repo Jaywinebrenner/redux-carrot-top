@@ -13,6 +13,7 @@ import {
   incrementPlayerHp,
   changeArmor,
   toggleChapterOne,
+  toggleChapterTwo,
   toggleBattleDisplay,
 } from "../actions";
 import { Container } from "react-bootstrap";
@@ -30,7 +31,6 @@ let playerAttackRange = null;
 let enemyAttackRange = null;
 
 const Battle = (enemy) => {
-
 
   const dispatch = useDispatch();
 
@@ -59,21 +59,28 @@ const Battle = (enemy) => {
   const playerDefence = useSelector((state) => state.playerDefence);
   const enemyHitpoints = useSelector((state) => state.enemyHitpoints);
 
+  const createCharacter = useSelector((state) => state.createCharacter);
+  const chapterOne = useSelector((state) => state.chapterOne);
+  const chapterTwo = useSelector((state) => state.chapterTwo);
+  const battleVisible = useSelector((state) => state.battleVisible);
+
+    console.log("ENEMY NAME ON BATTLE", enemy.enemy.name);
+    console.log("ENEMY HIT POINTS on BATTLE", enemyHitpoints);
+
+    
+
   useEffect(() => {
     const loadEmo = () => {
-
+    if (enemy.enemy.name === "Emo Philips") {
       dispatch(setEnemyHp(enemy.enemy.hitPoints));
+    }
     };
-
-    console.log("name INIT", enemy.enemy.nameInitiative);
-
     loadEmo();
+
+
   }, []);
 
-    console.log("STAT-DEFENCE", playerDefence);
-    console.log("STAT-DAMAGE", playerDamage);
-     console.log("STAT-HITPOINTS", playerHitpoints);
-     console.log("STAT-ENEMY HITPOINS", enemyHitpoints);
+
 
 
 
@@ -168,7 +175,7 @@ const Battle = (enemy) => {
     enemyAttackRoll,
     doubleDamageVsPlayerAmount,
   ) => {
-    console.log("DOULBE DAMAGE vs PLAYER", doubleDamageVsPlayerAmount);
+    // console.log("DOULBE DAMAGE vs PLAYER", doubleDamageVsPlayerAmount);
 
     return (
       <Container>
@@ -199,7 +206,7 @@ const Battle = (enemy) => {
     playerAttackRoll,
     doubleDamageVsEnemyAmount,
   ) => {
-    console.log("DOULBE DAMAGE vs ENEMY", doubleDamageVsEnemyAmount);
+    // console.log("DOULBE DAMAGE vs ENEMY", doubleDamageVsEnemyAmount);
 
     return (
       <Container>
@@ -212,10 +219,10 @@ const Battle = (enemy) => {
     );
   };
 
-  console.log("Emo Philips has this many Hit Points", enemyHitpoints);
-  console.log("You have this many Hit Points", playerHitpoints);
-  console.log("isPlayerWonInitiativeVisible", isPlayerWonInitiativeVisible);
-  console.log("__________________________________________________");
+  // console.log("Emo Philips has this many Hit Points", enemyHitpoints);
+  // console.log("You have this many Hit Points", playerHitpoints);
+  // console.log("isPlayerWonInitiativeVisible", isPlayerWonInitiativeVisible);
+  // console.log("__________________________________________________");
 
   // INITIATIVE
 
@@ -231,8 +238,8 @@ const Battle = (enemy) => {
     setIsPlayerWonInitiativeVisible(false);
     setIsEnemyWonInitiativeVisible(false);
     if (initiativeRoll >= 5) {
-      console.log("INITIATIVE ROLL= ", initiativeRoll);
-      console.log("You have won intiiative and attack the foul createure");
+      // console.log("INITIATIVE ROLL= ", initiativeRoll);
+      // console.log("You have won intiiative and attack the foul createure");
       playerAttack();
       enemyAttack();
       setIsPlayerWonInitiativeVisible(true);
@@ -242,8 +249,8 @@ const Battle = (enemy) => {
         </Container>
       );
     } else {
-      console.log("INITIATIVE ROLL= ", initiativeRoll);
-      console.log("Your Foe has won intiiative and attacks you");
+      // console.log("INITIATIVE ROLL= ", initiativeRoll);
+      // console.log("Your Foe has won intiiative and attacks you");
       enemyAttack();
       playerAttack();
       setIsEnemyWonInitiativeVisible(true);
@@ -292,13 +299,13 @@ const Battle = (enemy) => {
              isPlayerDeadCheck();
            } else {
              setEnemyMissed(true);
-             console.log("YOUR FOE HAS SWUNG AND MISSED YOU");
+            //  console.log("YOUR FOE HAS SWUNG AND MISSED YOU");
            }
     return enemyAttackRoll;
   };
 
   const isPlayerDeadCheck = () => {
-    console.log("IN DEAD", playerHitpoints);
+    // console.log("IN DEAD", playerHitpoints);
     if (playerHitpoints <= 0) {
       return (
         <Redirect

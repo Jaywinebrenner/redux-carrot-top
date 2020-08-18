@@ -115,11 +115,11 @@ const ChapterOne = () => {
           <div
             onClick={() => {
               setBattleEmo(true);
-              // setIsEmoImageVisible(true);
               setIsAreaOneThreeDisplayed(false);
               dispatch(toggleEnemyDisplay(true));
-              // dispatch(toggleChapterOne(false));
               dispatch(toggleBattleDisplay(true));
+              // dispatch(toggleChapterOne(false));
+              // setIsEmoImageVisible(true);
             }}
             className="continueButtonWrapper"
           >
@@ -144,8 +144,8 @@ const ChapterOne = () => {
             setIsAreaOneFourDisplayed(false);
             setBattleEmo(true);
             dispatch(toggleEnemyDisplay(true));
-            // dispatch(toggleChapterOne(false));
             dispatch(toggleBattleDisplay(true));
+            // dispatch(toggleChapterOne(false));
             // setIsEmoImageVisible(true);
           }}
           className="continueButtonWrapper"
@@ -167,11 +167,11 @@ const ChapterOne = () => {
         <div
           onClick={() => {
             setBattleEmo(true);
-            // setIsEmoImageVisible(true);
             setIsAreaOneFiveDisplayed(false);
             dispatch(toggleEnemyDisplay(true));
-            // dispatch(toggleChapterOne(false));
             dispatch(toggleBattleDisplay(true));
+            // dispatch(toggleChapterOne(false));
+            // setIsEmoImageVisible(true);
           }}
           className="continueButtonWrapper"
         >
@@ -193,12 +193,12 @@ const ChapterOne = () => {
         <div
           onClick={() => {
             setBattleEmo(true);
-            // setIsEmoImageVisible(true);
             setIsAreaOneSixDisplayed(false);
             dispatch(toggleEnemyDisplay(true));
+            dispatch(toggleBattleDisplay(true))
             // dispatch(toggleCreateCharacter(false));
             // dispatch(toggleChapterOne(false));
-            dispatch(toggleBattleDisplay(true))
+            // setIsEmoImageVisible(true);
           }}
           className="emoButtonWrapper"
         >
@@ -207,6 +207,7 @@ const ChapterOne = () => {
       </div>
     );
   };
+
 
   return (
     <div>

@@ -36,7 +36,7 @@ export const emoPhilips = {
              "Tim Allen",
              "The lead actor of Home Improvement",
            ],
-           hitPoints: 20,
+           hitPoints: 30,
            damage: 4,
            defence: 10,
            intro:

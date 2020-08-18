@@ -38,6 +38,8 @@ const Victory = (props, { isRunVisible }) => {
 
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
+ console.log("Chapter 1 ", chapterOne);
+  console.log("Chapter 2 ", chapterTwo);
 
   const renderVictoryMessage = () => {
     return (

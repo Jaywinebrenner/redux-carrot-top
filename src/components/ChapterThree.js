@@ -63,10 +63,11 @@ const ChapterThree = () => {
     return (
       <Container>
         <h6>{AREATHREE.one}</h6>
+
         <div
           onClick={() => {
-            setTwo(false)
-            setThree(true)          
+            setTwo(false);
+            setThree(true);
           }}
         >
           <h6 className="buttonText">CONTINUE</h6>
@@ -75,63 +76,38 @@ const ChapterThree = () => {
     );
   };
 
-  const renderThree = () => {
-    return (
-      <Container>
-        <h6>{AREATHREE.two}</h6>
-        <h6>{AREATHREE.three}</h6>
-        <h6>Do you:</h6>
-        <Row className="answerGridWrapper">
-          <Col className="answerGridOne" id="butterKnifeSelection">
-            <h6
-              onClick={() => {
-                setThree(false);
-                setFour(true);
-              }}
-            >
-              Open Door Number One
-            </h6>
-          </Col>
-
-          <Col className="answerGridTwo">
-            <h6 onClick={() => {
-                setThree(false);
-                setFour(true);
-              }}>Open Door Number Two</h6>
-          </Col>
-
-          <Col className="answerGridThree">
-            <h6 onClick={() => {
-                setThree(false);
-                setFour(true);
-              }}>Open Door Number Three</h6>
-          </Col>
-
-          <Col className="answerGridFour">
-            <h6 onClick={() => {
-                setThree(false);
-                setFour(true);
-              }}>Run from this vile place</h6>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-
+    const renderThree = () => {
+      return (
+        <Container>
+          <h6>{AREATHREE.two}</h6>
+          <h6>{AREATHREE.three}</h6>
+          <h1
+            className="buttonText"
+            onClick={() => {
+              setThree(false);
+              setFour(true);
+            }}
+          >
+            CONTINUE
+          </h1>
+        </Container>
+      );
+    };
 
   const renderFour = () => {
     return (
       <Container>
         <h6>
-          Before grasping the door handle, a terrible shuffling noise is heard
-          over head. Looking up, a human figure is seen flipping through the
-          rafters in impressive Olympic fashion and lands several yards away.
+          "Hey Buuuuuuuudy," drawls Pauly Shore as he unsheaths a stiletto knife from the front pocket of his multi-colored drug rug poncho.
         </h6>
-        <h6>"Hey Buuuuuuuudy," </h6>
-        <h1 className="buttonText" onClick={beginBattle}>CONTINUE</h1>
+        <h6>"The Weeeeasel is here to carve you into bit sized bits. I'm gonna suck the marrow from your bones and pop your the eyes right out of your skull, buuuuuuuudy!" Pauly Shore shakes his curly tresses and lunges at you...</h6>
+        <h1 className="buttonText" onClick={beginBattle}>
+          CONTINUE
+        </h1>
       </Container>
     );
-  };
+  }
+
 
 const beginBattle = () => {
   setBattlePauly(true)

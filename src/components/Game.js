@@ -12,6 +12,7 @@ import CreateCharacter from "./CreateCharacter";
 import ChapterOne from './ChapterOne';
 import ChapterTwo from "./ChapterTwo";
 import ChapterThree from "./ChapterThree";
+import ChapterFour from "./ChapterFour";
 import Battle from "./Battle";
 // import { emoPhilips } from "../constants/Monsters";
 import ReactHowler from "react-howler";
@@ -30,6 +31,7 @@ const Game = () => {
    const chapterOne = useSelector((state) => state.chapterOne);
    const chapterTwo = useSelector((state) => state.chapterTwo);
   const chapterThree = useSelector((state) => state.chapterThree);
+  const chapterFour = useSelector((state) => state.chapterFour);
 
    const battleVisible = useSelector(
      (state) => state.battleVisible,
@@ -96,10 +98,11 @@ const Game = () => {
         <Row>
           <Col className="mainDisplayOne">
             <MainDisplay />
-            {/* {createCharacter && <CreateCharacter />}
+            {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
-            {chapterTwo && <ChapterTwo />} */}
+            {chapterTwo && <ChapterTwo />}
             {chapterThree && <ChapterThree />}
+            {chapterFour && <ChapterFour />}
             {/* {battleVisible && <Battle/>} */}
           </Col>
         </Row>

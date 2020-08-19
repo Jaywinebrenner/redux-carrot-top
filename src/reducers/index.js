@@ -17,6 +17,7 @@ import enemyHitpoints from './enemyHitpoints';
 import enemyDisplayVisible from "./enemyDisplayVisible";
 import battleVisible from "./battleVisible";
 import chapterThree from './chapterThree';
+import chapterFour from './chapterFour';
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -29,14 +30,15 @@ const allReducers = combineReducers({
   weapon: weapon,
   mainDisplayOne: mainDisplayOne,
   mainDisplayTwo: mainDisplayTwo,
-  createCharacter: createCharacter,
-  chapterOne: chapterOne,
-  chapterTwo: chapterTwo,
-  chapterThree: chapterThree,
   mainDisplayButtons: mainDisplayButtons,
   enemyHitpoints: enemyHitpoints,
   enemyDisplayVisible: enemyDisplayVisible,
   battleVisible: battleVisible,
+  createCharacter: createCharacter,
+  chapterOne: chapterOne,
+  chapterTwo: chapterTwo,
+  chapterThree: chapterThree,
+  chapterFour: chapterFour,
 });
 
 export default allReducers

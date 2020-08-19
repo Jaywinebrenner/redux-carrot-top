@@ -15,6 +15,7 @@ import {
   toggleEnemyDisplay,
   toggleChapterTwo,
   toggleChapterThree,
+  toggleChapterFour
 } from "../actions";
 import Battle from "./Battle";
 import carrotTop from "../media/carrot-top.png";
@@ -40,6 +41,7 @@ const Victory = (props, { isRunVisible }) => {
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
   const chapterThree = useSelector((state) => state.chapterThree);
+  const chapterFour = useSelector((state) => state.chapterFour);
 
    console.log("Chapter 1 ", chapterOne);
   console.log("Chapter 2 ", chapterTwo);
@@ -147,10 +149,13 @@ const Victory = (props, { isRunVisible }) => {
   const goBackToGame = () => {
     dispatch(toggleChapterOne(false));
     dispatch(toggleChapterTwo(false));
+    dispatch(toggleChapterThree(false));
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleEnemyDisplay(false))
     chapterOne && dispatch(toggleChapterTwo(true));
     chapterTwo && dispatch(toggleChapterThree(true));
+    chapterThree && dispatch(toggleChapterFour(true));
+    // chapterFour && dispatch(toggleChapterFive(true));
   };
 
   const renderLootResultNo = () => {
@@ -163,14 +168,13 @@ const Victory = (props, { isRunVisible }) => {
             {chapterThree && paulyShore.lootFour}
           </h6>
           <Link
-            className="linkButton"
             onClick={() => {
               goBackToGame();
             }}
             style={{ textDecoration: "none", fontFamily: "Red Rose" }}
             to="/Game"
           >
-            CONTINUE
+            <h1 className="buttonText">CONTINUE</h1>
           </Link>
         </Container>
       );

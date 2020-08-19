@@ -75,26 +75,6 @@ export const toggleCreateCharacter = (boolean) => {
   };
 };
 
-export const toggleChapterOne = (boolean) => {
-  return {
-    type: "TOGGLE_CHAPTER_ONE",
-    payload: boolean,
-  };
-};
-
-export const toggleChapterTwo = (boolean) => {
-  return {
-    type: "TOGGLE_CHAPTER_TWO",
-    payload: boolean,
-  };
-};
-
-export const toggleChapterThree = (boolean) => {
-  return {
-    type: "TOGGLE_CHAPTER_THREE",
-    payload: boolean,
-  };
-};
 
 export const decrementEnemyHp = (number) => {
   return {
@@ -127,6 +107,34 @@ export const toggleEnemyDisplay = (boolean) => {
 export const toggleBattleDisplay = (boolean) => {
   return {
     type: "TOGGLE_BATTLE_DISPLAY",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterOne = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_ONE",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterTwo = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_TWO",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterThree = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_THREE",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterFour = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_FOUR",
     payload: boolean,
   };
 };

@@ -73,7 +73,7 @@ export const emoPhilips = {
       "You riffle through Pauly Shores carcass in hopes of finding something useful for your journy and find only a tie-dyed bandana.",
     lootTwo: "Do you wear the bandana?",
     lootThree:
-      "You gingerly wrap the bandana around your head and with a quick snapping motion, knot it tight. Alas, it begin to burn like the firey depths of hell. You convulse and remove the garment leaving your forehead blistering in pain.",
+      "You gingerly wrap the bandana around your head and with a quick snapping motion, knot it tight. It's garish colors are off putting and it's fit awkward.",
     lootFour:
       "You deem it wise not to wear accoutrements from such fell beasts.",
   };
@@ -128,7 +128,7 @@ export const emoPhilips = {
         died:
           'A mighty blow connects with Andrew Dice Clays shoulder, separating his arm from his torso. A river of blood paints the floor. A look of shock and irritation envelops his face as he frantically pulls out a cigarette.  "Little boy Blew," he exclaims as he explodes into a torrent of gore.',
         lootOne:
-          "You search the area where Andrew Dice Clay once stood, now a wet pile of crimson. You find a package of Marlboro Red cigarettes with book of matches stuffed into the celophane.",
+          "You search the area where Andrew Dice Clay once stood, now a wet pile of crimson. You find a package of Marlboro Red cigarettes with book of matches stuffed into the cellophane.",
         lootTwo: "Do you smoke a cigarette?",
         lootThree:
           "You light up a cigarette, inhaling the smoke deep into your lungs. Your body instantly recoils as you burst into a coughing fit",
@@ -164,6 +164,35 @@ export const emoPhilips = {
         lootFour:
           "You snort some mucus into your mouth and spit on the vile article of clothing.",
       };
+
+      export const gallagher = {
+          name: "Gallagher",
+          nameInitiative: [
+            "The Lord of Wreckage",
+            "Stripe-shirted Hellspawn",
+            " Hammer Weidling Hellion",
+          ],
+          nameAttack: [
+            "The Hammer Weidling Hellion",
+            "Gallagher",
+            "The Lord of Wreckage",
+          ],
+          hitPoints: 15,
+          damage: 8,
+          defence: 5,
+          intro:
+            "You stand face to face with The Dark Lord of Wreckage himself...",
+          imageName: "gallagherImage",
+          died:
+            'You gash a ripping hole across the torso of Gallagher as his black heart plummets to the ground.',
+          lootOne:
+            "You search the area where Andrew Dice Clay once stood, now a wet pile of crimson. You find a package of Marlboro Red cigarettes with book of matches stuffed into the cellophane.",
+          lootTwo: "Do you smoke a cigarette?",
+          lootThree:
+            "You light up a cigarette, inhaling the smoke deep into your lungs. Your body instantly recoils as you burst into a coughing fit",
+          lootFour:
+            "You crush the pack of cigarettes and toss them aside.",
+        };
 
 // DEFENSE IS THE NUMBER TO HIT ON A ROLL OF 20. Higher the better.
 

@@ -19,8 +19,9 @@ import {
   toggleChapterFive,
   toggleChapterSix,
   toggleChapterSeven,
-  toggleChapterEight
-
+  toggleChapterEight,
+  incrementPlayerDefence,
+  decrementPlayerDefence,
 } from "../actions";
 import Battle from "./Battle";
 import carrotTop from "../media/carrot-top.png";
@@ -44,6 +45,8 @@ const Victory = (props, { isRunVisible }) => {
   const [lootResultYes, setLootResultYes] = useState(false);
   const [lootResultNo, setLootResultNo] = useState(false);
 
+   const playerDefence = useSelector((state) => state.playerDefence);
+
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
   const chapterThree = useSelector((state) => state.chapterThree);
@@ -54,7 +57,8 @@ const Victory = (props, { isRunVisible }) => {
    console.log("Chapter 1 ", chapterOne);
   console.log("Chapter 2 ", chapterTwo);
     console.log("Chapter 3 ", chapterThree);
-
+     console.log("Chapter 7 ", chapterSeven);
+console.log("Player defence", playerDefence);
 
   const renderVictoryMessage = () => {
     return (
@@ -127,15 +131,23 @@ const Victory = (props, { isRunVisible }) => {
     );
   };
 
-  const lootResults = () => {
-    setLootResultYes(true);
-    setLootOptionsVisible(false);
-    if(chapterThree === true) {
-      dispatch(decrementPlayerHp(tenSidedDie));
-    } else {
-      dispatch(incrementPlayerHp(tenSidedDie));
-    }
-  }
+
+    const lootResults = () => {
+      setLootResultYes(true);
+      setLootOptionsVisible(false);
+      if (chapterSix == true) {
+        dispatch(decrementPlayerHp(tenSidedDie));
+      }
+      if (chapterSeven === true) {
+        dispatch(incrementPlayerDefence(3));
+      }
+      if (chapterOne === true || chapterTwo === true || chapterFive == true) {
+        dispatch(incrementPlayerHp(tenSidedDie));
+      }
+      if (chapterThree === true) {
+        dispatch(decrementPlayerDefence(2))
+      }
+    };
 
   const renderLootResultYes = () => {
     if (lootResultYes)
@@ -149,11 +161,18 @@ const Victory = (props, { isRunVisible }) => {
             {chapterSix && andrewDiceClay.lootThree}
             {chapterSeven && samKinison.lootThree}
           </h6>
-          {chapterThree ? (
-            <h6>You suffer {tenSidedDie} hit points of damage.</h6>
-          ) : (
-            <h6>You recieve {tenSidedDie} hit points.</h6>
-          )}
+
+          {chapterOne ||
+            (chapterTwo ||
+              chapterFive 
+              && (
+              <h6>You receive {tenSidedDie} hit points.</h6>
+            ))}
+          {(chapterSix && (
+              <h6>You suffer {tenSidedDie} hit points of damage.</h6>
+            ))}
+          {chapterSeven && <h6>You gain 3 Defense points.</h6>}
+          {chapterThree && <h6>You lose 2 Defense points.</h6>}
 
           <Link
             onClick={() => {
@@ -177,6 +196,7 @@ const Victory = (props, { isRunVisible }) => {
     dispatch(toggleChapterFour(false));
     dispatch(toggleChapterFive(false));
     dispatch(toggleChapterSix(false));
+     dispatch(toggleChapterSeven(false));
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleEnemyDisplay(false))
     chapterOne && dispatch(toggleChapterTwo(true));
@@ -184,8 +204,8 @@ const Victory = (props, { isRunVisible }) => {
     chapterThree && dispatch(toggleChapterFour(true));
     // chapterFour && dispatch(toggleChapterFive(true));
     chapterFive && dispatch(toggleChapterEight(true));
-    chapterSix && dispatch(toggleChapterSeven(true));
-    // chapterSeven && dispatch(toggleChapterEight(true));
+    chapterSix && dispatch(toggleChapterEight(true));
+    chapterSeven && dispatch(toggleChapterEight(true));
   };
 
   const renderLootResultNo = () => {

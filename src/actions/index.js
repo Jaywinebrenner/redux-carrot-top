@@ -90,6 +90,20 @@ export const incrementEnemyHp = (number) => {
   };
 };
 
+export const incrementPlayerDefence = (number) => {
+  return {
+    type: "INCREMENT_PLAYER_DEFENCE",
+    payload: number,
+  };
+};
+
+export const decrementPlayerDefence = (number) => {
+  return {
+    type: "DECREMENT_PLAYER_DEFENCE",
+    payload: number,
+  };
+};
+
 export const setEnemyHp = (number) => {
   return {
     type: "SET_ENEMY_HP",

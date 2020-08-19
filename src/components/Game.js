@@ -13,6 +13,10 @@ import ChapterOne from './ChapterOne';
 import ChapterTwo from "./ChapterTwo";
 import ChapterThree from "./ChapterThree";
 import ChapterFour from "./ChapterFour";
+import ChapterFive from "./ChapterFive";
+import ChapterSix from "./ChapterSix";
+import ChapterSeven from "./ChapterSeven";
+import ChapterEight from "./ChapterEight";
 import Battle from "./Battle";
 // import { emoPhilips } from "../constants/Monsters";
 import ReactHowler from "react-howler";
@@ -32,6 +36,10 @@ const Game = () => {
    const chapterTwo = useSelector((state) => state.chapterTwo);
   const chapterThree = useSelector((state) => state.chapterThree);
   const chapterFour = useSelector((state) => state.chapterFour);
+  const chapterFive = useSelector((state) => state.chapterFive);
+  const chapterSix = useSelector((state) => state.chapterSix);
+  const chapterSeven = useSelector((state) => state.chapterSeven);
+  const chapterEight = useSelector((state) => state.chapterEight);
 
    const battleVisible = useSelector(
      (state) => state.battleVisible,
@@ -46,6 +54,11 @@ const Game = () => {
     console.log("GAME chapterOne", chapterOne);
     console.log("GAME chapterTwo", chapterTwo);
     console.log("GAME chapterThree", chapterThree);
+    console.log("GAME chapterFour", chapterFour);
+    console.log("GAME chapterFive", chapterFive);
+    console.log("GAME chapterSix", chapterSix);
+    console.log("GAME chapterSeven", chapterSeven);
+    console.log("GAME chapterEight", chapterEight);
     console.log("GAME createCharacter", createCharacter);
     console.log("GAME battleVisible", battleVisible);
 
@@ -98,12 +111,15 @@ const Game = () => {
         <Row>
           <Col className="mainDisplayOne">
             <MainDisplay />
-            {createCharacter && <CreateCharacter />}
+            {/* {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
             {chapterTwo && <ChapterTwo />}
-            {chapterThree && <ChapterThree />}
+            {chapterThree && <ChapterThree />} */}
             {chapterFour && <ChapterFour />}
-            {/* {battleVisible && <Battle/>} */}
+            {chapterFive && <ChapterFive />}
+            {chapterSix && <ChapterSix />} 
+            {chapterSeven && <ChapterSeven />} 
+            {chapterEight && <ChapterEight/>}
           </Col>
         </Row>
         <ReactHowler

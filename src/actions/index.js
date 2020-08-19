@@ -138,3 +138,31 @@ export const toggleChapterFour = (boolean) => {
     payload: boolean,
   };
 };
+
+export const toggleChapterFive = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_FIVE",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterSix = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_SIX",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterSeven = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_SEVEN",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterEight = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_EIGHT",
+    payload: boolean,
+  };
+};

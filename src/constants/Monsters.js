@@ -53,12 +53,6 @@ export const emoPhilips = {
              "You deem it wise not to put unknown powders up your nose. You kick Tim Allen's carcass and continue forth.",
          };
 
-  export const judyTenuda = {
-    name: "Judy Tenuda",
-    hitPoints: 18,
-    damage: 7,
-    defence: 1,
-  };
 
   export const paulyShore = {
     name: "Pauly Shore",
@@ -83,6 +77,93 @@ export const emoPhilips = {
     lootFour:
       "You deem it wise not to wear accoutrements from such fell beasts.",
   };
+
+  export const judyTenuda = {
+      name: "Judy Tenuda",
+      nameInitiative: [
+        "The Demoness of Hideous Noise",
+        "The Succubus of Sound",
+        " the Siren of Madness",
+      ],
+      nameAttack: [
+        "The Demoness of Hideous Noise",
+        "Judy Tenuda",
+        "The Succubus of Sound",
+      ],
+      hitPoints: 10,
+      damage: 3,
+      defence: 12,
+      intro:
+        "You stand face to face with The Demoness of Hideous Noise herself...",
+      imageName: "judyTenudaImage",
+      died:
+        "A mighty blow connects with Judy's shoulder, separating her arm from her torso. A river of blood paints the floor. She writhes and cackles madeningly and explodes into a torrent of gore.",
+      lootOne:
+        "You search the area where Judy Tenuda once stood, now a wet pile of crimson. Much to your surprise, you find a croissant - a strange relic from the old world. How a thing like this could exist in this putrid world that has come to be is inexplicable.",
+      lootTwo: "Do you eat the croissant?",
+      lootThree:
+        "You close your eyes and dig your teeth into the pastry. It is soft, flakey and buttery.",
+      lootFour:
+        "You could harldy trust to eat a thing which belonged to such a vile demoness. You toss it on the ground and crush it with your boot.",
+    };
+
+      export const andrewDiceClay = {
+        name: "Andrew Dice Clay",
+        nameInitiative: [
+          "The Dark Prince of Masculinity",
+          "Leather-Clad Hellspawn",
+          " chain smoking Hellion",
+        ],
+        nameAttack: [
+          "The Dark Prince of Masculinity",
+          "Andrew Dice Clay",
+          "Leather-Clad Hellspawn",
+        ],
+        hitPoints: 20,
+        damage: 5,
+        defence: 1,
+        intro:
+          "You stand face to face with The Dark Prince of Masculinity himself...",
+        imageName: "andrewDiceClayImage",
+        died:
+          'A mighty blow connects with Andrew Dice Clays shoulder, separating his arm from his torso. A river of blood paints the floor. A look of shock and irritation envelops his face as he frantically pulls out a cigarette.  "Little boy Blew," he exclaims as he explodes into a torrent of gore.',
+        lootOne:
+          "You search the area where Andrew Dice Clay once stood, now a wet pile of crimson. You find a package of Marlboro Red cigarettes with book of matches stuffed into the celophane.",
+        lootTwo: "Do you smoke a cigarette?",
+        lootThree:
+          "You light up a cigarette, inhaling the smoke deep into your lungs. Your body instantly recoils as you burst into a coughing fit",
+        lootFour:
+          "You crush the pack of cigarettes and toss them aside.",
+      };
+
+            export const samKinison = {
+        name: "Sam Kinison",
+        nameInitiative: [
+          "The Howling Demon",
+          "Leather-Clad Hellspawn",
+          "Red-faced Berzerker",
+        ],
+        nameAttack: [
+          "The Howling Demon",
+          "Sam Kinison",
+          "Red-faced Berzerker",
+        ],
+        hitPoints: 20,
+        damage: 4,
+        defence: 3,
+        intro:
+          "You stand face to face with The Howling Demon of Endless Anger himself...",
+        imageName: "samKinisonImage",
+        died:
+          'A mighty blow connects with Sam Kinisons shoulder, separating his arm from his torso. A river of blood paints the floor. A look of shock and irritation envelops his face as he locks eyes and unleashes a deafening howl.  "ARRRRRGGGGGHHHH!" He lock eyes with you, veins undulating in his forehead as he explodes into a torrent of gore.',
+        lootOne:
+          "You search the area where Sam Kinison once stood, now a wet pile of crimson. You find his blood soaked beret.",
+        lootTwo: "Do you wear the beret?",
+        lootThree:
+          "You place the beret on your head. It slips on easily and fits like a glove.",
+        lootFour:
+          "You snort some mucus into your mouth and spit on the vile article of clothing.",
+      };
 
 // DEFENSE IS THE NUMBER TO HIT ON A ROLL OF 20. Higher the better.
 

@@ -15,16 +15,22 @@ import {
   toggleEnemyDisplay,
   toggleChapterTwo,
   toggleChapterThree,
-  toggleChapterFour
+  toggleChapterFour,
+  toggleChapterFive,
+  toggleChapterSix,
+  toggleChapterSeven,
+  toggleChapterEight
+
 } from "../actions";
 import Battle from "./Battle";
 import carrotTop from "../media/carrot-top.png";
 import MainDisplay from "./MainDisplay";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
-import { emoPhilips, paulyShore } from "../constants/Monsters";
+import { emoPhilips, paulyShore, andrewDiceClay } from "../constants/Monsters";
 import { timAllen } from "../constants/Monsters";
 import { judyTenuda } from "../constants/Monsters";
+import { samKinison } from "../constants/Monsters";
 
 const Victory = (props, { isRunVisible }) => {
 
@@ -41,7 +47,9 @@ const Victory = (props, { isRunVisible }) => {
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
   const chapterThree = useSelector((state) => state.chapterThree);
-  const chapterFour = useSelector((state) => state.chapterFour);
+  const chapterFive = useSelector((state) => state.chapterFive);
+  const chapterSix = useSelector((state) => state.chapterSix);
+  const chapterSeven = useSelector((state) => state.chapterSeven);
 
    console.log("Chapter 1 ", chapterOne);
   console.log("Chapter 2 ", chapterTwo);
@@ -55,6 +63,9 @@ const Victory = (props, { isRunVisible }) => {
           {chapterOne && emoPhilips.died}
           {chapterTwo && timAllen.died}
           {chapterThree && paulyShore.died}
+          {chapterFive && judyTenuda.died}
+          {chapterSix && andrewDiceClay.died}
+          {chapterSeven && samKinison.died}
         </h6>
         <h1 className="areDeadText">VICTORIOUS</h1>
         <h1
@@ -81,12 +92,18 @@ const Victory = (props, { isRunVisible }) => {
           {chapterOne && emoPhilips.lootOne}
           {chapterTwo && timAllen.lootOne}
           {chapterThree && paulyShore.lootOne}
+          {chapterFive && judyTenuda.lootOne}
+          {chapterSix && andrewDiceClay.lootOne}
+          {chapterSeven && samKinison.lootOne}
         </h6>
         <h6 className="lootText">
           {" "}
           {chapterOne && emoPhilips.lootTwo}
           {chapterTwo && timAllen.lootTwo}
           {chapterThree && paulyShore.lootTwo}
+          {chapterFive && judyTenuda.lootTwo}
+          {chapterSix && andrewDiceClay.lootTwo}
+          {chapterSeven && samKinison.lootTwo}
         </h6>
         <Row>
           <Col>
@@ -128,8 +145,15 @@ const Victory = (props, { isRunVisible }) => {
             {chapterOne && emoPhilips.lootThree}
             {chapterTwo && timAllen.lootThree}
             {chapterThree && paulyShore.lootThree}
+            {chapterFive && judyTenuda.lootThree}
+            {chapterSix && andrewDiceClay.lootThree}
+            {chapterSeven && samKinison.lootThree}
           </h6>
-          {chapterThree ? <h6>You suffer {tenSidedDie} hit points of damage.</h6> : <h6>You recieve {tenSidedDie} hit points.</h6>}
+          {chapterThree ? (
+            <h6>You suffer {tenSidedDie} hit points of damage.</h6>
+          ) : (
+            <h6>You recieve {tenSidedDie} hit points.</h6>
+          )}
 
           <Link
             onClick={() => {
@@ -150,12 +174,18 @@ const Victory = (props, { isRunVisible }) => {
     dispatch(toggleChapterOne(false));
     dispatch(toggleChapterTwo(false));
     dispatch(toggleChapterThree(false));
+    dispatch(toggleChapterFour(false));
+    dispatch(toggleChapterFive(false));
+    dispatch(toggleChapterSix(false));
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleEnemyDisplay(false))
     chapterOne && dispatch(toggleChapterTwo(true));
     chapterTwo && dispatch(toggleChapterThree(true));
     chapterThree && dispatch(toggleChapterFour(true));
     // chapterFour && dispatch(toggleChapterFive(true));
+    chapterFive && dispatch(toggleChapterEight(true));
+    chapterSix && dispatch(toggleChapterSeven(true));
+    // chapterSeven && dispatch(toggleChapterEight(true));
   };
 
   const renderLootResultNo = () => {
@@ -166,6 +196,9 @@ const Victory = (props, { isRunVisible }) => {
             {chapterOne && emoPhilips.lootFour}
             {chapterTwo && timAllen.lootFour}
             {chapterThree && paulyShore.lootFour}
+            {chapterFive && judyTenuda.lootFour}
+            {chapterSix && andrewDiceClay.lootFour}
+            {chapterSeven && samKinison.lootFour}
           </h6>
           <Link
             onClick={() => {

@@ -18,6 +18,10 @@ import enemyDisplayVisible from "./enemyDisplayVisible";
 import battleVisible from "./battleVisible";
 import chapterThree from './chapterThree';
 import chapterFour from './chapterFour';
+import chapterFive from "./chapterFive";
+import chapterSix from "./chapterSix";
+import chapterSeven from "./chapterSeven";
+import chapterEight from "./chapterEight";
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -39,6 +43,10 @@ const allReducers = combineReducers({
   chapterTwo: chapterTwo,
   chapterThree: chapterThree,
   chapterFour: chapterFour,
+  chapterFive: chapterFive,
+  chapterSix: chapterSix,
+  chapterSeven: chapterSeven,
+  chapterEight: chapterEight,
 });
 
 export default allReducers

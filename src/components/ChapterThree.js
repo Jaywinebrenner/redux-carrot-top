@@ -110,7 +110,7 @@ const ChapterThree = () => {
 
 
 const beginBattle = () => {
-  setBattlePauly(true)
+      setBattlePauly(true)
       setFour(false)
       dispatch(setEnemyHp(paulyShore.hitPoints));
       dispatch(toggleEnemyDisplay(true));

@@ -46,3 +46,21 @@ export let RUN = [
 
     "As you turn to flee your foe, you clumsily trip over crack on the ground. Your face slams the ground with wet slap. Your vision grows page as you feel your foe climb on your back and end your life in some horrible, unseen way. You die know that you are a ... "
 ];
+
+export let AREATHREE = {
+         one:
+           'You slowly make your way to the iron wrought doors of Ha Ha Tower. As if by some otherworldly command, the doors creek open accomanied with the distant eerie sound of "Ha Cha Cha Chaaa." As you enter the tower, an ornate bas-relief depiction of Jimmy Durante afixed over the massive doorway seems to have winked at you.',
+         two:
+           "You enter the vast foyer of Ha Ha tower. It is populated with bronze statues keeled over in various poses of unhinged laughter, yet it is eerily quiet. The room is encapsulated in shadow and pain. You can feel the thick black blood of depravity hanging in the air. This is truly an unholy and vile place.",
+         three:
+           "There is a large staircase which goes up to a landing containing three doors. The soft and unsettling sounds of what seems to be an accordian can be heard reverberating through what lies beyond Door One. Door Number Two is wrapped in what appears to be black leather and reeks of casual sexism and cigarette smoke. Door Number Three smells of unchecked rage and pulsates with what looks to be human veins.",
+         four: "",
+         five:
+           "A lanky figure cloaked in shadow emerges from the make-shift tent immediately after you speak. 'How dare you', says an eerie, child-like voice crackling in-and-out of falsetto. 'How dare you interupt my dinner.' The figure steps into the moonlight and tosses a roasted human hand at your feet. 'No one interupts Emo Philips as he dines!' He pulls up his lanky arm, points at you and howls in a terrifying ear-piercing shriek.",
+         six:
+           "You punch yourself in the face. A true Comedy Slayer must never rest on the laurels of indecision. In order to take down the Illuminati of Laughter, one must never sit idle.",
+         seven:
+           "As you lick the blood from your self-inflicted wound, a lanky figure cloaked in shadow emerges from the make-shift tent. 'How dare you', says an eerie, child-like voice crackling in-and-out of falsetto. 'How dare you interupt my dinner.' The figure steps into the moonlight and tosses a roasted human hand at your feet. 'No one interupts Emo Philips as he dines!' He pulls up his lanky arm, points at you and howls in a terrifying ear-piercing shriek.",
+         eight:
+           " The slight sound eminates through the hollowed streets as a lanky figure cloaked in shadow emerges from the make-shift tent. 'How dare you', says an eerie, child-like voice crackling in-and-out of falsetto. 'How dare you interupt my dinner.' The figure steps into the moonlight and tosses a roasted human hand at your feet. 'No one interupts Emo Philips as he dines!' He pulls up his lanky arm, points at you and howls in a terrifying ear-piercing shriek.",
+       };

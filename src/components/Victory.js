@@ -21,7 +21,7 @@ import carrotTop from "../media/carrot-top.png";
 import MainDisplay from "./MainDisplay";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
-import { emoPhilips } from "../constants/Monsters";
+import { emoPhilips, paulyShore } from "../constants/Monsters";
 import { timAllen } from "../constants/Monsters";
 import { judyTenuda } from "../constants/Monsters";
 
@@ -39,19 +39,21 @@ const Victory = (props, { isRunVisible }) => {
 
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
- console.log("Chapter 1 ", chapterOne);
-  console.log("Chapter 2 ", chapterTwo);
+  const chapterThree = useSelector((state) => state.chapterThree);
 
-  console.log("on VICTORY, chapterONe", chapterOne);
-  console.log("on VICTORY, chapterTwo,", chapterTwo);
+   console.log("Chapter 1 ", chapterOne);
+  console.log("Chapter 2 ", chapterTwo);
+    console.log("Chapter 3 ", chapterThree);
+
 
   const renderVictoryMessage = () => {
     return (
       <Container>
-        <h4 className="deadText">
+        <h6 className="deadText">
           {chapterOne && emoPhilips.died}
           {chapterTwo && timAllen.died}
-        </h4>
+          {chapterThree && paulyShore.died}
+        </h6>
         <h1 className="areDeadText">VICTORIOUS</h1>
         <h1
           className="buttonText"
@@ -60,7 +62,7 @@ const Victory = (props, { isRunVisible }) => {
             setLootOptionsVisible(true);
           }}
         >
-          Continue
+          CONTINUE
         </h1>
       </Container>
     );
@@ -73,25 +75,20 @@ const Victory = (props, { isRunVisible }) => {
   const renderLootOptions = () => {
     return (
       <Container>
-        <h4 className="lootTextSubheader">
+        <h6 className="lootTextSubheader">
           {chapterOne && emoPhilips.lootOne}
           {chapterTwo && timAllen.lootOne}
-        </h4>
-        <h1 className="lootText">
+          {chapterThree && paulyShore.lootOne}
+        </h6>
+        <h6 className="lootText">
           {" "}
           {chapterOne && emoPhilips.lootTwo}
           {chapterTwo && timAllen.lootTwo}
-        </h1>
+          {chapterThree && paulyShore.lootTwo}
+        </h6>
         <Row>
           <Col>
-            <h1
-              className="buttonText"
-              onClick={() => {
-                setLootResultYes(true);
-                setLootOptionsVisible(false);
-                dispatch(incrementPlayerHp(tenSidedDie));
-              }}
-            >
+            <h1 className="buttonText" onClick={lootResults}>
               Yes
             </h1>
           </Col>
@@ -111,27 +108,35 @@ const Victory = (props, { isRunVisible }) => {
     );
   };
 
+  const lootResults = () => {
+    setLootResultYes(true);
+    setLootOptionsVisible(false);
+    if(chapterThree === true) {
+      dispatch(decrementPlayerHp(tenSidedDie));
+    } else {
+      dispatch(incrementPlayerHp(tenSidedDie));
+    }
+  }
+
   const renderLootResultYes = () => {
     if (lootResultYes)
       return (
         <Container>
-          <h4>
+          <h6>
             {chapterOne && emoPhilips.lootThree}
             {chapterTwo && timAllen.lootThree}
-          </h4>
-          <h4>You receive {tenSidedDie} hit points.</h4>
+            {chapterThree && paulyShore.lootThree}
+          </h6>
+          {chapterThree ? <h6>You suffer {tenSidedDie} hit points of damage.</h6> : <h6>You recieve {tenSidedDie} hit points.</h6>}
 
           <Link
-            className="buttonText"
             onClick={() => {
               goBackToGame();
-              // setLootResultYes(false);
-              // setLootResultNo(false);
             }}
             style={{ textDecoration: "none", color: "white" }}
             to="/Game"
           >
-            Continue
+            <h1 className="startGameText">CONTINUE</h1>
           </Link>
         </Container>
       );
@@ -146,28 +151,26 @@ const Victory = (props, { isRunVisible }) => {
     dispatch(toggleEnemyDisplay(false))
     chapterOne && dispatch(toggleChapterTwo(true));
     chapterTwo && dispatch(toggleChapterThree(true));
-    // setCreateCharacterVisible(false);
-    // setLootResultYes(false);
-    // setLootResultNo(false);
   };
 
   const renderLootResultNo = () => {
     if (lootResultNo) {
       return (
         <Container>
-          <h4>
+          <h6>
             {chapterOne && emoPhilips.lootFour}
             {chapterTwo && timAllen.lootFour}
-          </h4>
+            {chapterThree && paulyShore.lootFour}
+          </h6>
           <Link
             className="linkButton"
             onClick={() => {
               goBackToGame();
             }}
             style={{ textDecoration: "none", fontFamily: "Red Rose" }}
-            to="/ChapterTwo"
+            to="/Game"
           >
-            Continue
+            CONTINUE
           </Link>
         </Container>
       );
@@ -175,12 +178,6 @@ const Victory = (props, { isRunVisible }) => {
   };
 
   return (
-    // <React.Fragment>
-    //   {victoryMessage && renderVictoryMessage()}
-    //   {lootResultYes && renderLootResultYes()}
-    //   {lootResultNo && renderLootResultNo()}
-    //   {lootOptionsVisible && renderLootOptions()}
-    // </React.Fragment>
     <Container className="gameWrapper">
       <Row>
         <Col className="carrotTopLogo" xs={1.5}>

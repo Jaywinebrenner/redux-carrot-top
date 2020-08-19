@@ -54,7 +54,7 @@ const CreateCharacter = () => {
         <input
           ref={(input) => input && input.focus()}
           className="submitNameInput"
-          onChange={(event) => setLocalName(event.target.value)}
+          onChange={(event) => setLocalName(event.target.value.toUpperCase())}
           value={localName}
         />
         <h6 className="buttonText" onClick={() => submitOne()}>

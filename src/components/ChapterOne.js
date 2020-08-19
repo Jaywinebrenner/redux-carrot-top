@@ -64,24 +64,24 @@ const ChapterOne = () => {
         <Row className="answerGridWrapper">
           <Col className="answerGridOne" id="butterKnifeSelection">
             <h6 onClick={handleAreaOneThree}>
-              1 - Quietly slink by the ramshacked tent and continue forth to Ha
+              Quietly slink by the ramshacked tent and continue forth to Ha
               Ha Tower
             </h6>
           </Col>
 
           <Col className="answerGridTwo">
             <h6 onClick={handleAreaOneFour}>
-              2 - Carefully approach the tent and sumptuous smells
+              Carefully approach the tent and sumptuous smells
             </h6>
           </Col>
 
           <Col className="answerGridThree">
-            <h6 onClick={handleAreaOneFive}>3 - Say, 'Is anyone there?'</h6>
+            <h6 onClick={handleAreaOneFive}>Say, 'Is anyone there?'</h6>
           </Col>
 
           <Col className="answerGridFour">
             <h6 onClick={handleAreaOneSix}>
-              4 - Hide behind a nearby dumpster to survey the tent
+              Hide behind a nearby dumpster to survey the tent
             </h6>
           </Col>
         </Row>

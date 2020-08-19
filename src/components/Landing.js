@@ -14,12 +14,13 @@ const Landing = () => {
     <Container className="landingWrapper">
       <h1 className="landingHeader">KILLING CARROT TOP</h1>
       <Link
+        className="linkText"
         style={{
           textDecoration: "none",
         }}
         to="/Intro"
       >
-        <h1 onClick={pressStartGame} className="startGameButtonText">
+        <h1 onClick={pressStartGame} className="startGameText">
           START GAME
         </h1>
       </Link>

@@ -119,7 +119,7 @@ const ChapterTwo = () => {
               <h5 onClick={() => {
                 setThree(false);
                 setAttackVisible(true);
-                }}>1- Attack</h5>
+                }}>Attack</h5>
             </Col>
 
             <Col>
@@ -129,12 +129,12 @@ const ChapterTwo = () => {
                   setFour(true);
                 }}
               >
-                2 -Answer his questions
+                Answer his questions
               </h5>
             </Col>
 
             <Col>
-              <h5 onClick={run}>3- Run</h5>
+              <h5 onClick={run}>Run</h5>
             </Col>
           </Row>
         </Container>
@@ -227,7 +227,7 @@ const ChapterTwo = () => {
       ) {
         return (
           <Container>
-            <h4>"You are correct, Comedian Slayer"</h4>
+            <h6>"You are correct, Comedian Slayer"</h6>
             <h6>
               Tim Allen pauses, shoots you a condecending glare, flicks a
               Phillips head screwdriver bit into the air and catches it in his
@@ -253,10 +253,10 @@ const ChapterTwo = () => {
       } else {
         return (
           <Container>
-            <h4>
+            <h6>
               "WRONG!" he bellows as he spits the drill bit from his taut lips
               at an ungodly speed. It pierces your torso for 1 damage.
-            </h4>
+            </h6>
             <h6>
               Tim Allen pauses, shoots you a condecending glare, flicks a
               Phillips head screwdriver bit into the air and catches it in his
@@ -310,7 +310,7 @@ const ChapterTwo = () => {
       if (questionTwoInput === "TOOL TIME") {
         return (
           <Container>
-            <h4>"Yes, Comedian Slayer"</h4>
+            <h6>"Yes, Comedian Slayer"</h6>
             <h6>
               With a taut flick of his thumb, Tim Allen arches a Flathead
               screwdriver bit into the air which lands on his tongue.
@@ -336,9 +336,9 @@ const ChapterTwo = () => {
       } else {
         return (
           <Container>
-            <h4>
+            <h6>
               "WRONG!" he spits the bit out of his mouth at an unfathomable speed and it pierces the meat of your leg for 1 damage.
-            </h4>
+            </h6>
             <h6>
               With a taut flick of his thumb, Tim Allen arches a Flathead
               screwdriver bit into the air which lands on his tongue.
@@ -400,7 +400,7 @@ const ChapterTwo = () => {
       ) {
         return (
           <Container>
-            <h4>"You are correct, Comedian Slayer"</h4>
+            <h6>"You are correct, Comedian Slayer"</h6>
             <h6>
               He flicks a Counter Sink bit into the air and sucks it in his
               mouth.
@@ -425,10 +425,10 @@ const ChapterTwo = () => {
       } else {
         return (
           <Container>
-            <h4>
+            <h6>
               "NO!" He shoots the bit out of his mouth with a deep wet coughing
               sound. It sinks into your shoulder for 1 point of damage.
-            </h4>
+            </h6>
             <h6>
               He flicks a Counter Sink bit into the air and sucks it in his
               mouth.
@@ -477,7 +477,7 @@ const ChapterTwo = () => {
         if (questionFourInput === "CANCER") {
           return (
             <Container>
-              <h4>"Caner it is!"</h4>
+              <h6>"Caner it is!"</h6>
               <h6>
                 He tosses a Hex bit into the air and catches it in his mouth.
               </h6>
@@ -501,11 +501,11 @@ const ChapterTwo = () => {
         } else {
           return (
             <Container>
-              <h4>
+              <h6>
                 "BZZZZT!! WRONG!" he bellows as he spits the drill bit from his
                 taut lips at an ungodly speed. It pierces your chest for 1
                 damage.
-              </h4>
+              </h6>
               <h6>
                 He tosses a Hex bit into the air and catches it in his mouth.
               </h6>
@@ -562,7 +562,7 @@ const ChapterTwo = () => {
         if (questionFiveInput === "SEASON FOUR" || questionFiveInput === "SEASON 4" || questionFiveInput=== "FOUR" || questionFiveInput === "4") {
           return (
             <Container>
-              <h4>"Edd Hall would be proud. You are correct!"</h4>
+              <h6>"Edd Hall would be proud. You are correct!"</h6>
               <h6 onClick={goToTen} className="buttonText">
                 CONTINUE
               </h6>
@@ -571,8 +571,8 @@ const ChapterTwo = () => {
         } else {
           return (
            <Container>
-             <h4>"WRONG! Edd Hall would not be proud.</h4>
-             <h4>He spits the bit out of his mouth at an unfathomable speed. It pierces your torso for 1 hit point of damage.</h4>
+             <h6>"WRONG! Edd Hall would not be proud.</h6>
+             <h6>He spits the bit out of his mouth at an unfathomable speed. It pierces your torso for 1 hit point of damage.</h6>
              <h6 onClick={goToTen} className="buttonText">
                CONTINUE
              </h6>
@@ -600,12 +600,12 @@ const ChapterTwo = () => {
           alert("correct!");
           return (
             <Container>
-              <h4>"You are a Tool Time fanatic!", he exclaims.</h4>
-              <h4>
+              <h6>"You are a Tool Time fanatic!", he exclaims.</h6>
+              <h6>
                 "Much as I yearn to cut your throat and suck the air from your
                 lungs, I can not. Your breadth of Tim Allen knowledge is far too
                 vast. I loathe to say you are free pass.{" "}
-              </h4>
+              </h6>
 
               <h6>
                 Tim Allen makes a gesture toward the sky as a Belt Sander

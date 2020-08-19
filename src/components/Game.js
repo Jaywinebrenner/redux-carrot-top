@@ -96,9 +96,9 @@ const Game = () => {
         <Row>
           <Col className="mainDisplayOne">
             <MainDisplay />
-            {createCharacter && <CreateCharacter />}
+            {/* {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
-            {chapterTwo && <ChapterTwo />}
+            {chapterTwo && <ChapterTwo />} */}
             {chapterThree && <ChapterThree />}
             {/* {battleVisible && <Battle/>} */}
           </Col>

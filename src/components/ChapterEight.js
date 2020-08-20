@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
-import { timAllen } from "../constants/Monsters";
+import { timAllen, bobcatGoldthwait } from "../constants/Monsters";
 import {
   incrementPlayerHp,
   decrementPlayerHp,
@@ -41,7 +41,7 @@ const ChapterEight = () => {
     return (
       <Container>
         <h1>Chapter Six</h1>
-        <h3>Of They Wretched Misery</h3>
+        <h3>Of Thy Wretched Misery and Terrible Derangement</h3>
         <div>
           <h6 onClick={endOne} className="buttonText">
             CONTINUE
@@ -84,7 +84,7 @@ const ChapterEight = () => {
     return (
       <Container>
         <h6>
-          Bobcat Goldthwait steps into a sickly pick light. "But ya know, let's face it though. You're going to die either way, Eeruhh."  
+          Bobcat Goldthwait steps into a sickly pink light. "But ya know, let's face it though. You're going to die either way, Eeruhh."  
         </h6>
         <Row>
           <Col>
@@ -256,7 +256,10 @@ const ChapterEight = () => {
       dispatch(decrementPlayerHp(1));
       setPlayerDidNotEnterAnswer(true);
     } else {
-      if (questionTwoInput === "HIGHTOWER" || "HIGH TOWER") {
+      if (
+        questionTwoInput === "HIGHTOWER" ||
+        questionTwoInput === "HIGH TOWER"
+      ) {
         setFive(false);
         setSix(true);
         setPlayerDidNotEnterAnswer(false);
@@ -272,7 +275,7 @@ const ChapterEight = () => {
   const [questionThreeInput, setQuestionThreeInput] = useState("");
 
   const renderSix = () => {
-    if (questionTwoInput === "HIGHTOWER" || "HIGH TOWER") {
+    if (questionTwoInput === "HIGHTOWER" || questionTwoInput === "HIGH TOWER") {
       return (
         <Container>
           <h6>"Yea, you got it."</h6>
@@ -482,7 +485,7 @@ const ChapterEight = () => {
       dispatch(decrementPlayerHp(0.5));
       setPlayerDidNotEnterAnswer(true);
     } else {
-      if (questionFiveInput === "WILFORD BRIMLEY") {
+      if (questionFiveInput === "DIABETES") {
         setEight(false);
         setNine(true);
         setPlayerDidNotEnterAnswer(false);
@@ -496,9 +499,7 @@ const ChapterEight = () => {
   };
 
   const renderNine = () => {
-    if (
-      questionFiveInput === "WILFORD BRIMLEY" 
-    ) {
+    if (questionFiveInput === "DIABETES") {
       return (
         <Container>
           <h6>"Yea," he squeals.</h6>
@@ -531,33 +532,24 @@ const ChapterEight = () => {
 
   const renderTen = () => {
     if (
-      (questionOneInput === "JONATHAN TAYLOR THOMAS" ||
-        questionOneInput === "JONATHAN THOMAS") &&
-      questionTwoInput === "TOOL TIME" &&
-      (questionThreeInput === "PAMELA ANDERSON LEE" ||
-        questionThreeInput === "PAMELA ANDERSON" ||
-        questionThreeInput === "PAM ANDERSON") &&
-      questionFourInput === "CANCER" &&
-      (questionFiveInput === "SEASON FOUR" ||
-        questionFiveInput === "SEASON 4" ||
-        questionFiveInput === "FOUR" ||
-        questionFiveInput === "4")
+      questionOneInput === "MICHAEL WINSLOW" &&
+      (questionTwoInput === "HIGHTOWER" || questionTwoInput === "HIGH TOWER") &&
+      questionThreeInput === "STEVE GUTTENBERG" &&
+      questionFourInput === "CACOON" &&
+      questionFiveInput === "DIABETES"
     ) {
       alert("correct!");
       return (
         <Container>
-          <h6>"You are a Tool Time fanatic!", he exclaims.</h6>
-          <h6>
-            "Much as I yearn to cut your throat and suck the air from your
-            lungs, I can not. Your breadth of Tim Allen knowledge is far too
-            vast. I loathe to say you are free pass.{" "}
-          </h6>
+          <h6>"Damn it", he growls.</h6>
+          <h6>"I can't eat you. You answered all the questions. So hungry."</h6>
 
           <h6>
-            Tim Allen makes a gesture toward the sky as a Belt Sander
-            materializes in his hand. "Ta ta," he exclaims as he pulls the
-            trigger on the sander and evaporates into thin air.
+            Bobcat Goldthwait falls to the ground and frantically begins eating
+            his own arm, then his legs and feet until he begins to convulse in a
+            pool of his own blood.
           </h6>
+          <h6>He has died.</h6>
           <h6 onClick={() => alert("go to Chapter 4")} className="buttonText">
             CONTINUE
           </h6>
@@ -567,16 +559,14 @@ const ChapterEight = () => {
       return (
         <Container>
           <h6>
-            "I need not mention your obvious intellectual inadequacies. Your Tim
-            Allen Knowledge is pitiful, woefully indept and deeply embarassing.
-            And for that, you will die."{" "}
+            "This is exactly what I want. I'm so happy you are so stupid. I'm so
+            hungry."
           </h6>
           <h6>
-            Tim Allen makes a gesture toward the sky as a Belt Sander
-            materializes in his hand. "Aeuuugh," he exclaims in his inexplicable
-            Home Improvement noise as he pulls the trigger on the sander and
-            attacks.
+            Bobcat Goldthwait inserts another finger into his mouth and scraps
+            it clean. "SO... HUNGRY!!"
           </h6>
+          <h6>He attacks. </h6>
           <h6 onClick={() => beginBattle()} className="buttonText">
             CONTINUE
           </h6>
@@ -613,7 +603,7 @@ const ChapterEight = () => {
       {nine && renderNine()}
       {ten && renderTen()}
       {playerDidNotEnterAnswer && <h1>THIS IS AN UNACCEPTABLE ANSWER!</h1>}
-      {battleBobcat && <Battle enemy={timAllen} />}
+      {battleBobcat && <Battle enemy={bobcatGoldthwait} />}
     </Container>
   );
 };

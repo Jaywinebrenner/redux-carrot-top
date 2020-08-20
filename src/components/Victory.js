@@ -20,6 +20,7 @@ import {
   toggleChapterSix,
   toggleChapterSeven,
   toggleChapterEight,
+  toggleChapterNine,
   incrementPlayerDefence,
   decrementPlayerDefence,
 } from "../actions";
@@ -28,10 +29,16 @@ import carrotTop from "../media/carrot-top.png";
 import MainDisplay from "./MainDisplay";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
-import { emoPhilips, paulyShore, andrewDiceClay } from "../constants/Monsters";
-import { timAllen } from "../constants/Monsters";
-import { judyTenuda } from "../constants/Monsters";
-import { samKinison } from "../constants/Monsters";
+import {
+  emoPhilips,
+  paulyShore,
+  andrewDiceClay,
+  bobcatGoldthwait,
+  timAllen,
+  judyTenuda,
+  samKinison,
+} from "../constants/Monsters";
+
 
 const Victory = (props, { isRunVisible }) => {
 
@@ -53,11 +60,14 @@ const Victory = (props, { isRunVisible }) => {
   const chapterFive = useSelector((state) => state.chapterFive);
   const chapterSix = useSelector((state) => state.chapterSix);
   const chapterSeven = useSelector((state) => state.chapterSeven);
+  const chapterEight = useSelector((state) => state.chapterEight);
+
 
    console.log("Chapter 1 ", chapterOne);
   console.log("Chapter 2 ", chapterTwo);
     console.log("Chapter 3 ", chapterThree);
      console.log("Chapter 7 ", chapterSeven);
+     console.log("Chapter 8 ", chapterEight);
 console.log("Player defence", playerDefence);
 
   const renderVictoryMessage = () => {
@@ -70,6 +80,7 @@ console.log("Player defence", playerDefence);
           {chapterFive && judyTenuda.died}
           {chapterSix && andrewDiceClay.died}
           {chapterSeven && samKinison.died}
+          {chapterEight && bobcatGoldthwait.died}
         </h6>
         <h1 className="areDeadText">VICTORIOUS</h1>
         <h1
@@ -99,6 +110,7 @@ console.log("Player defence", playerDefence);
           {chapterFive && judyTenuda.lootOne}
           {chapterSix && andrewDiceClay.lootOne}
           {chapterSeven && samKinison.lootOne}
+          {chapterEight && bobcatGoldthwait.lootOne}
         </h6>
         <h6 className="lootText">
           {" "}
@@ -108,6 +120,7 @@ console.log("Player defence", playerDefence);
           {chapterFive && judyTenuda.lootTwo}
           {chapterSix && andrewDiceClay.lootTwo}
           {chapterSeven && samKinison.lootTwo}
+          {chapterEight && bobcatGoldthwait.lootTwo}
         </h6>
         <Row>
           <Col>
@@ -160,17 +173,17 @@ console.log("Player defence", playerDefence);
             {chapterFive && judyTenuda.lootThree}
             {chapterSix && andrewDiceClay.lootThree}
             {chapterSeven && samKinison.lootThree}
+            {chapterEight && bobcatGoldthwait.lootThree}
           </h6>
 
           {chapterOne ||
-            (chapterTwo ||
-              chapterFive 
-              && (
-              <h6>You receive {tenSidedDie} hit points.</h6>
-            ))}
-          {(chapterSix && (
-              <h6>You suffer {tenSidedDie} hit points of damage.</h6>
-            ))}
+            chapterTwo ||
+            chapterFive ||
+            chapterEight 
+            && <h6>You receive {tenSidedDie} hit points.</h6>}
+          {chapterSix && (
+            <h6>You suffer {tenSidedDie} hit points of damage.</h6>
+          )}
           {chapterSeven && <h6>You gain 3 Defense points.</h6>}
           {chapterThree && <h6>You lose 2 Defense points.</h6>}
 
@@ -206,6 +219,7 @@ console.log("Player defence", playerDefence);
     chapterFive && dispatch(toggleChapterEight(true));
     chapterSix && dispatch(toggleChapterEight(true));
     chapterSeven && dispatch(toggleChapterEight(true));
+    // chapterEight && dispatch(toggleChapterNine(true));
   };
 
   const renderLootResultNo = () => {
@@ -219,6 +233,7 @@ console.log("Player defence", playerDefence);
             {chapterFive && judyTenuda.lootFour}
             {chapterSix && andrewDiceClay.lootFour}
             {chapterSeven && samKinison.lootFour}
+            {chapterEight && bobcatGoldthwait.lootFour}
           </h6>
           <Link
             onClick={() => {

@@ -64,11 +64,11 @@ const ChapterSeven = () => {
         <h6>
           The door opens with a firm push of the shoulder. You gingerly make
           your way through a long windowless hallway as the sounds of enraged outbursts can be heard reverberating ahead. As
-          you approach an archway which leads to an open room shrouded in residual anger, the screaming abruptly stops.
+          you approach, the screaming abruptly stops.
         </h6>
 
         <h6>
-          The hallway opens to a large room lined with what seems to be human veins pulsing in and out. In it's center lays a sticky pile of human gore, reeking of wet blood and unchecked rage. It is a ghastly site and the silence is
+          The hallway opens to a large room lined with what seems to be human veins pulsating in and out. In it's center lays a sticky pile of human gore, reeking of wet blood and unchecked rage. It is a ghastly site and the silence is
           deafening.
         </h6>
 
@@ -96,7 +96,7 @@ const ChapterSeven = () => {
   };
   const encounterAndrewTwo = () => {
     setTwo(false);
-    setThree(true);
+    setFour(true);
   };
 
   const renderThree = () => {

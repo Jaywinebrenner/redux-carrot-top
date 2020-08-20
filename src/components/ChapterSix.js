@@ -95,7 +95,7 @@ const ChapterSix = () => {
   };
   const encounterAndrewTwo = () => {
     setTwo(false);
-    setThree(true);
+    setFour(true);
   };
 
   const renderThree = () => {

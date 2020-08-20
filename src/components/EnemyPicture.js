@@ -2,13 +2,14 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import { useSelector, useDispatch } from "react-redux";
-import { emoPhilips, judyTenuda } from "../constants/Monsters";
+import { emoPhilips, judyTenuda, bobcatGoldthwait } from "../constants/Monsters";
 import emoPhilipsPicture from "../media/emo.jpg";
 import timPicture from "../media/tim.jpg";
 import paulyPicture from "../media/pauly.jpeg";
 import judyTenudaPicture from "../media/judy.jpg";
 import andrewDiceClayPicture from "../media/dice.jpg";
 import samKinisonPicture from "../media/kinison.jpg";
+import bobcatGoldthwaitPicture from "../media/bobcat.jpg";
 
 
 const EnemyPicture = (enemy) => {
@@ -20,6 +21,7 @@ const EnemyPicture = (enemy) => {
   const chapterFive = useSelector((state) => state.chapterFive);
   const chapterSix = useSelector((state) => state.chapterSix);
   const chapterSeven = useSelector((state) => state.chapterSeven);
+  const chapterEight = useSelector((state) => state.chapterEight);
 
 
   return (
@@ -32,6 +34,7 @@ const EnemyPicture = (enemy) => {
         <img className="enemyPicture" src={andrewDiceClayPicture} />
       )}
       {chapterSeven && <img className="enemyPicture" src={samKinisonPicture} />}
+      {chapterEight && <img className="enemyPicture" src={bobcatGoldthwaitPicture} />}
     </Container>
   );
 };

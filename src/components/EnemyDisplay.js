@@ -9,7 +9,8 @@ import {
   timAllen,
   andrewDiceClay,
   samKinison,
-  gallagher
+  gallagher,
+  bobcatGoldthwait
 } from "../constants/Monsters";
 
 
@@ -36,6 +37,7 @@ const EnemyDisplay = (enemy) => {
       <h5>{chapterFive && judyTenuda.intro}</h5>
       <h5>{chapterSix && andrewDiceClay.intro}</h5>
       <h5>{chapterSeven && samKinison.intro}</h5>
+      <h5>{chapterEight && bobcatGoldthwait.intro}</h5>
 
       <h3>{chapterOne && emoPhilips.name}</h3>
       <h3>{chapterTwo && timAllen.name}</h3>
@@ -43,7 +45,7 @@ const EnemyDisplay = (enemy) => {
       <h3>{chapterFive && judyTenuda.name}</h3>
       <h3>{chapterSix && andrewDiceClay.name}</h3>
       <h3>{chapterSeven && samKinison.name}</h3>
-      {/* <h3>{chapterEight && gallagher.name}</h3> */}
+      <h5>{chapterEight && bobcatGoldthwait.name}</h5>
 
       <h6>Hit Points: {enemyHitpoints}</h6>
     </Container>

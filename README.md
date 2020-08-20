@@ -6,7 +6,12 @@ Chapter Four:  Doors
 	Chapter Six: Judy Tenuta
 	Chapter Seven: Sam Kinison
 Chapter Eight : Bobcat Goldthwait
-Chapter Nine: Stairwell (climbing over debris and human waste) / Gallagher
+Chapter Nine: Doors #2
+  Chapter Ten: Victoria Jackson
+  Chapter Eleven: Rodney Dangerfield
+  Chapter Tweleve: Yakov Smirnoff
+Chapter Thirteen: Stairwell (climbing over debris and human waste) / Gallagher
+Chapter Fourteen: The Lord of Laughter, Carrot Top
 
 You connect with Andrew Dice Clays knee sending his buckling on all fours where you tee off and crush his skull for one last mighty blow.'
 
@@ -16,6 +21,7 @@ Gilbert Godfrey
 bobcat goldwait
 elvira
 
+Diaboical Idolatry 
 Rodney Dangerfield chewing on a corpse
 Inexplicably small Pauly Shore 
 Jeff Foxworthy

@@ -180,3 +180,49 @@ export const toggleChapterEight = (boolean) => {
     payload: boolean,
   };
 };
+
+export const toggleChapterNine = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_NINE",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterTen = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_TEN",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterEleven = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_ELEVEN",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterTwelve = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_TWELVE",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterThirteen = (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_THIRTEEN",
+    payload: boolean,
+  };
+};
+
+export const toggleChapterFourteen= (boolean) => {
+  return {
+    type: "TOGGLE_CHAPTER_FOURTEEN",
+    payload: boolean,
+  };
+};
+
+
+
+

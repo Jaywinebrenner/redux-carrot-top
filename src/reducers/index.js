@@ -22,6 +22,12 @@ import chapterFive from "./chapterFive";
 import chapterSix from "./chapterSix";
 import chapterSeven from "./chapterSeven";
 import chapterEight from "./chapterEight";
+import chapterNine from './chapterNine';
+import chapterTen from './chapterTen';
+import chapterEleven from "./chapterEleven";
+import chapterTwelve from './chapterTwelve';
+import chapterThirteen from './chapterThirteen';
+import chapterFourteen from './chapterFourteen';
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -47,6 +53,12 @@ const allReducers = combineReducers({
   chapterSix: chapterSix,
   chapterSeven: chapterSeven,
   chapterEight: chapterEight,
+  chapterNine: chapterNine,
+  chapterTen: chapterTen,
+  chapterEleven: chapterEleven,
+  chapterTwelve: chapterTwelve,
+  chapterThirteen: chapterThirteen,
+  chapterFourteen: chapterFourteen,
 });
 
 export default allReducers

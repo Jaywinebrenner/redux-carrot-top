@@ -40,7 +40,7 @@ const ChapterFour = () => {
     return (
       <div>
         <h1>Chapter Four</h1>
-        <h6>Descent into the Bowls of Ha Ha Tower</h6>
+        <h6>Ascent into the Depths of Ha Ha Tower</h6>
         <div
           onClick={() => {
             setOne(false);

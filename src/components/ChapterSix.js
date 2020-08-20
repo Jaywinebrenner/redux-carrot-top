@@ -105,11 +105,10 @@ const ChapterSix = () => {
           You begin to inch toward the car when you hear a familiar voice echo throughout the room. "{name} and Jill go up a hill..." says a black leather clad man as he
             casually steps out of the car. "... and Jill cuts
             The Comedian Slayers fucking asshole out, entrails and all and
-            stuffs all the tubes and shit and blood and piss into their moooOOOOOUUUUTH,
-            OHHHHHHHHHHH!"{" "}
+            stuffs all the tubes and shit and blood and piss into their OHHHHHHHHHHH!"{" "}
         </h6>
         <h6>
-         Andrew Dice Clay snaps out a cigarette with lightening precision, lights it up and attacks.
+         Andrew Dice Clay snaps out a cigarette with lightening precision, lights it and attacks.
         </h6>
 
         <div onClick={beginBattle}>
@@ -126,8 +125,7 @@ const ChapterSix = () => {
           You begin to inch around the edges of the room when you hear a familiar voice. "{name} and Jill go up a hill..." says a black
           leather clad man as he casually steps out of the car. "... and Jill
           cuts The Comedian Slayers fucking asshole out, entrails and all and
-          stuffs all the tubes and shit and blood and piss into their
-          moooOOOOOUUUUTH, OHHHHHHHHHHH!"{" "}
+          stuffs all the tubes and shit and blood and piss into their OHHHHHHHHHHH!"{" "}
         </h6>
         <h6>
           Andrew Dice Clay snaps out a cigarette with lightening precision,

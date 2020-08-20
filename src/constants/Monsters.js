@@ -181,17 +181,17 @@ export const emoPhilips = {
           damage: 8,
           defence: 5,
           intro:
-            "You stand face to face with The Dark Lord of Wreckage himself...",
+            "You stand face to face with The Archfiend of Magnanimous Wreckage himself...",
           imageName: "gallagherImage",
           died:
-            'You gash a ripping hole across the torso of Gallagher as his black heart plummets to the ground.',
+            'You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out it astonishment amd you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.',
           lootOne:
-            "You search the area where Andrew Dice Clay once stood, now a wet pile of crimson. You find a package of Marlboro Red cigarettes with book of matches stuffed into the cellophane.",
-          lootTwo: "Do you smoke a cigarette?",
+            "You stand over the carcass of the Prop-Adled beast and pick up his signiture weapon. The Sledge-O-Matic.",
+          lootTwo: "Do you weild the Sledge-O-Matic?",
           lootThree:
-            "You light up a cigarette, inhaling the smoke deep into your lungs. Your body instantly recoils as you burst into a coughing fit",
+            'You can feel the ghosts of 1000 children cry out within the fabric of this foul object. "Oh, thy foul instument of unrepentant horror... it is time to cleanse you of your sins and destroy the Harbringer of Death with your mighty murderous power.' ,
           lootFour:
-            "You crush the pack of cigarettes and toss them aside.",
+            "You can feel the ghosts of 1000 children cry out within the fabric of this foul object. You leave it be.",
         };
 
 // DEFENSE IS THE NUMBER TO HIT ON A ROLL OF 20. Higher the better.

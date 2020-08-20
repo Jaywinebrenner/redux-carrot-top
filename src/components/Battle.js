@@ -70,12 +70,47 @@ const Battle = (enemy) => {
     
 
   useEffect(() => {
-    const loadEmo = () => {
-    if (enemy.enemy.name === "Emo Philips") {
-      dispatch(setEnemyHp(enemy.enemy.hitPoints));
-    }
+    const enemyHitpointsFromMonsters = () => {
+      if (enemy.enemy.name === "Emo Philips") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Tim Allen") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Pauly Shore") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Andrew Dice Clay") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Judy Tenuta") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Sam Kinison") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Bobcat Goldthwait") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Victoria Jackson") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Rodney Dangerfield") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Yakov Smirnoff") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Gallagher") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+      if (enemy.enemy.name === "Carrot Top") {
+        dispatch(setEnemyHp(enemy.enemy.hitPoints));
+      }
+
+
     };
-    loadEmo();
+    enemyHitpointsFromMonsters();
 
 
   }, []);

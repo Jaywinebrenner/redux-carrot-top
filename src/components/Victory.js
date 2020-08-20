@@ -21,11 +21,17 @@ import {
   toggleChapterSeven,
   toggleChapterEight,
   toggleChapterNine,
+  toggleChapterTen,
+  toggleChapterEleven,
+  toggleChapterTwelve,
+  toggleChapterThirteen,
+  toggleChapterFourteen,
   incrementPlayerDefence,
   decrementPlayerDefence,
+
 } from "../actions";
 import Battle from "./Battle";
-import carrotTop from "../media/carrot-top.png";
+import carrotTopThumbnail from "../media/carrot-top.png";
 import MainDisplay from "./MainDisplay";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
@@ -37,6 +43,11 @@ import {
   timAllen,
   judyTenuda,
   samKinison,
+  victoriaJackson,
+  rodneyDangerfield,
+  yakovSmirnoff,
+  gallagher,
+  carrotTop,
 } from "../constants/Monsters";
 
 
@@ -61,6 +72,12 @@ const Victory = (props, { isRunVisible }) => {
   const chapterSix = useSelector((state) => state.chapterSix);
   const chapterSeven = useSelector((state) => state.chapterSeven);
   const chapterEight = useSelector((state) => state.chapterEight);
+  const chapterNine = useSelector((state) => state.chapterNine);
+  const chapterTen = useSelector((state) => state.chapterTen);
+  const chapterEleven = useSelector((state) => state.chapterEleven);
+  const chapterTwelve = useSelector((state) => state.chapterTwelve);
+  const chapterThirteen = useSelector((state) => state.chapterThirteen);
+  const chapterFourteen = useSelector((state) => state.chapterFourteen);
 
 
    console.log("Chapter 1 ", chapterOne);
@@ -68,6 +85,13 @@ const Victory = (props, { isRunVisible }) => {
     console.log("Chapter 3 ", chapterThree);
      console.log("Chapter 7 ", chapterSeven);
      console.log("Chapter 8 ", chapterEight);
+     console.log("Chapter 9 ", chapterNine);
+     console.log("Chapter 10 ", chapterTen);
+     console.log("Chapter 11", chapterEleven);
+     console.log("Chapter 12 ", chapterTwelve);
+     console.log("Chapter 13 ", chapterThirteen);
+     console.log("Chapter 14 ", chapterFourteen);
+
 console.log("Player defence", playerDefence);
 
   const renderVictoryMessage = () => {
@@ -77,10 +101,17 @@ console.log("Player defence", playerDefence);
           {chapterOne && emoPhilips.died}
           {chapterTwo && timAllen.died}
           {chapterThree && paulyShore.died}
+
           {chapterFive && judyTenuda.died}
           {chapterSix && andrewDiceClay.died}
           {chapterSeven && samKinison.died}
           {chapterEight && bobcatGoldthwait.died}
+     
+          {chapterTen && victoriaJackson.died}
+          {chapterEleven && rodneyDangerfield.died}
+          {chapterTwelve && yakovSmirnoff.died}
+          {chapterThirteen && gallagher.died}
+          {chapterFourteen && carrotTop.died}
         </h6>
         <h1 className="areDeadText">VICTORIOUS</h1>
         <h1
@@ -210,8 +241,17 @@ console.log("Player defence", playerDefence);
     dispatch(toggleChapterFive(false));
     dispatch(toggleChapterSix(false));
      dispatch(toggleChapterSeven(false));
+     dispatch(toggleChapterEight(false));
+     dispatch(toggleChapterNine(false));
+     dispatch(toggleChapterTen(false));
+     dispatch(toggleChapterEleven(false));
+     dispatch(toggleChapterTwelve(false));
+     dispatch(toggleChapterThirteen(false));
+     dispatch(toggleChapterFourteen(false));
+
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleEnemyDisplay(false))
+
     chapterOne && dispatch(toggleChapterTwo(true));
     chapterTwo && dispatch(toggleChapterThree(true));
     chapterThree && dispatch(toggleChapterFour(true));
@@ -219,7 +259,8 @@ console.log("Player defence", playerDefence);
     chapterFive && dispatch(toggleChapterEight(true));
     chapterSix && dispatch(toggleChapterEight(true));
     chapterSeven && dispatch(toggleChapterEight(true));
-    // chapterEight && dispatch(toggleChapterNine(true));
+    chapterEight && dispatch(toggleChapterNine(true));
+
   };
 
   const renderLootResultNo = () => {
@@ -253,7 +294,7 @@ console.log("Player defence", playerDefence);
     <Container className="gameWrapper">
       <Row>
         <Col className="carrotTopLogo" xs={1.5}>
-          <img className="carrotTopThumbNail" src={carrotTop} />
+          <img className="carrotTopThumbNail" src={carrotTopThumbnail} />
         </Col>
         <Col className="gameTitle">
           <h1 className="gameTitleText">KILLING CARROT TOP</h1>

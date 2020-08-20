@@ -1,3 +1,5 @@
+// DEFENSE IS THE NUMBER TO HIT ON A ROLL OF 20. Higher the better.
+
 export const emoPhilips = {
          name: "Emo Philips",
          nameInitiative: [
@@ -136,7 +138,7 @@ export const emoPhilips = {
           "You crush the pack of cigarettes and toss them aside.",
       };
 
-            export const samKinison = {
+      export const samKinison = {
         name: "Sam Kinison",
         nameInitiative: [
           "The Howling Demon",
@@ -165,36 +167,38 @@ export const emoPhilips = {
           "You snort some mucus into your mouth and spit on the vile article of clothing.",
       };
 
-    export const gallagher = {
-        name: "Gallagher",
-        nameInitiative: [
-          "The Lord of Wreckage",
-          "Stripe-shirted Hellspawn",
-          " Hammer Weidling Hellion",
-        ],
-        nameAttack: [
-          "The Hammer Weidling Hellion",
-          "Gallagher",
-          "The Lord of Wreckage",
-        ],
-        hitPoints: 15,
-        damage: 8,
-        defence: 5,
-        intro:
-          "You stand face to face with The Archfiend of Magnanimous Wreckage himself...",
-        imageName: "gallagherImage",
-        died:
-          'You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out it astonishment amd you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.',
-        lootOne:
-          "You stand over the carcass of the Prop-Adled beast and pick up his signiture weapon. The Sledge-O-Matic.",
-        lootTwo: "Do you weild the Sledge-O-Matic?",
-        lootThree:
-          'You can feel the ghosts of 1000 children cry out within the fabric of this foul object. "Oh, thy foul instument of unrepentant horror... it is time to cleanse you of your sins and destroy the Harbringer of Death with your mighty murderous power.' ,
-        lootFour:
-          "You can feel the ghosts of 1000 children cry out within the fabric of this foul object. You leave it be.",
-      };
+
 
       export const bobcatGoldthwait = {
+        name: "Bobcat Goldthwait",
+        nameInitiative: [
+          "the twisted creature",
+          "the Deranged Maniac",
+          "Bobcat",
+        ],
+        nameAttack: [
+          "Bobcat Goldthwait",
+          "Bobcat",
+          "The deranged maniac",
+        ],
+        hitPoints: 10,
+        damage: 5,
+        defence: 5,
+        intro:
+          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
+        imageName: "bobcatGoldthwaitImage",
+        died:
+          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+        lootOne:
+          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
+        lootTwo: "Do you eat the pizza?",
+        lootThree:
+          'It is delicious. Why Bobcat did not eat it himself remains a mystery.' ,
+        lootFour:
+          "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
+      };
+
+      export const victoriaJackson = {
         name: "Bobcat Goldthwait",
         nameInitiative: [
           "The twisted creature",
@@ -223,6 +227,123 @@ export const emoPhilips = {
           "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
       };
 
-// DEFENSE IS THE NUMBER TO HIT ON A ROLL OF 20. Higher the better.
+      export const rodneyDangerfield = {
+        name: "Bobcat Goldthwait",
+        nameInitiative: [
+          "The twisted creature",
+          "the Deranged Maniac",
+          " Hammer Weidling Hellion",
+        ],
+        nameAttack: [
+          "Bobcat Goldthwait",
+          "Bobcat",
+          "The deranged maniac",
+        ],
+        hitPoints: 15,
+        damage: 5,
+        defence: 5,
+        intro:
+          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
+        imageName: "bobcatGoldthwaitImage",
+        died:
+          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+        lootOne:
+          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
+        lootTwo: "Do you eat the pizza?",
+        lootThree:
+          "It is delicious. Why Bobcat did not eat it himself remains a mystery.",
+        lootFour:
+          "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
+      };
+
+      export const yakovSmirnoff = {
+        name: "Bobcat Goldthwait",
+        nameInitiative: [
+          "The twisted creature",
+          "the Deranged Maniac",
+          " Hammer Weidling Hellion",
+        ],
+        nameAttack: [
+          "Bobcat Goldthwait",
+          "Bobcat",
+          "The deranged maniac",
+        ],
+        hitPoints: 15,
+        damage: 5,
+        defence: 5,
+        intro:
+          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
+        imageName: "bobcatGoldthwaitImage",
+        died:
+          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+        lootOne:
+          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
+        lootTwo: "Do you eat the pizza?",
+        lootThree:
+          "It is delicious. Why Bobcat did not eat it himself remains a mystery.",
+        lootFour:
+          "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
+      };
+
+    export const gallagher = {
+      name: "Gallagher",
+      nameInitiative: [
+        "The Lord of Wreckage",
+        "Stripe-shirted Hellspawn",
+        " Hammer Weidling Hellion",
+      ],
+      nameAttack: [
+        "The Hammer Weidling Hellion",
+        "Gallagher",
+        "The Lord of Wreckage",
+      ],
+      hitPoints: 15,
+      damage: 8,
+      defence: 5,
+      intro:
+        "You stand face to face with The Archfiend of Magnanimous Wreckage himself...",
+      imageName: "gallagherImage",
+      died:
+        "You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out it astonishment amd you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.",
+      lootOne:
+        "You stand over the carcass of the Prop-Adled beast and pick up his signiture weapon. The Sledge-O-Matic.",
+      lootTwo: "Do you weild the Sledge-O-Matic?",
+      lootThree:
+        'You can feel the ghosts of 1000 children cry out within the fabric of this foul object. "Oh, thy foul instument of unrepentant horror... it is time to cleanse you of your sins and destroy the Harbringer of Death with your mighty murderous power.',
+      lootFour:
+        "You can feel the ghosts of 1000 children cry out within the fabric of this foul object. You leave it be.",
+    };
+
+
+      export const carrotTop = {
+        name: "Bobcat Goldthwait",
+        nameInitiative: [
+          "The twisted creature",
+          "the Deranged Maniac",
+          " Hammer Weidling Hellion",
+        ],
+        nameAttack: [
+          "Bobcat Goldthwait",
+          "Bobcat",
+          "The deranged maniac",
+        ],
+        hitPoints: 15,
+        damage: 5,
+        defence: 5,
+        intro:
+          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
+        imageName: "bobcatGoldthwaitImage",
+        died:
+          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+        lootOne:
+          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
+        lootTwo: "Do you eat the pizza?",
+        lootThree:
+          "It is delicious. Why Bobcat did not eat it himself remains a mystery.",
+        lootFour:
+          "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
+      };
+
+
 
 

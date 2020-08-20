@@ -11,6 +11,8 @@ import {
   decrementPlayerHp,
   toggleEnemyDisplay,
   toggleBattleDisplay,
+  toggleChapterEight,
+  toggleChapterNine,
   setEnemyHp,
 } from "../actions";
 import Game from "./Game";
@@ -22,7 +24,8 @@ const ChapterEight = () => {
 
   // console.log("battle visible -", battleVisible);
 
-  const armor = useSelector((state) => state.armor);
+  const chapterEight = useSelector((state) => state.chapterEight);
+  const chapterNine = useSelector((state) => state.chapterNine);
   const name = useSelector((state) => state.name);
   const [battleBobcat, setBattleBobcat] = useState(false);
 
@@ -538,7 +541,6 @@ const ChapterEight = () => {
       questionFourInput === "CACOON" &&
       questionFiveInput === "DIABETES"
     ) {
-      alert("correct!");
       return (
         <Container>
           <h6>"Damn it", he growls.</h6>
@@ -550,7 +552,7 @@ const ChapterEight = () => {
             pool of his own blood.
           </h6>
           <h6>He has died.</h6>
-          <h6 onClick={() => alert("go to Chapter 4")} className="buttonText">
+          <h6 onClick={() => skipBattle()} className="buttonText">
             CONTINUE
           </h6>
         </Container>
@@ -574,6 +576,13 @@ const ChapterEight = () => {
       );
     }
   };
+
+
+  const skipBattle = () => {
+    chapterEight && dispatch(toggleChapterNine(true));
+    chapterEight && dispatch(toggleChapterEight(false));
+    setTen(false);
+  }
 
   const beginBattle = () => {
     dispatch(setEnemyHp(timAllen.hitPoints));

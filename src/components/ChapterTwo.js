@@ -8,10 +8,11 @@ import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import { timAllen } from "../constants/Monsters";
 import {
-  incrementPlayerHp,
   decrementPlayerHp,
   toggleEnemyDisplay,
   toggleBattleDisplay,
+  toggleChapterThree,
+  toggleChapterTwo,
   setEnemyHp
 } from "../actions";
 import Game from "./Game";
@@ -25,7 +26,7 @@ const ChapterTwo = () => {
 
   // console.log("battle visible -", battleVisible);
 
-  const armor = useSelector((state) => state.armor);
+  const chapterTwo = useSelector((state) => state.chapterTwo);
   const [battleTim, setBattleTim] = useState(false);
 
   const [one, setOne] = useState(true);
@@ -38,21 +39,6 @@ const ChapterTwo = () => {
   const [eight, setEight ] = useState(false);
   const [nine, setNine ] = useState(false)
   const [ten, setTen] = useState(false)
-
-  // useEffect(() => {
-  //   const listener = (event) => {
-  //     if (event.code === "Enter" || event.code === "NumpadEnter") {
-  //       console.log("Enter key was pressed. Run your function.");
-  //       submitOne();
-  //     }
-  //   };
-  //   document.addEventListener("keydown", listener);
-  //   return () => {
-  //     document.removeEventListener("keydown", listener);
-  //   };
-  // }, []);
-
-
 
   const renderOne = () => {
     return (
@@ -597,7 +583,7 @@ const ChapterTwo = () => {
           questionFourInput === "CANCER" &&
           (questionFiveInput === "SEASON FOUR" || questionFiveInput === "SEASON 4" || questionFiveInput === "FOUR" || questionFiveInput === "4")
         ) {
-          alert("correct!");
+
           return (
             <Container>
               <h6>"You are a Tool Time fanatic!", he exclaims.</h6>
@@ -613,7 +599,7 @@ const ChapterTwo = () => {
                 trigger on the sander and evaporates into thin air.
               </h6>
               <h6
-                onClick={() => alert("go to Chapter 4")}
+                onClick={() => skipBattle()}
                 className="buttonText"
               >
                 CONTINUE
@@ -645,14 +631,21 @@ const ChapterTwo = () => {
         }
       }
 
-      const beginBattle = () => {
-        dispatch(setEnemyHp(timAllen.hitPoints));
-        setBattleTim(true);
-        setTen(false)
-        dispatch(toggleEnemyDisplay(true));
-        dispatch(toggleBattleDisplay(true))
+    const skipBattle = () => {
+      chapterTwo && dispatch(toggleChapterThree(true));
+      chapterTwo && dispatch(toggleChapterTwo(false));
+      setTen(false);
+    };
 
-      }
+
+  const beginBattle = () => {
+    dispatch(setEnemyHp(timAllen.hitPoints));
+    setBattleTim(true);
+    setTen(false)
+    dispatch(toggleEnemyDisplay(true));
+    dispatch(toggleBattleDisplay(true))
+
+  }
 
 
 

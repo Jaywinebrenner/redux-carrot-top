@@ -90,10 +90,10 @@ const ChapterThirteen = () => {
         </h6>
 
         <h6>
-          "This new world is no world at all. The laughs are nots laughs. The
+          "This new world is no world at all. The laughs are not real laughs. The
           pain is real pain. The suffering is real suffering. And this new world
           must come to an end. And you {name} are one chosen to do so." There is a genuine
-          kindess and overwhelming familiarity in his voice.
+          kindess in his voice.
         </h6>
         <div
           onClick={() => {
@@ -112,7 +112,7 @@ const ChapterThirteen = () => {
       <Container>
         <h6>
           "You have but two more obstacles before freeing humanity of this vile
-          scourge - Gallagher, They Archfiend of Magnanimous Wreckage and The Supreme
+          scourge - Gallagher, Thy Archfiend of Magnanimous Wreckage and The Supreme
           Lord of Laughter himself... Carrot Top. If you eliminate these two
           foul Comedic Overlords, you will have freed humanity."
         </h6>
@@ -182,7 +182,7 @@ const renderFour = () => {
     <Container>
       <h6>
         You graciously accept the food and eat it hungrily. It warms your
-        belly. You feel invigorating feel strength.
+        belly. You feel invigorating strength.
       </h6>
       <h6>You receive {fiftyToOneHundred} hit points. </h6>
       <div
@@ -320,8 +320,7 @@ const renderFour = () => {
         <h6>
           Gallagher descends from the sky, hammer in hand. A table with
           John Tesh strapped prone to it at his side. "LADIES AND GENTLEMEN! I
-          did not come here tonight to make you laugh! I came here to crush the life from
-          something! And I want you to pay particular attention, because The
+          did not come here tonight to make you laugh! I came here to terminate life itself! And I want you to pay particular attention, because The
           Amazing Death Bringer Corporation, a subsidiary of Murder Your Family
           Industries, has entrusted who? -- me! -- to show you! -- the handiest
           and the dandiest assassination tool you've ever seen, and don't you
@@ -380,6 +379,7 @@ const renderFour = () => {
       {four && renderFour()}
       {five && renderFive()}
       {noFoodVisible && renderNoFood()}
+      {noArmorVisible && renderNoArmor() }
       {six && renderSix()}
       {seven && renderSeven()}
       {eight && renderEight()}

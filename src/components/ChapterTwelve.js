@@ -48,7 +48,7 @@ const ChapterTwelve = () => {
     return (
       <div>
         <h1>Chapter Eight</h1>
-        <h6>Thy of Obsequious Sycophancy</h6>
+        <h6>Thy of Obsequious Capitalist Sycophancy</h6>
         <div
           onClick={() => {
             setOne(false);

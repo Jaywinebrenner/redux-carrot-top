@@ -28,6 +28,7 @@ import {
   toggleChapterFourteen,
   incrementPlayerDefence,
   decrementPlayerDefence,
+  changeDamage
 
 } from "../actions";
 import Battle from "./Battle";
@@ -201,6 +202,9 @@ console.log("Player defence", playerDefence);
       if (chapterThree === true) {
         dispatch(decrementPlayerDefence(2))
       }
+      if (chapterThirteen === true) {
+        dispatch(changeDamage(50));
+      }
     };
 
   const renderLootResultYes = () => {
@@ -231,6 +235,8 @@ console.log("Player defence", playerDefence);
           )}
           {chapterSeven && <h6>You gain 3 Defense points.</h6>}
           {chapterThree && <h6>You lose 2 Defense points.</h6>}
+          {chapterTen && <h6>You recieve {tenSidedDie} hit points.</h6>}
+          {chapterThirteen && <h6>You can now inflict up to 50 hit points of damage.</h6>}
 
           <Link
             onClick={() => {
@@ -278,6 +284,7 @@ console.log("Player defence", playerDefence);
     chapterTen && dispatch(toggleChapterThirteen(true));
     chapterEleven && dispatch(toggleChapterThirteen(true));
     chapterTwelve && dispatch(toggleChapterThirteen(true));
+    chapterThirteen && dispatch(toggleChapterFourteen(true));
 
   };
 

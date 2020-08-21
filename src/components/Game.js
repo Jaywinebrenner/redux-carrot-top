@@ -138,11 +138,11 @@ const Game = () => {
             {chapterFive && <ChapterFive />}
             {chapterSix && <ChapterSix />}
             {chapterSeven && <ChapterSeven />}
-            {chapterEight && <ChapterEight />} */}
+            {chapterEight && <ChapterEight />}
             {chapterNine && <ChapterNine />}
             {chapterTen && <ChapterTen />}
             {chapterEleven && <ChapterEleven />}
-            {chapterTwelve && <ChapterTwelve />}
+            {chapterTwelve && <ChapterTwelve />} */}
             {chapterThirteen && <ChapterThirteen />}
             {chapterFourteen && <ChapterFourteen />}
           </Col>

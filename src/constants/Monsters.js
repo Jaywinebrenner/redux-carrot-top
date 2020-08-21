@@ -199,97 +199,98 @@ export const emoPhilips = {
       };
 
       export const victoriaJackson = {
-        name: "Bobcat Goldthwait",
+        name: "Victoria Jackson",
         nameInitiative: [
-          "The twisted creature",
-          "the Deranged Maniac",
-          " Hammer Weidling Hellion",
+          "The Diaboical Idolator",
+          "Victoria Jackson",
+          "Victoria",
         ],
         nameAttack: [
-          "Bobcat Goldthwait",
-          "Bobcat",
-          "The deranged maniac",
+          "Victoria Jackson",
+          "Victoria",
+          "The Chaotic Chorus-Line Demoness",
         ],
         hitPoints: 15,
-        damage: 5,
+        damage: 3,
         defence: 5,
         intro:
-          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
-        imageName: "bobcatGoldthwaitImage",
+          "You stand face to face with The Diabolical Idolator herself...",
+        imageName: "victoriaJacksonImage",
         died:
-          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+          'A direct hit sends Victoria Jacksons eyes shooting out of her skull. "Argh," she screams while jamming her fingers in her now empty eye sockets. She flails about, slips on her disembodied eyes and crashes dead to the ground',
         lootOne:
-          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
-        lootTwo: "Do you eat the pizza?",
+          "You rifle through Victoria's pockets and a handful of half eaten communion wafers.",
+        lootTwo: "Do you eat the wafers?",
         lootThree:
-          'It is delicious. Why Bobcat did not eat it himself remains a mystery.' ,
+          'They are dry. But they offer nutrition. You eat them all.' ,
         lootFour:
           "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
       };
 
       export const rodneyDangerfield = {
-        name: "Bobcat Goldthwait",
+        name: "Rodney Dangerfield",
         nameInitiative: [
-          "The twisted creature",
-          "the Deranged Maniac",
-          " Hammer Weidling Hellion",
+          "Bug-eyed Maniac",
+          "Rodney Dangerfield",
+          "Thy of No Respect",
         ],
         nameAttack: [
-          "Bobcat Goldthwait",
-          "Bobcat",
-          "The deranged maniac",
+          "Rodney Dangerfield",
+          "Rodney",
+          "Thy of No Respect",
         ],
         hitPoints: 15,
         damage: 5,
         defence: 5,
         intro:
-          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
-        imageName: "bobcatGoldthwaitImage",
+          "You stand face to face with Thy of No Respect himself...",
+        imageName: "rodneyDangerfieldImage",
         died:
-          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+          'A direct hit sends Rodney Dangerfields bulging eyes shooting out of his skull. "Argh," he screams while jamming his fingers in his now empty eye sockets. He flails about, slips on his disembodied eyes and crashes dead to the ground',
         lootOne:
-          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
-        lootTwo: "Do you eat the pizza?",
+          "You rifle through Rodney's belongings and find nothing of value. You do, however, see his bulbous eyeballs laying prone.",
+        lootTwo: "Do you eat Rodney Dangerfields eyes?",
         lootThree:
-          "It is delicious. Why Bobcat did not eat it himself remains a mystery.",
+          "You pop the eyeballs in your mouth and collapse your molars in their center. They pop and release the thick, gelatinous vitrious humor. You swallow the revolting gell.",
         lootFour:
-          "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
+          "You wince at the thought of eating Rodney Dangerfields eyes. You give them a swift kick, sending them several yards.",
       };
 
       export const yakovSmirnoff = {
-        name: "Bobcat Goldthwait",
-        nameInitiative: [
-          "The twisted creature",
-          "the Deranged Maniac",
-          " Hammer Weidling Hellion",
-        ],
-        nameAttack: [
-          "Bobcat Goldthwait",
-          "Bobcat",
-          "The deranged maniac",
-        ],
-        hitPoints: 15,
-        damage: 5,
-        defence: 5,
-        intro:
-          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
-        imageName: "bobcatGoldthwaitImage",
-        died:
-          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
-        lootOne:
-          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
-        lootTwo: "Do you eat the pizza?",
-        lootThree:
-          "It is delicious. Why Bobcat did not eat it himself remains a mystery.",
-        lootFour:
-          "You do not trust this vile piece of food and toss ontop of Bobcat's half eaten corpse.",
-      };
+               name: "Yakov Smirnoff",
+               nameInitiative: [
+                 "The Capitalist Cog Beast",
+                 "Yakov Smirnoff",
+                 " Yakov",
+               ],
+               nameAttack: [
+                 "Yakov Smirnoff",
+                 "Yakov",
+                 "The Capitalist Cog Beast",
+               ],
+               hitPoints: 15,
+               damage: 5,
+               defence: 5,
+               intro:
+                 "You stand face to face with Thy of Obsequious Capitalist Sycophancy himself...",
+               imageName: "bobcatGoldthwaitImage",
+               died:
+                 'A direct hit sends Yakov Smirnoffs eyes shooting out of his skull. "Argh," he screams while jamming his fingers in his now empty eye sockets. He flails about, slips on his disembodied eyes and crashes dead to the ground',
+               lootOne:
+                 "You rifle through Yakov's pockets and find a handful of stale Freedom Fries and a packet of Ranch Dressing.",
+               lootTwo:
+                 "Do you eat the Freedom Fries and the packet of Ranch Dressing?",
+               lootThree:
+                 "The taste is negligible, yet it is nutrition no less.",
+               lootFour:
+                 "You do not trust this food. You leave it be.",
+             };
 
     export const gallagher = {
       name: "Gallagher",
       nameInitiative: [
-        "The Lord of Wreckage",
-        "Stripe-shirted Hellspawn",
+        "Thy Archfiend of Magnanimous Wreckage",
+        "Suspender-clad Hellspawn",
         " Hammer Weidling Hellion",
       ],
       nameAttack: [
@@ -297,16 +298,16 @@ export const emoPhilips = {
         "Gallagher",
         "The Lord of Wreckage",
       ],
-      hitPoints: 15,
+      hitPoints: 20,
       damage: 8,
       defence: 5,
       intro:
         "You stand face to face with The Archfiend of Magnanimous Wreckage himself...",
       imageName: "gallagherImage",
       died:
-        "You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out it astonishment amd you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.",
+        "You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out it astonishment add you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.",
       lootOne:
-        "You stand over the carcass of the Prop-Adled beast and pick up his signiture weapon. The Sledge-O-Matic.",
+        "You stand over the carcass of the Suspender-clad beast and pick up his signiture weapon. The Sledge-O-Matic.",
       lootTwo: "Do you weild the Sledge-O-Matic?",
       lootThree:
         'You can feel the ghosts of 1000 children cry out within the fabric of this foul object. "Oh, thy foul instument of unrepentant horror... it is time to cleanse you of your sins and destroy the Harbringer of Death with your mighty murderous power.',
@@ -316,25 +317,25 @@ export const emoPhilips = {
 
 
       export const carrotTop = {
-        name: "Bobcat Goldthwait",
+        name: "Carrot Top",
         nameInitiative: [
-          "The twisted creature",
-          "the Deranged Maniac",
-          " Hammer Weidling Hellion",
+          "Carrot Top, The Supreme Lord of Laughter",
+          "Thy Transcendant Consumer of Worlds",
+          " Thy Swallower of Life Itself",
         ],
         nameAttack: [
-          "Bobcat Goldthwait",
-          "Bobcat",
-          "The deranged maniac",
+          "Thy Swallower of Life Itself",
+          "Thy Supreme Consumer of Worlds",
+          "Carrot Top, The Supreme Lord of Laughter",
         ],
-        hitPoints: 15,
-        damage: 5,
+        hitPoints: 50,
+        damage: 25,
         defence: 5,
         intro:
-          "You stand face to face with The Vile Demon of Derangment and Chaos himself...",
-        imageName: "bobcatGoldthwaitImage",
+          "You stand face to face with Carrot Top,The Supreme Lord of Laughter himself...",
+        imageName: "carrotTopImage",
         died:
-          'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
+          'One last blow across Carrot Tops Skull fractures reality into one million pieces. "What is this?" you think to yourself as this vile muscular destroyer of worlds sprials into one million colors from beyond comprehensible places. It is beautful in an otherworldy and unknowing way. Reality folds in on itself. Time ceases to exist.',
         lootOne:
           "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
         lootTwo: "Do you eat the pizza?",

@@ -296,3 +296,28 @@ p {
 .chapterTwoWrapper {
   text-align: "center";
 }
+
+
+/* WON  */
+
+.wonWrapper{
+  border: 5px double #5c5959;
+  background-color: #1d211e;
+  padding: 20px;
+  text-align: center;
+  border: 5px double white;
+  width: 1000px;
+  min-height: 550px;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-image: url(./media/blood_pix.png);
+}
+
+.wonHeader {
+  font-family: 'Metal Mania', cursive;
+  letter-spacing: 23px;
+  font-size: 38px;
+  /* color :#8a0303; */
+  color: white;
+  margin-top: 90px;
+}

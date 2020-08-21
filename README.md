@@ -44,3 +44,36 @@ Landing
 				Battle
 			ChapterThree
 			
+
+
+
+
+
+			    const isEnemyDeadCheck = () => {
+      if (enemyHitpoints < 1 && chapterFourteen === true) {
+        gotToWon()
+    } 
+      if (enemyHitpoints < 1) {
+        goToVictory()
+      }
+  }
+
+    const goToVictory = () => {
+      return (
+        <Redirect
+          to={{
+            pathname: "/Victory",
+          }}
+        />
+      );
+    };
+
+    const gotToWon = () => {
+      return (
+        <Redirect
+          to={{
+            pathname: "/Won",
+          }}
+        />
+      );
+    };

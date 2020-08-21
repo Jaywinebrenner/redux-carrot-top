@@ -11,6 +11,7 @@ import Landing from './components/Landing'
 import Intro from "./components/Intro";
 import Dead from "./components/Dead";
 import Victory from "./components/Victory";
+import Won from "./components/Won";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/Game" exact={true} component={Game} />
         <Route path="/Dead" exact={true} component={Dead} />
         <Route path="/Victory" exact={true} component={Victory} />
+        <Route path="/Won" exact={true} component={Won} />
 
         <Game />
       </Switch>

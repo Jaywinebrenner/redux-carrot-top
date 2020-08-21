@@ -63,9 +63,10 @@ const Battle = (enemy) => {
   const chapterOne = useSelector((state) => state.chapterOne);
   const chapterTwo = useSelector((state) => state.chapterTwo);
   const battleVisible = useSelector((state) => state.battleVisible);
+  const chapterFourteen = useSelector((state) => state.chapterFourteen)
+    const chapterTwelve = useSelector((state) => state.chapterTwelve);
 
-    console.log("ENEMY NAME ON BATTLE", enemy.enemy.name);
-    console.log("ENEMY HIT POINTS on BATTLE", enemyHitpoints);
+console.log("Chapter 14 on BATTLE", chapterFourteen);
 
     
 
@@ -334,14 +335,12 @@ const Battle = (enemy) => {
              isPlayerDeadCheck();
            } else {
              setEnemyMissed(true);
-            //  console.log("YOUR FOE HAS SWUNG AND MISSED YOU");
            }
     return enemyAttackRoll;
   };
 
   const isPlayerDeadCheck = () => {
-    // console.log("IN DEAD", playerHitpoints);
-    if (playerHitpoints <= 0) {
+    if (playerHitpoints < 1) {
       return (
         <Redirect
           to={{
@@ -352,19 +351,39 @@ const Battle = (enemy) => {
     }
   };
 
+  //   const isEnemyDeadCheck = () => {
+  //     if (enemyHitpoints <= 0) {
+  //       return (
+  //         <Redirect
+  //           to={{
+  //             pathname: "/Victory",
+  //           }}
+  //         />
+  //       );
+  //   };
+  // }
+
 
   const isEnemyDeadCheck = () => {
-    if (enemyHitpoints <= 0) {
+    if ((enemyHitpoints < 1) && (chapterFourteen === true)) {
       return (
         <Redirect
-          to={{
-            pathname: "/Victory",
-            // setCreateCharacterVisible: setCreateCharacterVisible,
-          }}
+        to={{
+          pathname: "/Won",
+        }}
         />
-      );
+        );
+      }
+    if (enemyHitpoints < 1) {
+      return (
+          <Redirect
+            to={{
+              pathname: "/Victory",
+            }}
+          />
+        );
     }
-  };
+  }
 
   //DOUBLE DAMAGE
 

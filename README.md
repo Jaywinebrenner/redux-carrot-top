@@ -22,6 +22,9 @@ bobcat goldwait
 elvira
 
 
+carrto top flexes a muscle in convo for damage
+
+
 he door opens with the faintest twist of the knob as you are sucked into whirlwind .
 Diaboical Idolatry 
 Rodney Dangerfield chewing on a corpse

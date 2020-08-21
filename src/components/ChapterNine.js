@@ -7,6 +7,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
+  toggleChapterNine,
   toggleChapterTen,
   toggleChapterThirteen,
   toggleChapterEleven,
@@ -84,19 +85,19 @@ const ChapterNine = () => {
   const victoriaDoor = () => {
     setTwo(false);
     dispatch(toggleChapterTen(true));
-    dispatch(toggleChapterThirteen(false));
+    dispatch(toggleChapterNine(false));
   };
 
   const rodneyDoor = () => {
     setTwo(false);
     dispatch(toggleChapterEleven(true));
-    dispatch(toggleChapterThirteen(false));
+    dispatch(toggleChapterNine(false));
   };
 
   const yakovDoor = () => {
     setTwo(false);
     dispatch(toggleChapterTwelve(true));
-    dispatch(toggleChapterThirteen(false));
+    dispatch(toggleChapterNine(false));
   };
 
   const run = () => {

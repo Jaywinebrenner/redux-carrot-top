@@ -142,6 +142,11 @@ console.log("Player defence", playerDefence);
           {chapterSix && andrewDiceClay.lootOne}
           {chapterSeven && samKinison.lootOne}
           {chapterEight && bobcatGoldthwait.lootOne}
+          {chapterTen && victoriaJackson.lootOne}
+          {chapterEleven && rodneyDangerfield.lootOne}
+          {chapterTwelve && yakovSmirnoff.lootOne}
+          {chapterThirteen && gallagher.lootOne}
+          {chapterFourteen && carrotTop.lootOne}
         </h6>
         <h6 className="lootText">
           {" "}
@@ -152,6 +157,11 @@ console.log("Player defence", playerDefence);
           {chapterSix && andrewDiceClay.lootTwo}
           {chapterSeven && samKinison.lootTwo}
           {chapterEight && bobcatGoldthwait.lootTwo}
+          {chapterTen && victoriaJackson.lootTwo}
+          {chapterEleven && rodneyDangerfield.lootTwo}
+          {chapterTwelve && yakovSmirnoff.lootTwo}
+          {chapterThirteen && gallagher.lootTwo}
+          {chapterFourteen && carrotTop.lootTwo}
         </h6>
         <Row>
           <Col>
@@ -205,13 +215,17 @@ console.log("Player defence", playerDefence);
             {chapterSix && andrewDiceClay.lootThree}
             {chapterSeven && samKinison.lootThree}
             {chapterEight && bobcatGoldthwait.lootThree}
+            {chapterTen && victoriaJackson.lootThree}
+            {chapterEleven && rodneyDangerfield.lootThree}
+            {chapterTwelve && yakovSmirnoff.lootThree}
+            {chapterThirteen && gallagher.lootThree}
+            {chapterFourteen && carrotTop.lootThree}
           </h6>
 
           {chapterOne ||
             chapterTwo ||
             chapterFive ||
-            chapterEight 
-            && <h6>You receive {tenSidedDie} hit points.</h6>}
+            (chapterEight && <h6>You receive {tenSidedDie} hit points.</h6>)}
           {chapterSix && (
             <h6>You suffer {tenSidedDie} hit points of damage.</h6>
           )}
@@ -260,6 +274,10 @@ console.log("Player defence", playerDefence);
     chapterSix && dispatch(toggleChapterEight(true));
     chapterSeven && dispatch(toggleChapterEight(true));
     chapterEight && dispatch(toggleChapterNine(true));
+    // chapterNine && dispatch(toggleChapterTen(true));
+    chapterTen && dispatch(toggleChapterThirteen(true));
+    chapterEleven && dispatch(toggleChapterThirteen(true));
+    chapterTwelve && dispatch(toggleChapterThirteen(true));
 
   };
 
@@ -275,6 +293,11 @@ console.log("Player defence", playerDefence);
             {chapterSix && andrewDiceClay.lootFour}
             {chapterSeven && samKinison.lootFour}
             {chapterEight && bobcatGoldthwait.lootFour}
+            {chapterTen && victoriaJackson.lootFour}
+            {chapterEleven && rodneyDangerfield.lootFour}
+            {chapterTwelve && yakovSmirnoff.lootFour}
+            {chapterThirteen && gallagher.lootFour}
+            {chapterFourteen && carrotTop.lootFour}
           </h6>
           <Link
             onClick={() => {

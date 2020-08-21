@@ -133,12 +133,12 @@ const Game = () => {
             {/* {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
             {chapterTwo && <ChapterTwo />}
-            {chapterThree && <ChapterThree />} */}
+            {chapterThree && <ChapterThree />}
             {chapterFour && <ChapterFour />}
             {chapterFive && <ChapterFive />}
             {chapterSix && <ChapterSix />}
             {chapterSeven && <ChapterSeven />}
-            {chapterEight && <ChapterEight />}
+            {chapterEight && <ChapterEight />} */}
             {chapterNine && <ChapterNine />}
             {chapterTen && <ChapterTen />}
             {chapterEleven && <ChapterEleven />}

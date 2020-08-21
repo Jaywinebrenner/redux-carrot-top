@@ -8,6 +8,7 @@ import {
   victoriaJackson,
   rodneyDangerfield,
   yakovSmirnoff,
+  gallagher
 } from "../constants/Monsters";
 import { AREATHREE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
@@ -26,6 +27,8 @@ import {
   toggleChapterOne,
   toggleChapterTwo,
   changeDefence,
+  incrementPlayerHp,
+  incrementPlayerDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
@@ -37,9 +40,11 @@ const ChapterThirteen = () => {
   const [two, setTwo] = useState(false);
   const [three, setThree] = useState(false);
   const [four, setFour] = useState(false);
-  const [four, setFour] = useState(false);
-  const [four, setFour] = useState(false);
-  const [four, setFour] = useState(false);
+  const [five, setFive] = useState(false);
+  const [six, setSix] = useState(false);
+  const [seven, setSeven] = useState(false);
+  const [eight, setEight] = useState(false);
+  const [nine, setNine] = useState(false);
   const [battleGallagher, setBattleGallagher] = useState(false);
 
   const dispatch = useDispatch();
@@ -47,11 +52,16 @@ const ChapterThirteen = () => {
   const armor = useSelector((state) => state.armor);
   const name = useSelector((state) => state.name);
 
+  console.log("one", one);
+   console.log("two", two);
+    console.log("three", three);
+    console.log("four", four);
+
   const renderOne = () => {
     return (
       <div>
         <h1>Chapter Nine</h1>
-        <h6>Thy Crusher of Worlds and Obliterator of All Innocence</h6>
+        <h6>The Reprieve and Thy Crusher of Worlds and Obliterator of All Innocence</h6>
         <div
           onClick={() => {
             setOne(false);
@@ -68,77 +78,296 @@ const ChapterThirteen = () => {
     return (
       <Container>
         <h6>
-          You move forward into a collasal archway revealing an endless lake of
-          blood as far as the eye can see. Nothing will surprise you with what lies
-          inside this repugnant tower's walls.
+          You move forward into a colossal archway revealing an endless lake
+          of blood as far as the eye can see. Nothing will surprise you with
+          what lies inside this repugnant tower's walls.
         </h6>
         <h6>
-          A small skiff with a cloaked figure is seen paddling your way using languid strokes of a long pole. The figure docks and slowly removes his hood. "I am here to help you, " say a voice radiating with genuine kindness.
+          A small skiff with a cloaked figure is seen paddling your way using
+          languid strokes of a long pole. The figure docks and slowly removes
+          his hood revealing a skeleton head. "I am here to help you, " says a
+          familiar voice.
         </h6>
 
         <h6>
-          "This new world is no world at all,"  says George Carlin. You instinctively reach for your weapon, yet there is an aura around this man that leads you to believe this is no trickery. "And this new world must come to end. I can help you. You have but two more obstacles to before freeing humanity of this vile scourge."
+          "This new world is no world at all. The laughs are nots laughs. The
+          pain is real pain. The suffering is real suffering. And this new world
+          must come to an end. And you {name} are one chosen to do so." There is a genuine
+          kindess and overwhelming familiarity in his voice.
         </h6>
-
+        <div
+          onClick={() => {
+            setTwo(false);
+            setThree(true);
+          }}
+        >
+          <h6 className="buttonText">CONTINUE</h6>
+        </div>
       </Container>
     );
-  };
-
-  const encounterAndrewOne = () => {
-    setTwo(false);
-    setThree(true);
-  };
-  const encounterAndrewTwo = () => {
-    setTwo(false);
-    setFour(true);
   };
 
   const renderThree = () => {
     return (
       <Container>
         <h6>
-          You begin to inch forward when the statue of Uncle Sam exclaims, "Vhat
-          a country!"
+          "You have but two more obstacles before freeing humanity of this vile
+          scourge - Gallagher, Thy Lord of Wreckage and The Supreme Lord of
+          Laughter himself... Carrot Top. If you eliminate these two foul
+          Comedic Overlords, you will have freed humanity."
         </h6>
-        <h6>
-          Yakov Smirnoff tears off the mask and exclaims "If Comedy Slayer enter
-          Yakov domain to kill Yakov. Yakov kill Comedy Slayer!"
-        </h6>
+        <h6>"I offer you gifts to aid you in your quest."</h6>
+        <h6>"For your health... please choose one."</h6>
+        <Row>
+          <Col>
+            <h6 onClick={() => eatFood()}>
+              Mediteranean Couscous Salad with a Hummus charcuterie plate and
+              lemon mint tea.
+            </h6>
+          </Col>
+          <Col>
+            <h6 onClick={() => eatFood()}>
+              Lamb Shank braised in an heirloom tomato and Barolo wine reduction
+              with a side of sauteed snow pea tips.
+            </h6>
+          </Col>
+          <Col>
+            <h6 onClick={() => eatFood()}>
+              Garlic butter baked Salmon with grilled asparagus and fingerling
+              potatos.
+            </h6>
+          </Col>
+          <Col>
+            <h6 onClick={() => noFood()}>Do not accept the a gift.</h6>
+          </Col>
+        </Row>
+      </Container>
+    );
+  };
 
-        <h6>He whips out a bayonette and charges.</h6>
+let fiftyToOneHundred =  Math.floor(Math.random() * 50) + 51;
 
-        <div onClick={beginBattle}>
+const eatFood = () => {
+  setThree(false)
+  setFour(true)
+  dispatch(incrementPlayerHp(fiftyToOneHundred));
+}
+
+
+const noFood = () => {
+  setThree(false);
+  setNoFoodVisible(true)
+}
+
+const [noFoodVisible, setNoFoodVisible] = useState(false)
+
+const renderNoFood = () => {
+  return (
+    <Container>
+      <h6>You deem it wise not to indulge in such decadent sustenance. </h6>
+      <div
+        onClick={() => {
+          setNoFoodVisible(false);
+          setFive(true);
+        }}
+      >
+        <h6 className="buttonText">CONTINUE</h6>
+      </div>
+    </Container>
+  );
+}
+
+const renderFour = () => {
+  return (
+    <Container>
+      <h6>
+        You graciously accept the food and eat it right away. It warms your
+        belly. You feel invigorating feel strength.
+      </h6>
+      <h6>You receive {fiftyToOneHundred} hit points. </h6>
+      <div
+        onClick={() => {
+          setFour(false);
+          setFive(true);
+        }}
+      >
+        <h6 className="buttonText">CONTINUE</h6>
+      </div>
+    </Container>
+  );
+}
+
+  const renderFive = () => {
+    return (
+      <Container>
+
+        <h6>"For your defense..."</h6>
+        <Row>
+          <Col>
+            <h6 onClick={() => wearArmor()}>
+              Miami Dolphins Football Helmet
+            </h6>
+          </Col>
+          <Col>
+            <h6 onClick={() => wearArmor()}>
+              Sky Blue Sheepskin Suede Jacket
+            </h6>
+          </Col>
+          <Col>
+            <h6 onClick={() => wearArmor()}>
+              Lavander colored Doc Martin Combat Boots
+            </h6>
+          </Col>
+          <Col>
+            <h6 onClick={() => noArmor()}>Do not accept the a gift.</h6>
+          </Col>
+        </Row>
+      </Container>
+    );
+  };
+
+
+  const wearArmor = () => {
+    setFive(false);
+    setSix(true);
+    dispatch(incrementPlayerDefence(3));
+  };
+
+  const noArmor = () => {
+    setFive(false);
+    setNoArmorVisible(true);
+  };
+
+  const [noArmorVisible, setNoArmorVisible] = useState(false);
+
+  const renderNoArmor = () => {
+    return (
+      <Container>
+        <h6>You deem it wise not to accept any armor. </h6>
+        <div
+          onClick={() => {
+            setNoArmorVisible(false);
+            setSix(true);
+          }}
+        >
           <h6 className="buttonText">CONTINUE</h6>
         </div>
       </Container>
     );
   };
 
-  const renderFour = () => {
+  const renderSix = () => {
     return (
       <Container>
         <h6>
-          You begin to inch around the edges of the room when the statue of
-          Uncle Sam exclaims, "Vhat a country!"
+          You graciously accept the armor and afix it to your person. It fits well. It feels good.
         </h6>
-        <h6>
-          Yakov Smirnoff tears off the mask and exclaims "If Comedy Slayer enter
-          Yakov domain to kill Yakov. Yakov kill Comedy Slayer!"
-        </h6>
-
-        <h6>He whips out a bayonette and charges.</h6>
-        <div onClick={beginBattle}>
+        <h6>You receive 3 defense points. </h6>
+        <div
+          onClick={() => {
+            setSix(false);
+            setSeven(true);
+          }}
+        >
           <h6 className="buttonText">CONTINUE</h6>
         </div>
       </Container>
     );
-  };
+  }
+
+  const renderSeven = () => {
+    return (
+      <Container>
+        <h6>
+          "Now {name} slayer of all false Comedians, let us venture forth to
+          fulfill your destiny."
+        </h6>
+        <h6>
+          You board the skiff floating in this foul lake of blood. The hooded
+          skeletal figure begins to paddle in silence.You look up into the
+          eternal blackness above and contemplate what awaits you. You travel
+          for days. Weeks even. Time is distorted. Time is irrelevant.
+        </h6>
+        <h6>
+          In finality, the skeletal hooded figure says, "We are here. Shit
+          island. Domain of Thy Lord of Wreckage. I wish you luck Comedian
+          Slayer. Fare thee well."
+        </h6>
+        <h6>
+          And with that, you exit the skiff. You step foot on this foul landmass
+          and turn your head back to the figure one last time. "Thank you George
+          Carlin. Thank you for everything."
+        </h6>
+        <div
+          onClick={() => {
+            setSeven(false);
+            setEight(true);
+          }}
+        >
+          <h6 className="buttonText">CONTINUE</h6>
+        </div>
+      </Container>
+    );
+  }
+
+  const renderEight = () => {
+    return (
+      <Container>
+        <h6>
+          You trek through the feces for several miles and you feel his
+          presence. Just like that. He is inside you. He is here.
+        </h6>
+        <h6>
+          Gallagher descends from the sky, hammer in hand. A table with
+          John Tesh strapped prone to it at his side. "LADIES AND GENTLEMEN! I
+          did not come here tonight to make you laugh! I came here to crush the life from
+          something! And I want you to pay particular attention, because The
+          Amazing Death Bringer Corporation, a subsidiary of Murder Your Family
+          Industries, has entrusted who? -- me! -- to show you! -- the handiest
+          and the dandiest assassination tool you've ever seen, and don't you
+          wanna know how it works?!" 
+        </h6>
+        <h6>A chorus of unseen voices scream out "YES!"</h6>
+        <div
+          onClick={() => {
+            setEight(false);
+            setNine(true);
+          }}
+        >
+          <h6 className="buttonText">CONTINUE</h6>
+        </div>
+      </Container>
+    );
+  }
+
+  const renderNine = () => {
+    return (
+      <Container>
+        <h6>
+          "First you take a milque-toast musician! You place the head of the
+          milque-toast musician in between the patented pans! Then you reach for
+          the tool that is not a slicer, not a dicer, not a chopper in a hopper!
+          What in the hell can it possibly be? SLEDGE-O-MATIC!"
+        </h6>
+        <h6>
+          Gallagher unleashed a might blow upon John Tesh's head and it explodes
+          into red mist.
+        </h6>
+        <h6>"Your turn," he winks.</h6>
+        <div onClick={() => beginBattle()}>
+          <h6 className="buttonText">CONTINUE</h6>
+        </div>
+      </Container>
+    );
+  }
+
+
+
 
   const beginBattle = () => {
     setBattleGallagher(true);
-    setFour(false);
-    setThree(false);
-    dispatch(setEnemyHp(yakovSmirnoff.hitPoints));
+    setNine(false);
+    dispatch(setEnemyHp(gallagher.hitPoints));
     dispatch(toggleEnemyDisplay(true));
     dispatch(toggleBattleDisplay(true));
   };
@@ -149,7 +378,13 @@ const ChapterThirteen = () => {
       {two && renderTwo()}
       {three && renderThree()}
       {four && renderFour()}
-      {battleGallagher && <Battle enemy={yakovSmirnoff} />}
+      {five && renderFive()}
+      {noFoodVisible && renderNoFood()}
+      {six && renderSix()}
+      {seven && renderSeven()}
+      {eight && renderEight()}
+      {nine && renderNine()}
+      {battleGallagher && <Battle enemy={gallagher} />}
     </div>
   );
 };

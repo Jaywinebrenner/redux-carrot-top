@@ -61,7 +61,7 @@ const ChapterThirteen = () => {
     return (
       <div>
         <h1>Chapter Nine</h1>
-        <h6>The Reprieve and Thy Crusher of Worlds and Obliterator of All Innocence</h6>
+        <h6>The Reprieve and Thy Archfiend of Magnanimous Wreckage</h6>
         <div
           onClick={() => {
             setOne(false);
@@ -112,9 +112,9 @@ const ChapterThirteen = () => {
       <Container>
         <h6>
           "You have but two more obstacles before freeing humanity of this vile
-          scourge - Gallagher, Thy Lord of Wreckage and The Supreme Lord of
-          Laughter himself... Carrot Top. If you eliminate these two foul
-          Comedic Overlords, you will have freed humanity."
+          scourge - Gallagher, They Archfiend of Magnanimous Wreckage and The Supreme
+          Lord of Laughter himself... Carrot Top. If you eliminate these two
+          foul Comedic Overlords, you will have freed humanity."
         </h6>
         <h6>"I offer you gifts to aid you in your quest."</h6>
         <h6>"For your health... please choose one."</h6>
@@ -181,7 +181,7 @@ const renderFour = () => {
   return (
     <Container>
       <h6>
-        You graciously accept the food and eat it right away. It warms your
+        You graciously accept the food and eat it hungrily. It warms your
         belly. You feel invigorating feel strength.
       </h6>
       <h6>You receive {fiftyToOneHundred} hit points. </h6>
@@ -290,8 +290,8 @@ const renderFour = () => {
         </h6>
         <h6>
           In finality, the skeletal hooded figure says, "We are here. Shit
-          island. Domain of Thy Lord of Wreckage. I wish you luck Comedian
-          Slayer. Fare thee well."
+          island. Domain of Thy Archfiend of Magnanimous Wreckage. I wish you
+          luck Comedian Slayer. Fare thee well."
         </h6>
         <h6>
           And with that, you exit the skiff. You step foot on this foul landmass
@@ -350,7 +350,7 @@ const renderFour = () => {
           What in the hell can it possibly be? SLEDGE-O-MATIC!"
         </h6>
         <h6>
-          Gallagher unleashed a might blow upon John Tesh's head and it explodes
+          Gallagher unleashes a might blow upon John Tesh's head and it explodes
           into red mist.
         </h6>
         <h6>"Your turn," he winks.</h6>

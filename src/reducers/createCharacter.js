@@ -1,7 +1,7 @@
 const createCharacter = (state = true, action) => {
   switch (action.type) {
     case "TOGGLE_CREATE_CHARACTER":
-      return !state;
+      return action.payload;
     default:
       return state;
   }

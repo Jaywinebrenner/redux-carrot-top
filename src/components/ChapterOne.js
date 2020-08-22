@@ -7,16 +7,6 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from './Battle'
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay
 } from "../actions";
@@ -118,8 +108,6 @@ const ChapterOne = () => {
               setIsAreaOneThreeDisplayed(false);
               dispatch(toggleEnemyDisplay(true));
               dispatch(toggleBattleDisplay(true));
-              // dispatch(toggleChapterOne(false));
-              // setIsEmoImageVisible(true);
             }}
             className="continueButtonWrapper"
           >
@@ -133,7 +121,6 @@ const ChapterOne = () => {
   const handleAreaOneFour = () => {
     setTwo(false);
     setIsAreaOneFourDisplayed(true);
-    // setIsEmoImageVisible(true);
   };
   const renderAreaOneFour = () => {
     return (
@@ -145,8 +132,6 @@ const ChapterOne = () => {
             setBattleEmo(true);
             dispatch(toggleEnemyDisplay(true));
             dispatch(toggleBattleDisplay(true));
-            // dispatch(toggleChapterOne(false));
-            // setIsEmoImageVisible(true);
           }}
           className="continueButtonWrapper"
         >
@@ -170,8 +155,6 @@ const ChapterOne = () => {
             setIsAreaOneFiveDisplayed(false);
             dispatch(toggleEnemyDisplay(true));
             dispatch(toggleBattleDisplay(true));
-            // dispatch(toggleChapterOne(false));
-            // setIsEmoImageVisible(true);
           }}
           className="continueButtonWrapper"
         >
@@ -188,17 +171,14 @@ const ChapterOne = () => {
   const renderAreaOneSix = () => {
     return (
       <div>
-        <h4>{AREAONE.six}</h4>
-        <h4>{AREAONE.seven}</h4>
+        <h6>{AREAONE.six}</h6>
+        <h6>{AREAONE.seven}</h6>
         <div
           onClick={() => {
             setBattleEmo(true);
             setIsAreaOneSixDisplayed(false);
             dispatch(toggleEnemyDisplay(true));
             dispatch(toggleBattleDisplay(true))
-            // dispatch(toggleCreateCharacter(false));
-            // dispatch(toggleChapterOne(false));
-            // setIsEmoImageVisible(true);
           }}
           className="emoButtonWrapper"
         >
@@ -208,8 +188,6 @@ const ChapterOne = () => {
     );
   };
 
-
-
   return (
     <div>
       {one && renderOne()}
@@ -218,11 +196,7 @@ const ChapterOne = () => {
       {isAreaOneFourDisplayed && renderAreaOneFour()}
       {isAreaOneFiveDisplayed && renderAreaOneFive()}
       {isAreaOneSixDisplayed && renderAreaOneSix()}
-
       {battleEmo && <Battle enemy={emoPhilips}/>}
-      {/* {battleEmo && Battle(emoPhilips)} */}
-      {/* {battleEmo && <Game enemy={emoPhilips}/>} */}
-
     </div>
   );
 };

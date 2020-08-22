@@ -5,6 +5,21 @@ export const incrementPlayerHp = (number) => {
   };
 }
 
+export const setPlayerHp = (number) => {
+  return {
+    type: "SET_PLAYER_HP",
+    payload: number,
+  };
+};
+
+export const incrementPlayerDamage = (number) => {
+  return {
+    type: "INCREMENT_PLAYER_DAMAGE",
+    payload: number,
+  };
+};
+
+
 export const decrementPlayerHp = (number) => {
   return {
     type: "DECREMENT_PLAYER_HP",
@@ -42,7 +57,7 @@ export const changeWeapon = (weapon) => {
 
 export const changeDefence = (number) => {
   return {
-    type: "CHANGE_DEFENCE",
+    type: "CHANGE_PLAYER_DEFENCE",
     payload: number,
   };
 };

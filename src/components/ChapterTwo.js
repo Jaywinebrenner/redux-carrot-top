@@ -16,10 +16,27 @@ import {
   setEnemyHp
 } from "../actions";
 import Game from "./Game";
+import { Redirect, Route } from "react-router-dom";
 
 const ChapterTwo = () => {
 
   const dispatch = useDispatch();
+
+  const playerHitpoints = useSelector((state) => state.playerHitpoints);
+  
+  const isPlayerDeadCheck = () => {
+    console.log("HIT POINTS ON CHAPTER TWO", playerHitpoints);
+
+    if (playerHitpoints < 1) {
+      return (
+        <Redirect
+          to={{
+            pathname: "/Dead",
+          }}
+        />
+      );
+    }
+  };
   
 
   const battleVisible = useSelector((state) => state.battleVisible);
@@ -120,12 +137,24 @@ const ChapterTwo = () => {
             </Col>
 
             <Col>
-              <h5 onClick={run}>Run</h5>
+              <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
             </Col>
           </Row>
         </Container>
       );
     };
+
+    const [isRunVisible, setIsRunVisible] = useState(false)
+
+      const renderRun = () => {
+        return (
+          <Redirect
+            to={{
+              pathname: "/Run",
+            }}
+          />
+        );
+      };
 
     const [attackVisible, setAttackVisible] = useState(false);
 
@@ -145,9 +174,7 @@ const ChapterTwo = () => {
      );
     }
 
-    const run = () => {
-      //to do
-    };
+
 
     const [questionOneInput, setQuestionOneInput] = useState('')
 
@@ -180,7 +207,8 @@ const ChapterTwo = () => {
 
       const submitOne = () => {
         if (!questionOneInput || questionOneInput === " ") {
-          dispatch(decrementPlayerHp(1))
+          dispatch(decrementPlayerHp(3))
+          isPlayerDeadCheck()
           setPlayerDidNotEnterAnswer(true)
         } else {
 
@@ -192,7 +220,8 @@ const ChapterTwo = () => {
             setFive(true);
             setPlayerDidNotEnterAnswer(false);
           } else {
-            dispatch(decrementPlayerHp(1));
+            dispatch(decrementPlayerHp(3));
+            isPlayerDeadCheck()
             setFour(false);
             setFive(true);
             setPlayerDidNotEnterAnswer(false);
@@ -236,7 +265,7 @@ const ChapterTwo = () => {
           <Container>
             <h6>
               "WRONG!" he bellows as he spits the drill bit from his taut lips
-              at an ungodly speed. It pierces your torso for 1 damage.
+              at an ungodly speed. It pierces your torso for 3 hit points of damage.
             </h6>
             <h6>
               Tim Allen pauses, shoots you a condecending glare, flicks a
@@ -268,7 +297,8 @@ const ChapterTwo = () => {
 
     const submitTwo = () => {
       if (!questionTwoInput || questionTwoInput === " ") {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
+        isPlayerDeadCheck();
         setPlayerDidNotEnterAnswer(true);
       } else {
         if (questionTwoInput === "TOOL TIME") {
@@ -276,7 +306,8 @@ const ChapterTwo = () => {
         setSix(true);
         setPlayerDidNotEnterAnswer(false);
         } else {
-        dispatch(decrementPlayerHp(1));     
+        dispatch(decrementPlayerHp(3));     
+        isPlayerDeadCheck();
         setFive(false);
         setSix(true);
         setPlayerDidNotEnterAnswer(false);
@@ -315,7 +346,7 @@ const ChapterTwo = () => {
           <Container>
             <h6>
               "WRONG!" he spits the bit out of his mouth at an unfathomable
-              speed and it pierces the meat of your leg for 1 damage.
+              speed and it pierces the meat of your leg for 3 damage.
             </h6>
             <h6>
               With a taut flick of his thumb, Tim Allen arches a Flathead
@@ -345,7 +376,8 @@ const ChapterTwo = () => {
 
       const submitThree = () => {
         if (!questionThreeInput || questionThreeInput === " ") {
-          dispatch(decrementPlayerHp(1));
+          dispatch(decrementPlayerHp(3));
+          isPlayerDeadCheck();
           setPlayerDidNotEnterAnswer(true);
         } else {
           if (
@@ -357,7 +389,8 @@ const ChapterTwo = () => {
             setSeven(true);
             setPlayerDidNotEnterAnswer(false);
           } else {
-            dispatch(decrementPlayerHp(1));
+            dispatch(decrementPlayerHp(3));
+            isPlayerDeadCheck();
             setSix(false);
             setSeven(true);
             setPlayerDidNotEnterAnswer(false);
@@ -399,7 +432,7 @@ const ChapterTwo = () => {
           <Container>
             <h6>
               "NO!" He shoots the bit out of his mouth with a deep wet coughing
-              sound. It sinks into your shoulder for 1 point of damage.
+              sound. It sinks into your shoulder for 3 point of damage.
             </h6>
             <h6>
               He flicks a Counter Sink bit into the air and sucks it in his
@@ -427,7 +460,8 @@ const ChapterTwo = () => {
 
     const submitFour = () => {
       if (!questionFourInput || questionFourInput === " ") {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
+        isPlayerDeadCheck();
         setPlayerDidNotEnterAnswer(true);
       } else {
         if (questionFourInput === "CANCER") {
@@ -435,7 +469,8 @@ const ChapterTwo = () => {
           setEight(true);
           setPlayerDidNotEnterAnswer(false);
         } else {
-          dispatch(decrementPlayerHp(1));
+          dispatch(decrementPlayerHp(3));
+          isPlayerDeadCheck();
           setSeven(false);
           setEight(true);
           setPlayerDidNotEnterAnswer(false);
@@ -472,7 +507,7 @@ const ChapterTwo = () => {
             <Container>
               <h6>
                 "BZZZZT!! WRONG!" he bellows as he spits the drill bit from his
-                taut lips at an ungodly speed. It pierces your chest for 1
+                taut lips at an ungodly speed. It pierces your chest for 3
                 damage.
               </h6>
               <h6>
@@ -500,7 +535,8 @@ const ChapterTwo = () => {
 
           const submitFive = () => {
             if (!questionFiveInput || questionFiveInput === " ") {
-              dispatch(decrementPlayerHp(1));
+              dispatch(decrementPlayerHp(3));
+              isPlayerDeadCheck();
               setPlayerDidNotEnterAnswer(true);
             } else {
               if (questionFiveInput === "CANCER") {
@@ -508,7 +544,8 @@ const ChapterTwo = () => {
                 setNine(true);
                 setPlayerDidNotEnterAnswer(false);
               } else {
-                dispatch(decrementPlayerHp(1));
+                dispatch(decrementPlayerHp(3));
+                isPlayerDeadCheck();
                 setEight(false);
                 setNine(true);
                 setPlayerDidNotEnterAnswer(false);
@@ -530,7 +567,7 @@ const ChapterTwo = () => {
           return (
            <Container>
              <h6>"WRONG! Edd Hall would not be proud.</h6>
-             <h6>He spits the bit out of his mouth at an unfathomable speed. It pierces your torso for 1 hit point of damage.</h6>
+             <h6>He spits the bit out of his mouth at an unfathomable speed. It pierces your torso for 3 hit points of damage.</h6>
              <h6 onClick={goToTen} className="buttonText">
                CONTINUE
              </h6>
@@ -641,8 +678,9 @@ const ChapterTwo = () => {
       {eight && renderEight()}
       {nine && renderNine()}
       {ten && renderTen()}
+      {isRunVisible && renderRun()}
       {playerDidNotEnterAnswer && <h1>THIS IS AN UNACCEPTABLE ANSWER!</h1>}
-      {battleTim && <Battle enemy={timAllen}/>}
+      {battleTim && <Battle enemy={timAllen} />}
     </Container>
   );
 }

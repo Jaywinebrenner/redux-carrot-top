@@ -4,11 +4,19 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Typewriter from "typewriter-effect";
 import ReactHowler from "react-howler";
+import {
+  toggleChapterFourteen,
+} from "../actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const Won = () => {
+
+  const dispatch = useDispatch();
   const [startGame, setStartGame] = useState(false);
 
   const [isStartButtonVisible, setIsStartButtonVisible] = useState(false);
+
+  const chapterFourteen = useSelector((state) => state.chapterFourteen);
 
   setTimeout(function () {
     setIsStartButtonVisible(true);
@@ -35,6 +43,7 @@ const Won = () => {
   }
 
   const pressStartGame = () => {
+    dispatch(toggleChapterFourteen(false))
     setStartGame(true);
   };
 

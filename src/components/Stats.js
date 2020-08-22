@@ -22,13 +22,14 @@ const Stats = () => {
 
       <h6 className="statText">Hit Points: {playerHitpoints}</h6>
 
+      <h6 className="statText">Weapon: {weapon}</h6>
+
+      <h6 className="statText">Damage: {playerDamage} </h6>
+      
       <h6 className="statText">Armor: {armor}</h6>
 
       <h6 className="statText">Defence: {playerDefence} </h6>
 
-      <h6 className="statText">Weapon: {weapon}</h6>
-
-      <h6 className="statText">Damage: {playerDamage} </h6>
     </React.Fragment>
   );
 }

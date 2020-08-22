@@ -19,7 +19,8 @@ import {
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { emoPhilips } from "../constants/Monsters";
+import ReactHowler from "react-howler";
+import battle from "../media/battle.mp3";
 
 
 let initiativeRoll = null;
@@ -351,19 +352,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
     }
   };
 
-  //   const isEnemyDeadCheck = () => {
-  //     if (enemyHitpoints <= 0) {
-  //       return (
-  //         <Redirect
-  //           to={{
-  //             pathname: "/Victory",
-  //           }}
-  //         />
-  //       );
-  //   };
-  // }
-
-
   const isEnemyDeadCheck = () => {
     if ((enemyHitpoints < 1) && (chapterFourteen === true)) {
       return (
@@ -508,6 +496,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
 
   return (
     <Container>
+      <ReactHowler src={battle} volume={0.4} loop={true} />
       {battleButtonsVisible && renderBattleButtons()}
     </Container>
   );

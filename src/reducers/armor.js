@@ -1,4 +1,4 @@
-const armor = (state = "Naked", action) => {
+const armor = (state = " ", action) => {
   switch (action.type) {
     case "CHANGE_ARMOR":
       return action.payload;

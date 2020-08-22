@@ -20,6 +20,7 @@ import {
   toggleChapterOne,
   toggleChapterTwo,
   changeDefence,
+  incrementPlayerDamage,
 } from "../actions";
 
 const CreateCharacter = () => {
@@ -75,13 +76,14 @@ const CreateCharacter = () => {
       dispatch(changeName(localName));
       setIsOneVisible(false);
       setHealthVisible(true);
-      // setIsTwoVisible(true);
       dispatch(changeMainDisplayOne(" "));
       dispatch(changeMainDisplayTwo(" "));
     }
   };
-
-  let playerAttackRange = Math.floor(Math.random() * 75) + 25;
+  
+  
+// let healhRoll = Math.floor(Math.random() * 100) + 100;
+let healhRoll = Math.floor(Math.random() * 10) + 1;
 
   const renderSetHealth = () => {
     return (
@@ -89,15 +91,57 @@ const CreateCharacter = () => {
         <h6>{name}. Born in torment. Forged in pain. </h6>
         <div
           onClick={() => {
-            dispatch(incrementPlayerHp(playerAttackRange));
+            dispatch(incrementPlayerHp(healhRoll));
             setHealthVisible(false);
-            setIsTwoVisible(true);
+            setStrength(true)
           }}
         >
           <h6 className="setHealthButton">SET THY HEALTH</h6>
         </div>
       </React.Fragment>
     );
+  }
+
+  const [strength, setStrength] = useState(false)
+  const strengthRoll = Math.floor(Math.random() * 20) + 1;
+
+  const renderSetStrength = () => {
+    return (
+      <React.Fragment>
+        <h6>{name}. Born in desperation. Forged in hopelessness. </h6>
+        <div
+          onClick={() => determineStrength()}
+        >
+          <h6 className="setStrengthButton">SET THY STRENGTH</h6>
+        </div>
+      </React.Fragment>
+    );
+  }
+
+  const determineStrength = () => {
+    setHealthVisible(false);
+    setIsTwoVisible(true);
+    setStrength(false)
+    if (strengthRoll === 20) {
+      dispatch(incrementPlayerDamage(4));
+      dispatch(changeWeapon("Fists"));
+    } 
+   if (strengthRoll <= 7 ) {
+     dispatch(incrementPlayerDamage(2));
+     dispatch(changeWeapon("Fists"));
+   } else {
+    dispatch(incrementPlayerDamage(3));
+    dispatch(changeWeapon("Fists"));
+   }
+  //  return (
+  //    <React.Fragment>
+  //      <h6>{name}. Born in desperation. Forged in pain. </h6>
+  //      <div onClick={() => determineStrength()}>
+  //        <h6 className="setHealthButton">SET THY HEALTH</h6>
+  //      </div>
+  //    </React.Fragment>
+  //  );
+
   }
 
 
@@ -108,28 +152,28 @@ const CreateCharacter = () => {
 
   const handleSetButterKnife = () => {
     dispatch(changeWeapon(WEAPONS[1].name));
-    dispatch(changeDamage(WEAPONS[1].damage));
+    dispatch(incrementPlayerDamage(WEAPONS[1].damage));
     // setDamageString(WEAPONS[1].damageString);
     setIsTwoVisible(false);
     setIsWeaponChoiceTextVisible(true);
   };
   const handleSetTrashCanLid = () => {
     dispatch(changeWeapon(WEAPONS[2].name));
-    dispatch(changeDamage(WEAPONS[2].damage));
+    dispatch(incrementPlayerDamage(WEAPONS[2].damage));
     // setDamageString(WEAPONS[2].damageString);
     setIsTwoVisible(false);
     setIsWeaponChoiceTextVisible(true);
   }
   const handleSetTwoByFour = () => {
     dispatch(changeWeapon(WEAPONS[3].name));
-    dispatch(changeDamage(WEAPONS[3].damage));
+    dispatch(incrementPlayerDamage(WEAPONS[3].damage));
   //   setDamageString(WEAPONS[3].damageString);
     setIsTwoVisible(false);
     setIsWeaponChoiceTextVisible(true);
   }
   const handleTakeNothing = () => {
     dispatch(changeWeapon(WEAPONS[0].name));
-    dispatch(changeDamage(WEAPONS[0].damage));
+    dispatch(incrementPlayerDamage(WEAPONS[0].damage));
     // setDamageString(WEAPONS[0].damageString);
     setIsTwoVisible(false);
     setIsWeaponChoiceTextVisible(true);
@@ -172,7 +216,7 @@ const CreateCharacter = () => {
   ] = useState(false);
 
     const renderPostWeaponChoiceText = () => {
-      if (weapon === "Bare Hands") {
+      if (weapon === "Fists") {
         return (
           <div>
             <h6>{WEAPONS[0].weaponPickUp}</h6>
@@ -236,10 +280,6 @@ const CreateCharacter = () => {
 
     // 4 ARMOR   
     const [isSetArmorVisible, setIsSetArmorVisible] = useState(false);
-    const [
-      isArmorChoiceTextVisible,
-      setIsArmorChoiceTextVisible,
-    ] = useState(false);
 
     const renderSetArmor = () => {
       return (
@@ -407,6 +447,7 @@ const CreateCharacter = () => {
       {isWeaponChoiceTextVisible && renderPostWeaponChoiceText()}
       {isSetArmorVisible && renderSetArmor()}
       {isArmorChoiceVisible && renderArmorChoice()}
+      {strength && renderSetStrength()}
       <h6>{mainDisplayTwo}</h6>
     </React.Fragment>
   );

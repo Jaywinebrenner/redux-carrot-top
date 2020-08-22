@@ -2,12 +2,23 @@ import React, { useState } from "react";
 import carrotTop from "../media/carrot-top.png";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
+import {
+  toggleEnemyDisplay,
+  toggleBattleDisplay,
+  toggleCreateCharacter,
+} from "../actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const Landing = () => {
+
+   const dispatch = useDispatch();
   const [startGame, setStartGame] = useState(false);
 
   const pressStartGame = () => {
-    setStartGame(true);
+    // dispatch(toggleEnemyDisplay(false));
+    // dispatch(toggleBattleDisplay(false));
+    // dispatch(toggleCreateCharacter(true));
+    // setStartGame(true);
   };
 
   return (

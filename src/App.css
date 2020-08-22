@@ -247,6 +247,17 @@ p {
   line-height: 1;
 }
 
+.setStrengthButton {
+  text-align: center;
+  font-size: 30px;
+  border: double white;
+  width: 340px;
+  height: 37px;
+  margin: 0 auto;
+  margin-top: 50px;
+  line-height: 1;
+}
+
 
 
 .battleButtonText {

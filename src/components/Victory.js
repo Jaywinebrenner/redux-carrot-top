@@ -252,6 +252,7 @@ console.log("Player defence", playerDefence);
           {chapterThirteen && (
             <h6>You can now inflict up to 50 hit points of damage.</h6>
           )}
+          {chapterEleven && <h6>You gain {twentySidedDie} hit points.</h6>}
 
           <Link
             onClick={() => {
@@ -361,12 +362,12 @@ console.log("Player defence", playerDefence);
           {lootOptionsVisible && renderLootOptions()}
         </Col>
       </Row>
-      <ReactHowler
+      {/* <ReactHowler
         src={gamePlay}
         volume={0.4}
         loop={true}
-        // playing={isGameMusicPlaying}
-      />
+        playing={isGameMusicPlaying}
+      /> */}
     </Container>
   );
 };

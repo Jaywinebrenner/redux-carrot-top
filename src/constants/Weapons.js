@@ -3,7 +3,7 @@ export let WEAPONS = [
     id: 0,
     name: "Bare Hands",
     damageString: "1-2",
-    damage: 3,
+    damage: 0,
     weaponHealth: null,
     weaponPickUp:
       "You didn't grab a weapon and simply opt to battle the Illuimiati of Laughter with your bare fists. Some call this bravery. Others call this foolishness",

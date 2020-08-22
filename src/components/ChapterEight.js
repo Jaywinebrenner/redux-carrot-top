@@ -178,7 +178,7 @@ const ChapterEight = () => {
 
   const submitOne = () => {
     if (!questionOneInput || questionOneInput === " ") {
-      dispatch(decrementPlayerHp(1));
+      dispatch(decrementPlayerHp(3));
       setPlayerDidNotEnterAnswer(true);
     } else {
       if (
@@ -188,7 +188,7 @@ const ChapterEight = () => {
         setFive(true);
         setPlayerDidNotEnterAnswer(false);
       } else {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
         setFour(false);
         setFive(true);
         setPlayerDidNotEnterAnswer(false);
@@ -226,7 +226,7 @@ const ChapterEight = () => {
         <Container>
           <h6>
             Bobcat's eye light up. "WRONG!" he squeals and spits the finger
-            flesh at you with lightening speed, piercing you for 1 hit point of
+            flesh at you with lightening speed, piercing you for 3 hit points of
             damage.
           </h6>
           <h6>
@@ -256,7 +256,7 @@ const ChapterEight = () => {
 
   const submitTwo = () => {
     if (!questionTwoInput || questionTwoInput === " ") {
-      dispatch(decrementPlayerHp(1));
+      dispatch(decrementPlayerHp(3));
       setPlayerDidNotEnterAnswer(true);
     } else {
       if (
@@ -267,7 +267,7 @@ const ChapterEight = () => {
         setSix(true);
         setPlayerDidNotEnterAnswer(false);
       } else {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
         setFive(false);
         setSix(true);
         setPlayerDidNotEnterAnswer(false);
@@ -304,7 +304,7 @@ const ChapterEight = () => {
         <Container>
           <h6>
             Bobcat's eye light up. "WRONG!" he squeals and spits the finger
-            flesh at you with lightening speed, piercing you for 1 hit point of
+            flesh at you with lightening speed, piercing you for 3 hit points of
             damage.
           </h6>
           <h6>
@@ -313,7 +313,7 @@ const ChapterEight = () => {
           </h6>
           <h6>
             "So like, the lead character in some of these police movies was
-            called Tackleberry. What was his name in real life?"
+            called Mahoney. What was his name in real life?"
           </h6>
           <input
             ref={(input) => input && input.focus()}
@@ -333,7 +333,7 @@ const ChapterEight = () => {
 
   const submitThree = () => {
     if (!questionThreeInput || questionThreeInput === " ") {
-      dispatch(decrementPlayerHp(1));
+      dispatch(decrementPlayerHp(3));
       setPlayerDidNotEnterAnswer(true);
     } else {
       if (
@@ -343,7 +343,7 @@ const ChapterEight = () => {
         setSeven(true);
         setPlayerDidNotEnterAnswer(false);
       } else {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
         setSix(false);
         setSeven(true);
         setPlayerDidNotEnterAnswer(false);
@@ -379,7 +379,7 @@ const ChapterEight = () => {
         <Container>
           <h6>
             Bobcat's eye light up. "WRONG!" he squeals and spits the finger
-            flesh at you with lightening speed, piercing you for 1 hit point of
+            flesh at you with lightening speed, piercing you for 3 hit points of
             damage.
           </h6>
           <h6>
@@ -410,7 +410,7 @@ const ChapterEight = () => {
 
   const submitFour = () => {
     if (!questionFourInput || questionFourInput === " ") {
-      dispatch(decrementPlayerHp(0.5));
+      dispatch(decrementPlayerHp(3));
       setPlayerDidNotEnterAnswer(true);
     } else {
       if (questionFourInput === "CACOON") {
@@ -418,7 +418,7 @@ const ChapterEight = () => {
         setEight(true);
         setPlayerDidNotEnterAnswer(false);
       } else {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
         setSeven(false);
         setEight(true);
         setPlayerDidNotEnterAnswer(false);
@@ -454,7 +454,7 @@ const ChapterEight = () => {
         <Container>
           <h6>
             Bobcat's eye light up. "WRONG!" he squeals and spits the finger
-            flesh at you with lightening speed, piercing you for 1 hit point of
+            flesh at you with lightening speed, piercing you for 3 hit points of
             damage.
           </h6>
           <h6>
@@ -485,7 +485,7 @@ const ChapterEight = () => {
 
   const submitFive = () => {
     if (!questionFiveInput || questionFiveInput === " ") {
-      dispatch(decrementPlayerHp(0.5));
+      dispatch(decrementPlayerHp(3));
       setPlayerDidNotEnterAnswer(true);
     } else {
       if (questionFiveInput === "DIABETES") {
@@ -493,7 +493,7 @@ const ChapterEight = () => {
         setNine(true);
         setPlayerDidNotEnterAnswer(false);
       } else {
-        dispatch(decrementPlayerHp(1));
+        dispatch(decrementPlayerHp(3));
         setEight(false);
         setNine(true);
         setPlayerDidNotEnterAnswer(false);
@@ -516,7 +516,7 @@ const ChapterEight = () => {
         <Container>
           <h6>
             Bobcat's eye light up. "WRONG!" he squeals and spits the finger
-            flesh at you with lightening speed, piercing you for 1 hit point of
+            flesh at you with lightening speed, piercing you for 3 hit points of
             damage.
           </h6>
 

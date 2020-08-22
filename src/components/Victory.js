@@ -110,7 +110,7 @@ console.log("Player defence", playerDefence);
      
           {chapterTen && victoriaJackson.died}
           {chapterEleven && rodneyDangerfield.died}
-          {chapterTwelve && yakovSmirnoff.died}
+          {chapterTwelve && yakovSmirnoff.died} 
           {chapterThirteen && gallagher.died}
           {chapterFourteen && carrotTop.died}
         </h6>
@@ -129,8 +129,8 @@ console.log("Player defence", playerDefence);
   };
 
 
-  const [tenSidedDie, setTenSidedDie] = useState(
-    Math.floor(Math.random() * 10) + 1,
+  const [twentySidedDie, setTwentySidedDie] = useState(
+    Math.floor(Math.random() * 20) + 1,
   );
   const renderLootOptions = () => {
     return (
@@ -190,20 +190,33 @@ console.log("Player defence", playerDefence);
     const lootResults = () => {
       setLootResultYes(true);
       setLootOptionsVisible(false);
-      if (chapterSix == true) {
-        dispatch(decrementPlayerHp(tenSidedDie));
+      if (chapterSix == true || chapterTen == true) {
+        dispatch(decrementPlayerHp(twentySidedDie));
+        isPlayerDeadCheck()
       }
       if (chapterSeven === true) {
         dispatch(incrementPlayerDefence(3));
       }
-      if (chapterOne === true || chapterTwo === true || chapterFive == true) {
-        dispatch(incrementPlayerHp(tenSidedDie));
+      if (chapterOne === true || chapterTwo === true || chapterFive === true || chapterTwelve === true || chapterEleven == true) {
+        dispatch(incrementPlayerHp(twentySidedDie));
       }
       if (chapterThree === true) {
         dispatch(decrementPlayerDefence(2))
       }
       if (chapterThirteen === true) {
         dispatch(changeDamage(50));
+      }
+    };
+
+    const isPlayerDeadCheck = () => {
+      if (playerHitpoints < 1) {
+        return (
+          <Redirect
+            to={{
+              pathname: "/Dead",
+            }}
+          />
+        );
       }
     };
 
@@ -226,17 +239,19 @@ console.log("Player defence", playerDefence);
             {chapterFourteen && carrotTop.lootThree}
           </h6>
 
-          {chapterOne ||
+          {(chapterOne ||
             chapterTwo ||
             chapterFive ||
-            (chapterEight && <h6>You receive {tenSidedDie} hit points.</h6>)}
+            chapterEight) && <h6>You receive {twentySidedDie} hit points.</h6>}
           {chapterSix && (
-            <h6>You suffer {tenSidedDie} hit points of damage.</h6>
+            <h6>You suffer {twentySidedDie} hit points of damage.</h6>
           )}
           {chapterSeven && <h6>You gain 3 Defense points.</h6>}
           {chapterThree && <h6>You lose 2 Defense points.</h6>}
-          {chapterTen && <h6>You recieve {tenSidedDie} hit points.</h6>}
-          {chapterThirteen && <h6>You can now inflict up to 50 hit points of damage.</h6>}
+          {chapterTen && <h6>You recieve {twentySidedDie} hit points.</h6>}
+          {chapterThirteen && (
+            <h6>You can now inflict up to 50 hit points of damage.</h6>
+          )}
 
           <Link
             onClick={() => {

@@ -130,7 +130,7 @@ const Game = () => {
         <Row>
           <Col className="mainDisplayOne">
             <MainDisplay />
-            {/* {createCharacter && <CreateCharacter />}
+            {createCharacter && <CreateCharacter />}
             {chapterOne && <ChapterOne />}
             {chapterTwo && <ChapterTwo />}
             {chapterThree && <ChapterThree />}
@@ -142,7 +142,7 @@ const Game = () => {
             {chapterNine && <ChapterNine />}
             {chapterTen && <ChapterTen />}
             {chapterEleven && <ChapterEleven />}
-            {chapterTwelve && <ChapterTwelve />} */}
+            {chapterTwelve && <ChapterTwelve />}
             {chapterThirteen && <ChapterThirteen />}
             {chapterFourteen && <ChapterFourteen />}
           </Col>

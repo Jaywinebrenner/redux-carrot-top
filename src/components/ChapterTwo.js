@@ -215,12 +215,7 @@ const ChapterTwo = () => {
           <Container>
             <h6>"You are correct, Comedian Slayer"</h6>
             <h6>
-              Tim Allen pauses, shoots you a condecending glare, flicks a
-              Phillips head screwdriver bit into the air and catches it in his
-              mouth.
-            </h6>
-            <h6>
-              "Time for question two," he says while swallowing the bit. "What
+              "Time for question two," he smirks. "What
               was the name of my characters ficticious television show?"
             </h6>
             <input
@@ -298,11 +293,7 @@ const ChapterTwo = () => {
           <Container>
             <h6>"Yes, Comedian Slayer"</h6>
             <h6>
-              With a taut flick of his thumb, Tim Allen arches a Flathead
-              screwdriver bit into the air which lands on his tongue.
-            </h6>
-            <h6>
-              "Question 3," he says while swallowing the bit. "Before fellating
+              "Question 3," he says while fondeling his Dewalt 20-Pocket Apron Tool Belt. "Before fellating
               the drummer from the band responsible for the hit "Dr.Feelgood",
               this model / actress honed her acting chops on my show..."
             </h6>
@@ -323,16 +314,18 @@ const ChapterTwo = () => {
         return (
           <Container>
             <h6>
-              "WRONG!" he spits the bit out of his mouth at an unfathomable speed and it pierces the meat of your leg for 1 damage.
+              "WRONG!" he spits the bit out of his mouth at an unfathomable
+              speed and it pierces the meat of your leg for 1 damage.
             </h6>
             <h6>
               With a taut flick of his thumb, Tim Allen arches a Flathead
-              screwdriver bit into the air which lands on his tongue.
+              screwdriver bit into the air which lands on his tongue. He swallows.
             </h6>
             <h6>
-              "Question 3," he says while swallowing the bit. "Before fellating the
-              drummer from the band responsible for the hit "Dr.Feelgood", this
-              model / actress honed her acting chops on my show..."
+              "Question 3," he says while fondeling his Dewalt 20-Pocket Apron
+              Tool Belt.. "Before fellating the drummer from the band
+              responsible for the hit "Dr.Feelgood", this model / actress honed
+              her acting chops on my show..."
             </h6>
             <input
               ref={(input) => input && input.focus()}
@@ -342,10 +335,7 @@ const ChapterTwo = () => {
               }
               value={questionThreeInput}
             />
-            <h6
-              className="buttonText"
-              onClick={submitThree}
-            >
+            <h6 className="buttonText" onClick={submitThree}>
               SUBMIT
             </h6>
           </Container>
@@ -387,10 +377,6 @@ const ChapterTwo = () => {
         return (
           <Container>
             <h6>"You are correct, Comedian Slayer"</h6>
-            <h6>
-              He flicks a Counter Sink bit into the air and sucks it in his
-              mouth.
-            </h6>
             <h6>
               "Question 4. What was the affliction my aforementioned ficticious
               son Randy was diagnosed with in the episode 'The Longest Day'?""
@@ -441,7 +427,7 @@ const ChapterTwo = () => {
 
     const submitFour = () => {
       if (!questionFourInput || questionFourInput === " ") {
-        dispatch(decrementPlayerHp(0.5));
+        dispatch(decrementPlayerHp(1));
         setPlayerDidNotEnterAnswer(true);
       } else {
         if (questionFourInput === "CANCER") {
@@ -465,10 +451,7 @@ const ChapterTwo = () => {
             <Container>
               <h6>"Caner it is!"</h6>
               <h6>
-                He tosses a Hex bit into the air and catches it in his mouth.
-              </h6>
-              <h6>
-                "And the final question. Which season did celebrated comedian
+                "And the final question," he says while scratching his chin. "Which season did celebrated comedian
                 Jay Leno make a cameo in my serialized situational comedy?"
               </h6>
               <input
@@ -496,7 +479,7 @@ const ChapterTwo = () => {
                 He tosses a Hex bit into the air and catches it in his mouth.
               </h6>
               <h6>
-                "And the final question. Which season did celebrated comedian
+                "And the final question," he says while scratching his chin. "Which season did celebrated comedian
                 Jay Leno make a cameo in my serialized situational comedy?"
               </h6>
               <input
@@ -515,20 +498,9 @@ const ChapterTwo = () => {
         }
       };
 
-      // const submitFive = () => {
-      //   if (!questionFiveInput || questionFiveInput === " ") {
-      //     dispatch(decrementPlayerHp(1));
-      //     setPlayerDidNotEnterAnswer(true);
-      //   } else {
-      //     setEight(false);
-      //     setNine(true);
-      //     setPlayerDidNotEnterAnswer(false);
-      //   }
-      // };
-
           const submitFive = () => {
             if (!questionFiveInput || questionFiveInput === " ") {
-              dispatch(decrementPlayerHp(0.5));
+              dispatch(decrementPlayerHp(1));
               setPlayerDidNotEnterAnswer(true);
             } else {
               if (questionFiveInput === "CANCER") {
@@ -594,7 +566,7 @@ const ChapterTwo = () => {
               </h6>
 
               <h6>
-                Tim Allen makes a gesture toward the sky as a Belt Sander
+                Tim Allen makes a gesture toward the sky as a Makita Belt Sander
                 materializes in his hand. "Ta ta," he exclaims as he pulls the
                 trigger on the sander and evaporates into thin air.
               </h6>

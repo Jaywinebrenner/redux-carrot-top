@@ -9,6 +9,7 @@ import Col from "react-bootstrap/Col";
 import { WEAPONS } from "../constants/Weapons";
 
 import {
+  incrementPlayerHp,
   changeName,
   changeWeapon,
   changeDamage,
@@ -28,6 +29,7 @@ const CreateCharacter = () => {
   //STATE
   const mainDisplayOne = useSelector((state) => state.mainDisplayOne);
   const mainDisplayTwo = useSelector((state) => state.mainDisplayTwo);
+  const name = useSelector((state) => state.name);
 
   const weapon = useSelector((state) => state.weapon);
   const armor = useSelector((state) => state.armor);
@@ -64,17 +66,39 @@ const CreateCharacter = () => {
     );
   };
 
+  const [healthVisible, setHealthVisible ] = useState(false)
+
   const submitOne = () => {
     if (!localName || localName === " ") {
       dispatch(changeMainDisplayTwo("YOU MUST ENTER THY, COMEDIAN SLAYER!"));
     } else {
       dispatch(changeName(localName));
       setIsOneVisible(false);
-      setIsTwoVisible(true);
+      setHealthVisible(true);
+      // setIsTwoVisible(true);
       dispatch(changeMainDisplayOne(" "));
       dispatch(changeMainDisplayTwo(" "));
     }
   };
+
+  let playerAttackRange = Math.floor(Math.random() * 75) + 25;
+
+  const renderSetHealth = () => {
+    return (
+      <React.Fragment>
+        <h6>{name}. Born in torment. Forged in pain. </h6>
+        <div
+          onClick={() => {
+            dispatch(incrementPlayerHp(playerAttackRange));
+            setHealthVisible(false);
+            setIsTwoVisible(true);
+          }}
+        >
+          <h6 className="setHealthButton">SET THY HEALTH</h6>
+        </div>
+      </React.Fragment>
+    );
+  }
 
 
 
@@ -379,6 +403,7 @@ const CreateCharacter = () => {
       <h6>{mainDisplayOne}</h6>
       <h6>{isOneVisible && renderNameInput()}</h6>
       {isTwoVisible && renderTwo()}
+      {healthVisible && renderSetHealth()}
       {isWeaponChoiceTextVisible && renderPostWeaponChoiceText()}
       {isSetArmorVisible && renderSetArmor()}
       {isArmorChoiceVisible && renderArmorChoice()}

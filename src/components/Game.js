@@ -144,24 +144,6 @@ const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
           loop={true}
           playing={isGameMusicPlaying}
         />
-        {/* <ReactHowler
-          src={battle}
-          volume={0.3}
-          loop={true}
-          playing={isBattleMusicPlaying}
-        /> */}
-        {/* <ReactHowler
-        src={victory}
-        volume={0.3}
-        loop={true}
-        playing={isVictoryMusicPlaying}
-      />
-      <ReactHowler
-        src={death}
-        volume={0.3}
-        loop={true}
-        playing={isDeathMusicPlaying}
-      /> */}
       </Container>
     );
   }

@@ -19,7 +19,7 @@ const Intro = () => {
 
     setTimeout(function () {
       setIsContinueVisible(true)
-    }, 50000)
+    }, 500)
   // its 50,000 in reality
 
   const renderCarrotTopImage = () => {

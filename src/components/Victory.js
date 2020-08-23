@@ -1,7 +1,5 @@
-import { DEAD } from "../constants/Story";
-import React, { useState } from "react";
-import { Redirect, Link, useHistory } from "react-router-dom";
-import Game from "./Game";
+import React, { useState, useEffect } from "react";
+import { Redirect, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -28,14 +26,12 @@ import {
   toggleChapterFourteen,
   incrementPlayerDefence,
   decrementPlayerDefence,
-  changeDamage
+  changeDamage,
+  toggleIsGameMusicPlaying
 
 } from "../actions";
-import Battle from "./Battle";
 import carrotTopThumbnail from "../media/carrot-top.png";
 import MainDisplay from "./MainDisplay";
-import ReactHowler from "react-howler";
-import gamePlay from "../media/gameplay.mp3";
 import {
   emoPhilips,
   paulyShore,
@@ -50,16 +46,21 @@ import {
   gallagher,
   carrotTop,
 } from "../constants/Monsters";
+import ReactHowler from "react-howler";
+import victoryTheme from "../media/themeAbridged.mp3";
 
 
-const Victory = (props, { isRunVisible }) => {
+const Victory = () => {
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(toggleIsGameMusicPlaying(true))
+  }, []);
 
 
   const playerHitpoints = useSelector((state) => state.playerHitpoints);
   const [victoryMessage, setVictoryMessage] = useState(true);
-  const [pushedContinue, setPushedContinue] = useState(false);
   const [lootOptionsVisible, setLootOptionsVisible] = useState(false);
   const [lootResultYes, setLootResultYes] = useState(false);
   const [lootResultNo, setLootResultNo] = useState(false);
@@ -276,14 +277,14 @@ console.log("Player defence", playerDefence);
     dispatch(toggleChapterFour(false));
     dispatch(toggleChapterFive(false));
     dispatch(toggleChapterSix(false));
-     dispatch(toggleChapterSeven(false));
-     dispatch(toggleChapterEight(false));
-     dispatch(toggleChapterNine(false));
-     dispatch(toggleChapterTen(false));
-     dispatch(toggleChapterEleven(false));
-     dispatch(toggleChapterTwelve(false));
-     dispatch(toggleChapterThirteen(false));
-     dispatch(toggleChapterFourteen(false));
+    dispatch(toggleChapterSeven(false));
+    dispatch(toggleChapterEight(false));
+    dispatch(toggleChapterNine(false));
+    dispatch(toggleChapterTen(false));
+    dispatch(toggleChapterEleven(false));
+    dispatch(toggleChapterTwelve(false));
+    dispatch(toggleChapterThirteen(false));
+    dispatch(toggleChapterFourteen(false));
 
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleEnemyDisplay(false))
@@ -291,12 +292,10 @@ console.log("Player defence", playerDefence);
     chapterOne && dispatch(toggleChapterTwo(true));
     chapterTwo && dispatch(toggleChapterThree(true));
     chapterThree && dispatch(toggleChapterFour(true));
-    // chapterFour && dispatch(toggleChapterFive(true));
     chapterFive && dispatch(toggleChapterEight(true));
     chapterSix && dispatch(toggleChapterEight(true));
     chapterSeven && dispatch(toggleChapterEight(true));
     chapterEight && dispatch(toggleChapterNine(true));
-    // chapterNine && dispatch(toggleChapterTen(true));
     chapterTen && dispatch(toggleChapterThirteen(true));
     chapterEleven && dispatch(toggleChapterThirteen(true));
     chapterTwelve && dispatch(toggleChapterThirteen(true));
@@ -362,12 +361,12 @@ console.log("Player defence", playerDefence);
           {lootOptionsVisible && renderLootOptions()}
         </Col>
       </Row>
-      {/* <ReactHowler
-        src={gamePlay}
-        volume={0.4}
+      <ReactHowler
+        src={victoryTheme}
+        volume={0.7}
         loop={true}
-        playing={isGameMusicPlaying}
-      /> */}
+        // playing={isGameMusicPlaying}
+      />
     </Container>
   );
 };

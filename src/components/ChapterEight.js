@@ -15,7 +15,7 @@ import {
   toggleChapterNine,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterEight = () => {
   const dispatch = useDispatch();
@@ -87,7 +87,8 @@ const ChapterEight = () => {
     return (
       <Container>
         <h6>
-          Bobcat Goldthwait steps into a sickly pink light. "But ya know, let's face it though. You're going to die either way, Eeruhh."  
+          Bobcat Goldthwait steps into a sickly pink light. "But ya know, let's
+          face it though. You're going to die either way, Eeruhh."
         </h6>
         <Row>
           <Col>
@@ -113,10 +114,22 @@ const ChapterEight = () => {
           </Col>
 
           <Col>
-            <h5 onClick={run}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
+    );
+  };
+
+  const [isRunVisible, setIsRunVisible] = useState(false);
+
+  const renderRun = () => {
+    return (
+      <Redirect
+        to={{
+          pathname: "/Run",
+        }}
+      />
     );
   };
 
@@ -141,9 +154,7 @@ const ChapterEight = () => {
     );
   };
 
-  const run = () => {
-    //to do
-  };
+
 
   const [questionOneInput, setQuestionOneInput] = useState("");
 
@@ -600,6 +611,7 @@ const ChapterEight = () => {
 
   return (
     <Container className="chapterTwoWrapper">
+      {isRunVisible && renderRun()}
       {attackVisible && renderAttackOption()}
       {one && renderOne()}
       {two && renderTwo()}

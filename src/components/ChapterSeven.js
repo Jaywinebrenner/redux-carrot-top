@@ -27,7 +27,7 @@ import {
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterSeven = () => {
   const [one, setOne] = useState(true);
@@ -63,13 +63,16 @@ const ChapterSeven = () => {
       <Container>
         <h6>
           The door opens with a firm push of the shoulder. You gingerly make
-          your way through a long windowless hallway as the sounds of enraged outbursts can be heard reverberating ahead. As
-          you approach, the screaming abruptly stops.
+          your way through a long windowless hallway as the sounds of enraged
+          outbursts can be heard reverberating ahead. As you approach, the
+          screaming abruptly stops.
         </h6>
 
         <h6>
-          The hallway opens to a large room lined with what seems to be human veins pulsating in and out. In it's center lays a sticky pile of human gore, reeking of wet blood and unchecked rage. It is a ghastly site and the silence is
-          deafening.
+          The hallway opens to a large room lined with what seems to be human
+          veins pulsating in and out. In it's center lays a sticky pile of human
+          gore, reeking of wet blood and unchecked rage. It is a ghastly site
+          and the silence is deafening.
         </h6>
 
         <Row>
@@ -78,15 +81,27 @@ const ChapterSeven = () => {
           </Col>
           <Col>
             <h5 onClick={encounterAndrewTwo}>
-              Stealthily sneak past the pile and attempt enter a
-              staircase at the rooms end
+              Stealthily sneak past the pile and attempt enter a staircase at
+              the rooms end
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => alert("RUN")}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
+    );
+  };
+
+  const [isRunVisible, setIsRunVisible] = useState(false);
+
+  const renderRun = () => {
+    return (
+      <Redirect
+        to={{
+          pathname: "/Run",
+        }}
+      />
     );
   };
 
@@ -153,6 +168,7 @@ const ChapterSeven = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {three && renderThree()}

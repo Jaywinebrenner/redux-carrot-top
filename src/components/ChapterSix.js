@@ -7,21 +7,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterSix = () => {
   const [one, setOne] = useState(true);
@@ -66,9 +56,9 @@ const ChapterSix = () => {
 
         <h6>
           The hallway opens to large room padded in black leather with a
-          pristine red and white 1957 Ford Fairlane 500 Skyliner parked
-          in it's center. It's sight is dreadfully out of place and the silence
-          is deafening.
+          pristine red and white 1957 Ford Fairlane 500 Skyliner parked in it's
+          center. It's sight is dreadfully out of place and the silence is
+          deafening.
         </h6>
 
         <Row>
@@ -82,7 +72,7 @@ const ChapterSix = () => {
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => alert("RUN")}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
@@ -104,7 +94,7 @@ const ChapterSix = () => {
         <h6>
           You begin to inch toward the car when you hear a familiar voice echo
           throughout the room. "{name} and Jill go up a hill..." says a black
-          leather clad man as he casually steps out of the car. "... and Jill
+          leather clad man with a vaguely Rockabilly-inspired aesthetic as he casually steps out of the car. "... and Jill
           comes down with {name}'s intestines in her fuckin' mouth,
           OHHHHHHHHHHH!"{" "}
         </h6>
@@ -140,6 +130,18 @@ const ChapterSix = () => {
     );
   };
 
+  const [isRunVisible, setIsRunVisible] = useState(false);
+
+  const renderRun = () => {
+    return (
+      <Redirect
+        to={{
+          pathname: "/Run",
+        }}
+      />
+    );
+  };
+
   const beginBattle = () => {
     setBattleAndrew(true);
     setFour(false);
@@ -151,6 +153,7 @@ const ChapterSix = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {three && renderThree()}

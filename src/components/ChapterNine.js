@@ -1,40 +1,21 @@
 import React, { useState } from "react";
-import { emoPhilips, paulyShore } from "../constants/Monsters";
-import { AREATHREE } from "../constants/Story";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Battle from "./Battle";
 import {
   toggleChapterNine,
   toggleChapterTen,
-  toggleChapterThirteen,
   toggleChapterEleven,
   toggleChapterTwelve,
-  toggleChapterSix,
-  toggleEnemyDisplay,
-  toggleBattleDisplay,
-  setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterNine = () => {
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(false);
-  const [three, setThree] = useState(false);
-  const [four, setFour] = useState(false);
-  const [battlePauly, setBattlePauly] = useState(false);
-
-  const [isAreaOneDisplayed, setIsAreaOneDisplayed] = useState(false);
-  const [isAreaOneThreeDisplayed, setIsAreaOneThreeDisplayed] = useState(false);
-  const [isAreaOneFourDisplayed, setIsAreaOneFourDisplayed] = useState(false);
-  const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);
-  const [isAreaOneSixDisplayed, setIsAreaOneSixDisplayed] = useState(false);
 
   const dispatch = useDispatch();
-
-  const armor = useSelector((state) => state.armor);
 
   const renderOne = () => {
     return (
@@ -57,12 +38,16 @@ const ChapterNine = () => {
     return (
       <Container>
         <h6>
-          You take one final glance at Bobcat Goldthwait's half-eaten dead body and enter a stark room containing, once again, three more doors. 
+          You take one final glance at Bobcat Goldthwait's half-eaten dead body
+          and enter a stark room containing, once again, three more doors.
         </h6>
 
         <h6>You examine them.</h6>
         <h6>
-          A faint high-pitched squawking can be heard beyond Door Number One. Door Number Two reeks of insecruity, bitterness and profound discontent. Door Number three is bathed in sickly variations of the colors red, white and blue.
+          A faint high-pitched squawking can be heard beyond Door Number One.
+          Door Number Two reeks of insecruity, bitterness and profound
+          discontent. Door Number three is bathed in sickly variations of the
+          colors red, white and blue.
         </h6>
         <Row>
           <Col>
@@ -75,10 +60,22 @@ const ChapterNine = () => {
             <h5 onClick={yakovDoor}>Enter Door #3</h5>
           </Col>
           <Col>
-            <h5 onClick={run}>Run from this vile place</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
+    );
+  };
+
+  const [isRunVisible, setIsRunVisible] = useState(false);
+
+  const renderRun = () => {
+    return (
+      <Redirect
+        to={{
+          pathname: "/Run",
+        }}
+      />
     );
   };
 
@@ -100,24 +97,11 @@ const ChapterNine = () => {
     dispatch(toggleChapterNine(false));
   };
 
-  const run = () => {
-    setTwo(false);
-    alert("to do");
-  };
-
-  // const beginBattle = () => {
-  //   setBattlePauly(true);
-  //   setFour(false);
-  //   dispatch(setEnemyHp(paulyShore.hitPoints));
-  //   dispatch(toggleEnemyDisplay(true));
-  //   dispatch(toggleBattleDisplay(true));
-  // };
-
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
-      {/* {battlePauly && <Battle enemy={paulyShore} />} */}
     </div>
   );
 };

@@ -28,6 +28,8 @@ import chapterEleven from "./chapterEleven";
 import chapterTwelve from './chapterTwelve';
 import chapterThirteen from './chapterThirteen';
 import chapterFourteen from './chapterFourteen';
+import isGameMusicPlaying from './isGameMusicPlaying';
+import isIntroTextScrolling from "./isIntroTextScrolling";
 
 const allReducers = combineReducers({
   counter: counterReducer,
@@ -59,6 +61,8 @@ const allReducers = combineReducers({
   chapterTwelve: chapterTwelve,
   chapterThirteen: chapterThirteen,
   chapterFourteen: chapterFourteen,
+  isGameMusicPlaying: isGameMusicPlaying,
+  isIntroTextScrolling: isIntroTextScrolling,
 });
 
 export default allReducers

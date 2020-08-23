@@ -1,39 +1,19 @@
 import React, { useState } from "react";
 import {
-  emoPhilips,
-  paulyShore,
-  judyTenuda,
-  andrewDiceClay,
-  samKinison,
-  victoriaJackson,
-  rodneyDangerfield,
-  yakovSmirnoff,
   gallagher
 } from "../constants/Monsters";
-import { AREATHREE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
   incrementPlayerHp,
   incrementPlayerDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
 
 const ChapterThirteen = () => {
   const [one, setOne] = useState(true);

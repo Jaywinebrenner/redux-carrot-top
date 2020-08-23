@@ -16,7 +16,7 @@ import {
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterFour = () => {
   const [one, setOne] = useState(true);
@@ -85,12 +85,24 @@ const ChapterFour = () => {
             <h5 onClick={kinisonDoor}>Enter Door #3</h5>
           </Col>
           <Col>
-            <h5 onClick={run}>Run from this vile place</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
     );
   };
+
+      const [isRunVisible, setIsRunVisible] = useState(false);
+
+      const renderRun = () => {
+        return (
+          <Redirect
+            to={{
+              pathname: "/Run",
+            }}
+          />
+        );
+      };
 
     const judyDoor = () => {
       setTwo(false);
@@ -127,6 +139,7 @@ const ChapterFour = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {battlePauly && <Battle enemy={paulyShore} />}

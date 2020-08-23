@@ -82,18 +82,18 @@ const CreateCharacter = () => {
   };
   
   
-// let healhRoll = Math.floor(Math.random() * 100) + 100;
-let healhRoll = Math.floor(Math.random() * 10) + 1;
+let healhRoll = Math.floor(Math.random() * 100) + 100;
+// let healhRoll = Math.floor(Math.random() * 10) + 1;
 
   const renderSetHealth = () => {
     return (
       <React.Fragment>
-        <h6>{name}. Born in torment. Forged in pain. </h6>
+        <h6>{name}. Born in hopelessness. </h6>
         <div
           onClick={() => {
             dispatch(incrementPlayerHp(healhRoll));
             setHealthVisible(false);
-            setStrength(true)
+            setStrength(true);
           }}
         >
           <h6 className="setHealthButton">SET THY HEALTH</h6>
@@ -108,7 +108,7 @@ let healhRoll = Math.floor(Math.random() * 10) + 1;
   const renderSetStrength = () => {
     return (
       <React.Fragment>
-        <h6>{name}. Born in desperation. Forged in hopelessness. </h6>
+        <h6>{name}. Forged in desperation. </h6>
         <div
           onClick={() => determineStrength()}
         >

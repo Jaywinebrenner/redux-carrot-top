@@ -15,8 +15,7 @@ import {
   toggleChapterTwo,
   setEnemyHp
 } from "../actions";
-import Game from "./Game";
-import { Redirect, Route } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 const ChapterTwo = () => {
 

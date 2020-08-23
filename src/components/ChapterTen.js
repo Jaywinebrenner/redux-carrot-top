@@ -1,34 +1,18 @@
 import React, { useState } from "react";
 import {
-  emoPhilips,
-  paulyShore,
-  judyTenuda,
-  andrewDiceClay,
-  samKinison,
   victoriaJackson,
 } from "../constants/Monsters";
-import { AREATHREE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterTen = () => {
   const [one, setOne] = useState(true);
@@ -64,17 +48,17 @@ const ChapterTen = () => {
       <Container>
         <h6>
           The door opens with to reveal an escaltor painted in pastels and
-          littered with bibles. You trepedatiously step on the
-          escaltor experiencing a brief moment of relief that you need not climb
-          more stairs. The moment passes quickly albeit. As you ascend, a high
+          littered with bibles. You trepedatiously step on the escaltor
+          experiencing a brief moment of relief that you need not climb more
+          stairs. The moment passes quickly albeit. As you ascend, a high
           pitched squawking can be heard reverberating from the room above. It
           sounds human and resembles a nasally affectiation once known as
           "ditsy" in the old world.
         </h6>
 
         <h6>
-          You reach the landing above and it is filled with mannequins in various
-          vaudevillian dance poses.
+          You reach the landing above and it is filled with mannequins in
+          various vaudevillian dance poses.
         </h6>
 
         <Row>
@@ -83,15 +67,27 @@ const ChapterTen = () => {
           </Col>
           <Col>
             <h5 onClick={encounterAndrewTwo}>
-              Stealthily sneak past through the mannequins and attempt enter a door at
-              the rooms end
+              Stealthily sneak past through the mannequins and attempt enter a
+              door at the rooms end
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => alert("RUN")}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
+    );
+  };
+
+  const [isRunVisible, setIsRunVisible] = useState(false);
+
+  const renderRun = () => {
+    return (
+      <Redirect
+        to={{
+          pathname: "/Run",
+        }}
+      />
     );
   };
 
@@ -162,6 +158,7 @@ const ChapterTen = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {three && renderThree()}

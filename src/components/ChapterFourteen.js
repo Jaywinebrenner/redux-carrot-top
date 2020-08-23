@@ -1,14 +1,5 @@
 import React, { useState } from "react";
 import {
-  emoPhilips,
-  paulyShore,
-  judyTenuda,
-  andrewDiceClay,
-  samKinison,
-  victoriaJackson,
-  rodneyDangerfield,
-  yakovSmirnoff,
-  gallagher,
   carrotTop,
 } from "../constants/Monsters";
 import { AREATHREE } from "../constants/Story";
@@ -18,24 +9,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
-  incrementPlayerHp,
   decrementPlayerHp,
-  incrementPlayerDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
 
 const ChapterFourteen = () => {
   const [one, setOne] = useState(true);
@@ -43,21 +21,9 @@ const ChapterFourteen = () => {
   const [three, setThree] = useState(false);
   const [four, setFour] = useState(false);
   const [five, setFive] = useState(false);
-  const [six, setSix] = useState(false);
-  const [seven, setSeven] = useState(false);
-  const [eight, setEight] = useState(false);
-  const [nine, setNine] = useState(false);
   const [battleCarrotTop, setBattleCarrotTop] = useState(false);
 
   const dispatch = useDispatch();
-
-  const armor = useSelector((state) => state.armor);
-  const name = useSelector((state) => state.name);
-
-  console.log("one", one);
-  console.log("two", two);
-  console.log("three", three);
-  console.log("four", four);
 
   const renderOne = () => {
     return (

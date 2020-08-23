@@ -21,7 +21,7 @@ import {
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterFive = () => {
   const [one, setOne] = useState(true);
@@ -62,8 +62,8 @@ const ChapterFive = () => {
           As you approach an archway which leads to an open room shrouded in
           madness, the sound abruptly stops. An upright sarcophagus stands
           perfectly in the room's center with bones strewn about it's base. The
-          sudden void of the accordian's syllabic tones leaves you uneasy. You get
-          the feeling you are being watched.
+          sudden void of the accordian's syllabic tones leaves you uneasy. You
+          get the feeling you are being watched.
         </h6>
         <Row>
           <Col>
@@ -76,12 +76,25 @@ const ChapterFive = () => {
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => alert("RUN")}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
     );
   };
+
+
+    const [isRunVisible, setIsRunVisible] = useState(false);
+
+    const renderRun = () => {
+      return (
+        <Redirect
+          to={{
+            pathname: "/Run",
+          }}
+        />
+      );
+    };
 
   const encounterJudyOne = () => {
     setTwo(false);
@@ -153,6 +166,7 @@ const ChapterFive = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {three && renderThree()}

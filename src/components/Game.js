@@ -23,15 +23,10 @@ import ChapterEleven from "./ChapterEleven";
 import ChapterTwelve from "./ChapterTwelve";
 import ChapterThirteen from "./ChapterThirteen";
 import ChapterFourteen from "./ChapterFourteen";
-import Battle from "./Battle";
-// import { emoPhilips } from "../constants/Monsters";
 import ReactHowler from "react-howler";
 import gamePlay from "../media/gameplay.mp3";
 import { emoPhilips } from "../constants/Monsters";
-import {
-  toggleCreateCharacter,
-  toggleBattleDisplay
-} from "../actions";
+
 
 const Game = () => {
 
@@ -84,12 +79,8 @@ const Game = () => {
   //  console.log("EMO ON GAME", enemy.enemy.name);
   console.log("ENEMY DISPLAY VISIBLE?", enemyDisplayVisible);
 
+const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
 
-  const [isGameMusicPlaying, setIsGameMusicPlaying] = useState(true);
-
-  const turnOffGamePlayMusic = () => {
-    setIsGameMusicPlaying(false);
-  };
 
   const renderEnemyDisplay = () => {
     return (

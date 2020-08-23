@@ -238,4 +238,17 @@ export const toggleChapterFourteen= (boolean) => {
   };
 };
 
+export const toggleIsGameMusicPlaying = (boolean) => {
+  return {
+    type: "TOGGLE_IS_GAME_MUSIC_PLAYING",
+    payload: boolean,
+  };
+};
+
+export const isIntroTextScrolling = (boolean) => {
+  return {
+    type: "IS_INTRO_TEXT_SCROLLING",
+    payload: boolean,
+  };
+};
 

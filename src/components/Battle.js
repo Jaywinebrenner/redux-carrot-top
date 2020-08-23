@@ -6,15 +6,10 @@ import Game from "./Game";
 import { useSelector, useDispatch } from "react-redux";
 import playerDefence from "../reducers/playerDefence";
 import {
-  incrementEnemyHp,
   setEnemyHp,
   decrementEnemyHp,
   decrementPlayerHp,
-  incrementPlayerHp,
-  changeArmor,
-  toggleChapterOne,
-  toggleChapterTwo,
-  toggleBattleDisplay,
+  toggleIsGameMusicPlaying,
 } from "../actions";
 import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
@@ -51,8 +46,7 @@ const Battle = (enemy) => {
   const [IsDoubleDamageVsEnemy, setIsDoubleDamageVsEnemy] = useState(false);
   const [isRunVisible, setIsRunVisible] = useState(false);
   const [battleButtonsVisible, setBattleButtonsVisible] = useState(true);
-  const [isPlayerDead, setIsPlayerDead] = useState(true);
-  const [isEnemyDead, setIsEnemyDead] = useState(true);
+
 
   const weapon = useSelector((state) => state.weapon);
   const playerHitpoints = useSelector((state) => state.playerHitpoints);
@@ -60,18 +54,17 @@ const Battle = (enemy) => {
   const playerDefence = useSelector((state) => state.playerDefence);
   const enemyHitpoints = useSelector((state) => state.enemyHitpoints);
 
-  const createCharacter = useSelector((state) => state.createCharacter);
-  const chapterOne = useSelector((state) => state.chapterOne);
-  const chapterTwo = useSelector((state) => state.chapterTwo);
-  const battleVisible = useSelector((state) => state.battleVisible);
+
   const chapterFourteen = useSelector((state) => state.chapterFourteen)
-    const chapterTwelve = useSelector((state) => state.chapterTwelve);
+    const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
 
 console.log("Chapter 14 on BATTLE", chapterFourteen);
 
     
 
   useEffect(() => {
+
+    dispatch(toggleIsGameMusicPlaying(false))
     const enemyHitpointsFromMonsters = () => {
       if (enemy.enemy.name === "Emo Philips") {
         dispatch(setEnemyHp(enemy.enemy.hitPoints));
@@ -496,7 +489,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
 
   return (
     <Container>
-      <ReactHowler src={battle} volume={0.4} loop={true} />
+      <ReactHowler src={battle} volume={0.3} loop={true} />
       {battleButtonsVisible && renderBattleButtons()}
     </Container>
   );

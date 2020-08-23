@@ -1,36 +1,18 @@
 import React, { useState } from "react";
 import {
-  emoPhilips,
-  paulyShore,
-  judyTenuda,
-  andrewDiceClay,
-  samKinison,
-  victoriaJackson,
-  rodneyDangerfield,
   yakovSmirnoff,
 } from "../constants/Monsters";
-import { AREATHREE } from "../constants/Story";
 import { useSelector, useDispatch } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterTwelve = () => {
   const [one, setOne] = useState(true);
@@ -75,8 +57,8 @@ const ChapterTwelve = () => {
         <h6>
           You reach the landing above, the chatter stops and it opens to a room
           completely populated with a nightmarish patriotic display of flags,
-          bald eagles, guns and disposable American trinkets.
-          There is a statue of Uncle Sam at the room's center.
+          bald eagles, guns and disposable American trinkets. There is a statue
+          of Uncle Sam at the room's center.
         </h6>
 
         <Row>
@@ -90,12 +72,24 @@ const ChapterTwelve = () => {
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => alert("RUN")}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
     );
   };
+
+    const [isRunVisible, setIsRunVisible] = useState(false);
+
+    const renderRun = () => {
+      return (
+        <Redirect
+          to={{
+            pathname: "/Run",
+          }}
+        />
+      );
+    };
 
   const encounterAndrewOne = () => {
     setTwo(false);
@@ -156,6 +150,7 @@ const ChapterTwelve = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {three && renderThree()}

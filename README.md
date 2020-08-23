@@ -2,8 +2,8 @@ Chapter One: Emo Phillips
 Chapter Two: Tim Allen
 Chapter Three: Pauly Shore
 Chapter Four:  Doors
-	Chapter Five: Andrew Dice Clay
-	Chapter Six: Judy Tenuta
+	Chapter Five: Judy Tenuta
+	Chapter Six: Andrew Dice Clay
 	Chapter Seven: Sam Kinison
 Chapter Eight : Bobcat Goldthwait
 Chapter Nine: Doors #2

@@ -3,18 +3,23 @@ import React, {useState} from "react";
 import carrotTop from '../media/carrot-top.png'
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
-import ReactHowler from "react-howler";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import ReactHowler from "react-howler";
 import theme from "../media/theme1.mp3";
+import { useSelector, useDispatch } from "react-redux";
 
 const Intro = () => {
-  const [isCarrotTopVisible, setIsCarrotTopVisible] = useState(false)
+  const [isContinueVisible, setIsContinueVisible] = useState(false)
+
+  const isIntroTextScrolling = useSelector(
+    (state) => state.isIntroTextScrolling,
+  );
 
     setTimeout(function () {
-      setIsCarrotTopVisible(true)
-    }, 500)
+      setIsContinueVisible(true)
+    }, 50000)
   // its 50,000 in reality
 
   const renderCarrotTopImage = () => {
@@ -37,8 +42,7 @@ const Intro = () => {
 
 const renderIntroText = () => {
   return (
-    <div>
-      {/* <ReactAudioPlayer src="../media/theme1.mp3" autoPlay controls /> */}
+    <div class="introWrapper">
       <h1 className="introHeader">The Beginning</h1>
 
       <h3 className="introStoryText">
@@ -119,13 +123,11 @@ const renderIntroText = () => {
         <ReactHowler src={theme} volume={0.4} loop={true} />
         {renderIntroText()}
         <Row className="introImageWrapper">
-          <Col>
-          {isCarrotTopVisible && renderCarrotTopImage()}
+          <Col className="imageColWrapper">
+            {/* {isContinueVisible && renderCarrotTopImage()} */}
+            {renderCarrotTopImage()}
           </Col>
-          <Col>
-          {isCarrotTopVisible && renderIntroContinueButton()}
-          
-          </Col>
+          <Col>{isContinueVisible && renderIntroContinueButton()}</Col>
         </Row>
       </Container>
     );

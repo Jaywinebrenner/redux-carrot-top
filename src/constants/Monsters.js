@@ -75,7 +75,7 @@ export const emoPhilips = {
       "You riffle through Pauly Shores carcass in hopes of finding something useful for your journy and find only a tie-dyed bandana.",
     lootTwo: "Do you wear the bandana?",
     lootThree:
-      "You gingerly wrap the bandana around your head and with a quick snapping motion, knot it tight. It's garish colors are off putting and it's fit awkward.",
+      "You gingerly wrap the bandana around your head and with a quick snapping motion, knoting it tight. It's garish colors are off putting and it's fit awkward.",
     lootFour:
       "You deem it wise not to wear accoutrements from such fell beasts.",
   };

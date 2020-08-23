@@ -1,11 +1,5 @@
 import React, { useState } from "react";
 import {
-  emoPhilips,
-  paulyShore,
-  judyTenuda,
-  andrewDiceClay,
-  samKinison,
-  victoriaJackson,
   rodneyDangerfield,
 } from "../constants/Monsters";
 import { AREATHREE } from "../constants/Story";
@@ -15,21 +9,11 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Battle from "./Battle";
 import {
-  changeName,
-  changeWeapon,
-  changeDamage,
-  changeArmor,
-  changeMainDisplayOne,
-  changeMainDisplayTwo,
-  toggleCreateCharacter,
-  toggleChapterOne,
-  toggleChapterTwo,
-  changeDefence,
   toggleEnemyDisplay,
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 
 const ChapterEleven = () => {
   const [one, setOne] = useState(true);
@@ -64,7 +48,7 @@ const ChapterEleven = () => {
     return (
       <Container>
         <h6>
-          The door opens with to reveal an escalator climbing skyward littered
+          The door opens to reveal an escalator climbing skyward littered
           with divorce papers and restraining orders. You trepidatiously step on
           the escaltor experiencing a brief moment of relief that you need not
           climb more stairs. The moment passes quickly albeit. As you ascend, a
@@ -88,10 +72,22 @@ const ChapterEleven = () => {
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => alert("RUN")}>Run</h5>
+            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>
+    );
+  };
+
+  const [isRunVisible, setIsRunVisible] = useState(false);
+
+  const renderRun = () => {
+    return (
+      <Redirect
+        to={{
+          pathname: "/Run",
+        }}
+      />
     );
   };
 
@@ -115,7 +111,7 @@ const ChapterEleven = () => {
         </h6>
 
         <h6>
-          He leaps to his feat and lunges at you with surprising speed. 
+          A chorus of canned laughter explodes as he leaps to his feet and lunges at you with surprising speed. 
         </h6>
 
         <div onClick={beginBattle}>
@@ -129,8 +125,8 @@ const ChapterEleven = () => {
     return (
       <Container>
         <h6>
-          You begin to inch around the corners of the room when a spotlight illuminiates a man hunched
-          over feasting on a carcass.
+          You begin to inch around the corners of the room when a spotlight
+          illuminiates a man hunched over feasting on a carcass.
         </h6>
         <h6>
           Rodney Dangerfield slowly swivels his head in your direction. "I tell
@@ -138,7 +134,10 @@ const ChapterEleven = () => {
           so ugly she looks like a plate of meat and potatoes. That's why I'm
           eating her right fucking now!"
         </h6>
-        <h6>He leaps to his feat and lunges at you with surprising speed.</h6>
+        <h6>
+          A chorus of canned laughter explodes as he leaps to his feet and
+          lunges at you with surprising speed.{" "}
+        </h6>
         <div onClick={beginBattle}>
           <h6 className="buttonText">CONTINUE</h6>
         </div>
@@ -157,6 +156,7 @@ const ChapterEleven = () => {
 
   return (
     <div>
+      {isRunVisible && renderRun()}
       {one && renderOne()}
       {two && renderTwo()}
       {three && renderThree()}

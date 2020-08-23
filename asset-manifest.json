@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/redux-carrot-top.git/static/css/main.15bb6995.chunk.css",
+    "main.js": "/redux-carrot-top.git/static/js/main.41b1fa12.chunk.js",
+    "main.js.map": "/redux-carrot-top.git/static/js/main.41b1fa12.chunk.js.map",
+    "runtime-main.js": "/redux-carrot-top.git/static/js/runtime-main.d2cb6a79.js",
+    "runtime-main.js.map": "/redux-carrot-top.git/static/js/runtime-main.d2cb6a79.js.map",
+    "static/css/2.f3cffc9e.chunk.css": "/redux-carrot-top.git/static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.2a9b2a43.chunk.js": "/redux-carrot-top.git/static/js/2.2a9b2a43.chunk.js",
+    "static/js/2.2a9b2a43.chunk.js.map": "/redux-carrot-top.git/static/js/2.2a9b2a43.chunk.js.map",
+    "index.html": "/redux-carrot-top.git/index.html",
+    "precache-manifest.ddebbef29712d24c391d58476d647825.js": "/redux-carrot-top.git/precache-manifest.ddebbef29712d24c391d58476d647825.js",
+    "service-worker.js": "/redux-carrot-top.git/service-worker.js",
+    "static/css/2.f3cffc9e.chunk.css.map": "/redux-carrot-top.git/static/css/2.f3cffc9e.chunk.css.map",
+    "static/css/main.15bb6995.chunk.css.map": "/redux-carrot-top.git/static/css/main.15bb6995.chunk.css.map",
+    "static/js/2.2a9b2a43.chunk.js.LICENSE.txt": "/redux-carrot-top.git/static/js/2.2a9b2a43.chunk.js.LICENSE.txt",
+    "static/media/battle.mp3": "/redux-carrot-top.git/static/media/battle.8f0c4ba2.mp3",
+    "static/media/App.css": "/redux-carrot-top.git/static/media/blood_pix.83b1565f.png",
+    "static/media/carrot-top.png": "/redux-carrot-top.git/static/media/carrot-top.54b61746.png",
+    "static/media/dice.jpg": "/redux-carrot-top.git/static/media/dice.1250a546.jpg",
+    "static/media/emo.png": "/redux-carrot-top.git/static/media/emo.9230313d.png",
+    "static/media/emo.jpg": "/redux-carrot-top.git/static/media/emo.fdd82484.jpg",
+    "static/media/gallagher.jpg": "/redux-carrot-top.git/static/media/gallagher.712d1a28.jpg",
+    "static/media/gameplay.mp3": "/redux-carrot-top.git/static/media/gameplay.2757140b.mp3",
+    "static/media/judy.jpg": "/redux-carrot-top.git/static/media/judy.44dae754.jpg",
+    "static/media/kinison.jpg": "/redux-carrot-top.git/static/media/kinison.e430585a.jpg",
+    "static/media/rodney.jpg": "/redux-carrot-top.git/static/media/rodney.c9694bf5.jpg",
+    "static/media/theme1.mp3": "/redux-carrot-top.git/static/media/theme1.02380444.mp3",
+    "static/media/themeAbridged.mp3": "/redux-carrot-top.git/static/media/themeAbridged.579aa1ad.mp3",
+    "static/media/tim.jpg": "/redux-carrot-top.git/static/media/tim.7a6a4b5e.jpg",
+    "static/media/victoria.jpg": "/redux-carrot-top.git/static/media/victoria.edeca76d.jpg",
+    "static/media/yakov.jpg": "/redux-carrot-top.git/static/media/yakov.6e5e8c4f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d2cb6a79.js",
+    "static/css/2.f3cffc9e.chunk.css",
+    "static/js/2.2a9b2a43.chunk.js",
+    "static/css/main.15bb6995.chunk.css",
+    "static/js/main.41b1fa12.chunk.js"
+  ]
+}

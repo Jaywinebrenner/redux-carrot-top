@@ -48,7 +48,7 @@ const ChapterFourteen = () => {
         <h6>
           As you stand over Gallagher's carcass, a cosmic whirling pulsates in
           the air. Malevolent energies and tortured spirits twist in orgiastic
-          dark ecstasy as a deep and otherworldly tone blasts a chous of
+          dark ecstasy as a deep and otherworldly tone blasts a chorus of
           hellatious screams. A diabolical wormhole bathed in orange light
           splits open reality itself.
         </h6>
@@ -99,7 +99,7 @@ const ChapterFourteen = () => {
       <Container>
         <h6>
           A voice containing the screams of one million howling demons bellows
-          from the ether. "How dare you enter the Domain of Thy Lord of
+          from the ether. "How dare thee enter the Domain of Thy Supreme Lord of
           Laughter." You open your eyes and see Carrot Top himself, suspended in
           some extra-dimensional endlessness, wrapped in muscle, smeared in oil.
           "I am insulted by your prescence. Eternal suffering can not amend
@@ -115,6 +115,9 @@ const ChapterFourteen = () => {
             setFour(false);
             setFive(true);
             dispatch(decrementPlayerHp(flexWoundTwo));
+            dispatch(decrementPlayerHp(flexWoundThree));
+            dispatch(decrementPlayerHp(flexWoundFour));
+            dispatch(decrementPlayerHp(flexWoundFive));
           }}
         >
           <h6 className="buttonText">CONTINUE</h6>
@@ -136,16 +139,14 @@ const ChapterFourteen = () => {
           explodes in pain for {flexWoundTwo} damage.
         </h6>
         <h6>
-          "I WILL!" He raises an eyebrow. Your head explodes in pain for
-          {flexWoundThree} damage.
+          "I WILL!" He raises an eyebrow. Your head explodes in pain for {flexWoundThree} damage.
         </h6>
         <h6>
           "EAT YOUR!" He raises the other eyebrow. Your head explodes in pain
           for {flexWoundFour} damage.
         </h6>
         <h6>
-          "SOUL!" He flexes both biceps and your bones collapse for
-          {flexWoundFive} damage.
+          "SOUL!" He flexes both biceps and your bones collapse for {flexWoundFive} damage.
         </h6>
         <div
           onClick={() => beginBattle()}

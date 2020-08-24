@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Redirect, Route } from "react-router-dom";
-// import { RUN } from "../../constants/Story";
-import Typewriter from "typewriter-effect";
-import Game from "./Game";
+import { Redirect } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import playerDefence from "../reducers/playerDefence";
 import {
   setEnemyHp,
   decrementEnemyHp,
@@ -102,24 +98,17 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
       if (enemy.enemy.name === "Carrot Top") {
         dispatch(setEnemyHp(enemy.enemy.hitPoints));
       }
-
-
     };
     enemyHitpointsFromMonsters();
 
-
   }, []);
-
-
-
-
 
   //RENDER TO DOM
   const renderPlayerWonInitiative = (initiativeRoll) => {
     return (
       <Container>
         <h6 className="initiativeText">
-          You have won intiiative and swing your {weapon} at{" "}
+          You have won initiative and swing your {weapon} at{" "}
           {
             enemy.enemy.nameInitiative[
               Math.floor(Math.random() * enemy.enemy.nameInitiative.length)
@@ -205,8 +194,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
     enemyAttackRoll,
     doubleDamageVsPlayerAmount,
   ) => {
-    // console.log("DOULBE DAMAGE vs PLAYER", doubleDamageVsPlayerAmount);
-
     return (
       <Container>
         <h5 className="attackRoll">
@@ -236,8 +223,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
     playerAttackRoll,
     doubleDamageVsEnemyAmount,
   ) => {
-    // console.log("DOULBE DAMAGE vs ENEMY", doubleDamageVsEnemyAmount);
-
     return (
       <Container>
         <h5 className="attackRoll">You have rolled a {playerAttackRoll}</h5>
@@ -249,18 +234,10 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
     );
   };
 
-  // console.log("Emo Philips has this many Hit Points", enemyHitpoints);
-  // console.log("You have this many Hit Points", playerHitpoints);
-  // console.log("isPlayerWonInitiativeVisible", isPlayerWonInitiativeVisible);
-  // console.log("__________________________________________________");
-
   // INITIATIVE
 
   const beginAttack = () => {
-    // turnOnBattleMusic();
-    // turnOffGamePlayMusic();
     initiativeRoll = Math.floor(Math.random() * 20) + 1;
-
     playerAttackRange = Math.floor(Math.random() * playerDamage) + 1;
     enemyAttackRange = Math.floor(Math.random() * enemy.enemy.damage) + 1;
     setPlayerMissed(false);
@@ -268,8 +245,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
     setIsPlayerWonInitiativeVisible(false);
     setIsEnemyWonInitiativeVisible(false);
     if (initiativeRoll >= 5) {
-      // console.log("INITIATIVE ROLL= ", initiativeRoll);
-      // console.log("You have won intiiative and attack the foul createure");
       playerAttack();
       enemyAttack();
       setIsPlayerWonInitiativeVisible(true);
@@ -279,8 +254,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
         </Container>
       );
     } else {
-      // console.log("INITIATIVE ROLL= ", initiativeRoll);
-      // console.log("Your Foe has won intiiative and attacks you");
       enemyAttack();
       playerAttack();
       setIsEnemyWonInitiativeVisible(true);
@@ -309,7 +282,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
       setPlayerMissed(true);
     }
     isEnemyDeadCheck();
-    // return playerAttackRoll;
     return playerAttackRange;
   };
 

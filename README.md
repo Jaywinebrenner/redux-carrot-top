@@ -19,20 +19,21 @@ Killing Carrot Top is an old school RPG-inspired game set in a collapsed dystopi
 <img src="https://i.imgur.com/UStodOA.jpg" alt="Github pic" width="200">
 
 ## Outline
-`Chapter One: Emo Phillips
-Chapter Two: Tim Allen
-Chapter Three: Pauly Shore
-Chapter Four:  Doors
-	Chapter Five: Judy Tenuta
-	Chapter Six: Andrew Dice Clay
-	Chapter Seven: Sam Kinison
-Chapter Eight : Bobcat Goldthwait
-Chapter Nine: Doors #2
-  Chapter Ten: Victoria Jackson
-  Chapter Eleven: Rodney Dangerfield
-  Chapter Tweleve: Yakov Smirnoff
-Chapter Thirteen: Stairwell (climbing over debris and human waste) / Gallagher
-Chapter Fourteen: The Lord of Laughter, Carrot Top`
+
+  Chapter One: Emo Phillips
+  Chapter Two: Tim Allen
+  Chapter Three: Pauly Shore
+  Chapter Four:  Doors
+    Chapter Five: Judy Tenuta
+    Chapter Six: Andrew Dice Clay
+    Chapter Seven: Sam Kinison
+  Chapter Eight : Bobcat Goldthwait
+  Chapter Nine: Doors #2
+    Chapter Ten: Victoria Jackson
+    Chapter Eleven: Rodney Dangerfield
+    Chapter Tweleve: Yakov Smirnoff
+  Chapter Thirteen: Stairwell (climbing over debris and human waste) / Gallagher
+  Chapter Fourteen: The Lord of Laughter, Carrot Top
 
 ### Zip:
 

@@ -50,7 +50,7 @@ export const emoPhilips = {
              "You sift through Tim Allen's denim blue jeans and find nothing but lint and a small zip lock bag containing a white powder. ",
            lootTwo: "Do you snort the white powder?",
            lootThree:
-             "You scoop the powder into your unclipped index finger nail and snort it. An exhilerating rush cousrses through your body. You clench your jaw mightily and continue forth.",
+             "You scoop the powder into your unclipped index finger nail and snort it. An exhilerating rush courses through your body. You clench your jaw mightily and continue forth.",
            lootFour:
              "You deem it wise not to put unknown powders up your nose. You kick Tim Allen's carcass and continue forth.",
          };

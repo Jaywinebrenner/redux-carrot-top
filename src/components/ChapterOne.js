@@ -10,13 +10,11 @@ import {
   toggleEnemyDisplay,
   toggleBattleDisplay
 } from "../actions";
-import Game from './Game';
 
 const ChapterOne = () => {
 
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(false);
-  const [isAreaOneDisplayed, setIsAreaOneDisplayed] = useState(false);
   const [isAreaOneThreeDisplayed, setIsAreaOneThreeDisplayed] = useState(false);
   const [isAreaOneFourDisplayed, setIsAreaOneFourDisplayed] = useState(false);
   const [isAreaOneFiveDisplayed, setIsAreaOneFiveDisplayed] = useState(false);

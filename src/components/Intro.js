@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-// import { INTRO } from "../../constants/Story";
 import carrotTop from '../media/carrot-top.png'
 import { Link } from "react-router-dom";
 import Typewriter from "typewriter-effect";
@@ -8,14 +7,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ReactHowler from "react-howler";
 import theme from "../media/theme1.mp3";
-import { useSelector, useDispatch } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Intro = () => {
   const [isContinueVisible, setIsContinueVisible] = useState(false)
 
-  const isIntroTextScrolling = useSelector(
-    (state) => state.isIntroTextScrolling,
-  );
+  // const isIntroTextScrolling = useSelector(
+  //   (state) => state.isIntroTextScrolling,
+  // );
 
     setTimeout(function () {
       setIsContinueVisible(true)

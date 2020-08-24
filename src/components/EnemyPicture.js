@@ -1,8 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import { useSelector, useDispatch } from "react-redux";
-import { emoPhilips, judyTenuda, bobcatGoldthwait } from "../constants/Monsters";
+import { useSelector } from "react-redux";
 import emoPhilipsPicture from "../media/emo.jpg";
 import timPicture from "../media/tim.jpg";
 import paulyPicture from "../media/pauly.jpeg";
@@ -36,31 +34,31 @@ const EnemyPicture = (enemy) => {
 
   return (
     <Container className="enemyPictureContainer">
-      {chapterOne && <img className="enemyPicture" src={emoPhilipsPicture} />}
-      {chapterTwo && <img className="enemyPicture" src={timPicture} />}
-      {chapterThree && <img className="enemyPicture" src={paulyPicture} />}
-      {chapterFive && <img className="enemyPicture" src={judyTenudaPicture} />}
+      {chapterOne && <img className="enemyPicture" alt='Emo' src={emoPhilipsPicture} />}
+      {chapterTwo && <img className="enemyPicture" alt='Tim' src={timPicture} />}
+      {chapterThree && <img className="enemyPicture" alt='Pauly' src={paulyPicture} />}
+      {chapterFive && <img className="enemyPicture" alt='Judy' src={judyTenudaPicture} />}
       {chapterSix && (
-        <img className="enemyPicture" src={andrewDiceClayPicture} />
+        <img className="enemyPicture" alt='Dice' src={andrewDiceClayPicture} />
       )}
-      {chapterSeven && <img className="enemyPicture" src={samKinisonPicture} />}
+      {chapterSeven && <img className="enemyPicture" alt='Sam' src={samKinisonPicture} />}
       {chapterEight && (
-        <img className="enemyPicture" src={bobcatGoldthwaitPicture} />
+        <img className="enemyPicture" alt='Bobcat' src={bobcatGoldthwaitPicture} />
       )}
       {chapterTen && (
-        <img className="enemyPicture" src={victoriaJacksonPicture} />
+        <img className="enemyPicture" alt='Victoria' src={victoriaJacksonPicture} />
       )}
       {chapterEleven && (
-        <img className="enemyPicture" src={rodneyDangerfieldPicture} />
+        <img className="enemyPicture" alt='Rodney' src={rodneyDangerfieldPicture} />
       )}
       {chapterTwelve && (
-        <img className="enemyPicture" src={yakovSmirnoffPicture} />
+        <img className="enemyPicture" alt='Yakov' src={yakovSmirnoffPicture} />
       )}
       {chapterThirteen && (
-        <img className="enemyPicture" src={gallagherPicture} />
+        <img className="enemyPicture" alt='Gallagher' src={gallagherPicture} />
       )}
       {chapterFourteen && (
-        <img className="enemyPicture" src={carrotTopPicture} />
+        <img className="enemyPicture" alt='Carrot Top' src={carrotTopPicture} />
       )}
     </Container>
   );

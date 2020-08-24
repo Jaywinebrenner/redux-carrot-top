@@ -15,10 +15,10 @@ const Landing = () => {
   const [startGame, setStartGame] = useState(false);
 
   const pressStartGame = () => {
-    // dispatch(toggleEnemyDisplay(false));
-    // dispatch(toggleBattleDisplay(false));
-    // dispatch(toggleCreateCharacter(true));
-    // setStartGame(true);
+    dispatch(toggleEnemyDisplay(false));
+    dispatch(toggleBattleDisplay(false));
+    dispatch(toggleCreateCharacter(true));
+    setStartGame(true);
   };
 
   return (

@@ -24,7 +24,7 @@ const Intro = () => {
   const renderCarrotTopImage = () => {
     return (
       <React.Fragment>
-        <img className="carrotTopIntroImage" src={carrotTop} />
+        {/* <img className="carrotTopIntroImage" src={carrotTop} /> */}
       </React.Fragment>
     );
   }

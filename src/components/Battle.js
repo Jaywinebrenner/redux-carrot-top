@@ -417,7 +417,6 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
               enemyAttackRoll,
               doubleDamageVsPlayerAmount,
             )}
-          {/* {renderPlayerWonInitiative(initiativeRoll)} */}
           {playerMissed && renderPlayerMissed(playerAttackRoll)}
           {isPlayerAttackVisible &&
             renderPlayerAttack(playerAttackRoll, playerAttackRange)}
@@ -449,9 +448,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
         <Row>
           {isRunVisible && renderRun()}
           {isPlayerDeadCheck()}
-
           {enemyHitpoints && isEnemyDeadCheck()}
-
           {isPlayerWonInitiativeVisible && renderBattleIfPlayerWonInitiative()}
           {isEnemyWonInitiativeVisible && renderBattleIfEnemyWonInitiative()}
         </Row>

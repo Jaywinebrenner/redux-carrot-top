@@ -141,7 +141,6 @@ p {
 .introWholeWrapper {
   border: 5px double #5c5959;
   background-color: #1d211e;
-  /* padding: 20px; */
   text-align: center;
   border: 5px double white;
   width: 1000px;
@@ -171,8 +170,8 @@ p {
   bottom: 0;
   top: 200px;
    z-index: 1;
+  }
   /* position: absolute; */
-}
 
 .landingContinueButton{
   margin-top: 100px;

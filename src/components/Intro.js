@@ -123,7 +123,6 @@ const renderIntroText = () => {
         {renderIntroText()}
         <Row className="introImageWrapper">
           <Col className="imageColWrapper">
-            {/* {isContinueVisible && renderCarrotTopImage()} */}
             {renderCarrotTopImage()}
           </Col>
           <Col>{isContinueVisible && renderIntroContinueButton()}</Col>

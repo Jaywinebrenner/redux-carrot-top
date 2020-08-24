@@ -137,8 +137,21 @@ p {
 
 /* INTRO */
 
+.introWholeWrapper{
+  border: 5px double #5c5959;
+  background-color: #1d211e;
+  padding: 20px;
+  text-align: center;
+  border: 5px double white;
+  width: 1000px;
+  min-height: 550px;
+  margin: 0 auto;
+  margin-top: 60px;
+  background-image: url(./media/blood_pix.png);
+}
 
-.introWholeWrapper {
+
+/* .introWholeWrapper {
   border: 5px double #5c5959;
   background-color: #1d211e;
   text-align: center;
@@ -148,7 +161,7 @@ p {
   margin: auto 0;
   margin-top: 60px;
   background-image: url(./media/blood_pix.png);
-}
+} */
 
 .introHeader {
   font-family: 'Metal Mania', cursive;

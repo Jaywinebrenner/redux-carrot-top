@@ -138,7 +138,6 @@ p {
 /* INTRO */
 
 
-
 .introWholeWrapper {
   border: 5px double #5c5959;
   background-color: #1d211e;
@@ -335,7 +334,7 @@ p {
   min-height: 550px;
   margin: 0 auto;
   margin-top: 60px;
-  background-image: url(./media/blood_pix.png);
+  background-image: url(./media/won1.jpg);
 }
 
 .wonHeader {

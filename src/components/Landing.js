@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import carrotTop from "../media/carrot-top.png";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import {

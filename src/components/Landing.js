@@ -18,7 +18,11 @@ const Landing = () => {
     dispatch(toggleBattleDisplay(false));
     dispatch(toggleCreateCharacter(true));
     setStartGame(true);
-  };
+  }; 
+
+  const pressAbout = () => {
+
+  }
 
   return (
     <Container className="landingWrapper">
@@ -33,6 +37,16 @@ const Landing = () => {
         <h1 onClick={pressStartGame} className="startGameText">
           START GAME
         </h1>
+      </Link>
+      <Link
+        style={{
+          textDecoration: "none",
+        }}
+        to="/About"
+      >
+        <h6 onClick={pressStartGame} className="aboutTextOnLanding">
+          ABOUT
+        </h6>
       </Link>
     </Container>
   );

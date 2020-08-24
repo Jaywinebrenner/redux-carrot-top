@@ -135,6 +135,23 @@ p {
   font-size: 20px;
 }
 
+/* ABOUT */
+
+.aboutHeader {
+  font-family: 'Metal Mania', cursive;
+  letter-spacing: 23px;
+  font-size: 28px;
+  /* color :#8a0303; */
+  color: white;
+  margin-top: 30px;
+}
+
+.aboutLink {
+  text-decoration: "none";
+  font-family: 'Red Rose';
+  font-size: 50px;
+}
+
 /* INTRO */
 
 .introWholeWrapper{
@@ -308,8 +325,9 @@ p {
   border: double white;
   width: 260px;
   height: 40px;
-  margin: 35px auto;
+  margin: 35px auto 10px auto;
 }
+
 
 
 

@@ -6,7 +6,9 @@ import {
   toggleBattleDisplay,
   toggleCreateCharacter,
 } from "../actions";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import ReactHowler from "react-howler";
+import aboutMusic from "../media/victory.mp3";
 
 const About = () => {
   const dispatch = useDispatch();
@@ -86,6 +88,7 @@ const About = () => {
           BACK TO GAME
         </h1>
       </Link>
+      <ReactHowler src={aboutMusic} volume={0.4} loop={true} />
     </Container>
   );
 };

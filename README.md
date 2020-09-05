@@ -1,9 +1,12 @@
 # KILLING CARROT TOP
 
-    // "predeploy": "npm run build",
-    // "deploy": "gh-pages -d build"
-
 ## By **Jay Winebrenner**
+
+ 
+ ## Play the Game:
+[HERE](https://killing-carrot-top-v1.herokuapp.com/)
+
+
 
 ##  About
 
@@ -20,20 +23,34 @@ Killing Carrot Top is an old school RPG-inspired game set in a collapsed dystopi
 
 ## Outline
 
-  Chapter One: Emo Phillips
-  Chapter Two: Tim Allen
-  Chapter Three: Pauly Shore
-  Chapter Four:  Doors
-    Chapter Five: Judy Tenuta
-    Chapter Six: Andrew Dice Clay
-    Chapter Seven: Sam Kinison
-  Chapter Eight : Bobcat Goldthwait
-  Chapter Nine: Doors #2
-    Chapter Ten: Victoria Jackson
-    Chapter Eleven: Rodney Dangerfield
-    Chapter Tweleve: Yakov Smirnoff
-  Chapter Thirteen: Stairwell (climbing over debris and human waste) / Gallagher
-  Chapter Fourteen: The Lord of Laughter, Carrot Top
+<ul>
+<li>Chapter One: Emo Phillips</li>
+<li>Chapter Two: Tim Allen</li>
+<li>Chapter Three: Pauly Shore</li>
+<li>Chapter Four: Ascent 
+<ul>
+<li>Chapter Five: Judy Tenuta</li>
+<li>Chapter Six: Andrew Dice Clay</li>
+<li>Chapter Seven: Sam Kinison</li>
+</ul>
+</li>
+<li>Chapter Eight : Bobcat Goldthwait</li>
+<li>Chapter Nine: Innter Sanctum
+
+<ul>
+<li>Chapter Ten: Victoria Jackson</li>
+<li>Chapter Eleven: Rodney Dangerfield</li>
+<li>Chapter Tweleve: Yakov Smirnoff</li>
+</ul>
+</li>
+<ul>
+
+</ul>
+<li>Chapter Thirteen: Respite / Gallagher</li>
+<li>Chapter Fourteen: The Lord of Laughter, Carrot Top</li>
+
+<ul>
+
 
 ### Zip:
 

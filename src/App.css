@@ -364,14 +364,24 @@ p {
   min-height: 550px;
   margin: 0 auto;
   margin-top: 60px;
-  background-image: url(./media/won1.jpg);
+  background-image: url(./media/won3.png);
+
+  
 }
 
 .wonHeader {
   font-family: 'Metal Mania', cursive;
   letter-spacing: 23px;
-  font-size: 38px;
+  font-size: 75px;
   /* color :#8a0303; */
   color: white;
   margin-top: 90px;
+  text-shadow: 2px 2px 30px white;
+}
+
+.endTypedText {
+  color: black;
+    background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.8;
 }

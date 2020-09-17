@@ -77,6 +77,24 @@ const About = () => {
         </a>
       </p>
 
+      <h6>And wildly enough, the game has gotten some press.</h6>
+      <p>
+        <a
+          style={{ textDecoration: "none", fontFamily: "Red Rose" }}
+          href="https://news.avclub.com/new-rpg-tasks-players-with-defeating-carrot-top-and-th-1844853866"
+        >
+          AV Club
+        </a>
+      </p>
+
+      <p>
+        <a
+          style={{ textDecoration: "none", fontFamily: "Red Rose" }}
+          href="https://vitalvegas.com/carrot-top-featured-in-unfortunately-named-videogame-killing-carrot-top/"
+        >
+          Vital Vegas
+        </a>
+      </p>
       <Link
         className="linkText"
         style={{
@@ -88,6 +106,7 @@ const About = () => {
           BACK TO GAME
         </h1>
       </Link>
+
       <ReactHowler src={aboutMusic} volume={0.4} loop={true} />
     </Container>
   );

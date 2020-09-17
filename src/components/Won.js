@@ -3,11 +3,12 @@ import carrotTop from "../media/carrot-top.png";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Typewriter from "typewriter-effect";
-import ReactHowler from "react-howler";
 import {
   toggleChapterFourteen,
 } from "../actions";
 import { useSelector, useDispatch } from "react-redux";
+import ReactHowler from "react-howler";
+import aboutMusic from "../media/victory.mp3";
 
 const Won = () => {
 
@@ -52,7 +53,7 @@ const Won = () => {
       <h3>
         {" "}
         <Typewriter
-          wrappe
+          wrapperClassName="endTypedText"
           onInit={(typewriter) => {
             typewriter
               .changeDelay(80)
@@ -70,11 +71,11 @@ const Won = () => {
       <h3>
         {" "}
         <Typewriter
+          wrapperClassName
           options={{
             strings: ["Hello", "World"],
             autoStart: false,
           }}
-          wrappe
           onInit={(typewriter) => {
             typewriter
               .pauseFor(20000)
@@ -96,11 +97,12 @@ const Won = () => {
       <h3>
         {" "}
         <Typewriter
+          wrapperClassName
           options={{
             strings: ["Hello", "World"],
             autoStart: false,
           }}
-          wrappe
+          wrapperClassName
           onInit={(typewriter) => {
             typewriter
               .pauseFor(28000)
@@ -146,6 +148,7 @@ const Won = () => {
         </h1>
       </Link> */}
       {isStartButtonVisible && renderStartAgainButton()}
+      <ReactHowler src={aboutMusic} volume={0.4} loop={true} />
     </Container>
   );
 };

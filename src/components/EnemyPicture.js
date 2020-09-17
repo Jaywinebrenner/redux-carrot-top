@@ -1,17 +1,17 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import { useSelector } from "react-redux";
-import emoPhilipsPicture from "../media/emo_8F.png";
-import timPicture from "../media/tim_8F.png";
-import paulyPicture from "../media/pauly2_8F.png";
-import judyTenudaPicture from "../media/judy_8F.png";
-import andrewDiceClayPicture from "../media/dice_8F.png";
-import samKinisonPicture from "../media/kninson_8F.png";
-import bobcatGoldthwaitPicture from "../media/bobcat_8F.png";
+import emoPhilipsPicture from "../media/emo_final.png";
+import timPicture from "../media/tim_final.png";
+import paulyPicture from "../media/pauly_final.png";
+import judyTenudaPicture from "../media/judy_final.png";
+import andrewDiceClayPicture from "../media/dice_final.png";
+import samKinisonPicture from "../media/kninson_final.png";
+import bobcatGoldthwaitPicture from "../media/bobcat_final.png";
 import victoriaJacksonPicture from '../media/victoria_8F.png';
-import rodneyDangerfieldPicture from "../media/rodney_8F.png";
-import yakovSmirnoffPicture from "../media/yakov_8F.png";
-import gallagherPicture from "../media/gallagher_8F.png";
+import rodneyDangerfieldPicture from "../media/rodney_final.png";
+import yakovSmirnoffPicture from "../media/yakov_final.png";
+import gallagherPicture from "../media/gallagher_final.png";
 import carrotTopPicture from "../media/carrot-top.png";
 
 

@@ -305,7 +305,7 @@ export const emoPhilips = {
         "You stand face to face with The Archfiend of Magnanimous Wreckage himself...",
       imageName: "gallagherImage",
       died:
-        "You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out it astonishment add you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.",
+        "You land a clean blow upon on Gallaghers wrist, cleanly severing his hand off. He eyes bug out in astonishment as you counter with a direct hit on his temple, caving in his skull much like the watermelons of yore.",
       lootOne:
         "You stand over the carcass of the Suspender-clad beast and pick up his signiture weapon. The Sledge-O-Matic.",
       lootTwo: "Do you weild the Sledge-O-Matic?",

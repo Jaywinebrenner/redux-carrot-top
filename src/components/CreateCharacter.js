@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import emo from "../media/emo.png";
+
 import gamePlay from "../media/gameplay.mp3";
 import ReactHowler from "react-howler";
 import { useSelector, useDispatch } from "react-redux";

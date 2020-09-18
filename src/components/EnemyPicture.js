@@ -8,11 +8,11 @@ import judyTenudaPicture from "../media/judy_final.png";
 import andrewDiceClayPicture from "../media/dice_final.png";
 import samKinisonPicture from "../media/kninson_final.png";
 import bobcatGoldthwaitPicture from "../media/bobcat_final.png";
-import victoriaJacksonPicture from '../media/victoria_8F.png';
+import victoriaJacksonPicture from '../media/victoria_final.png';
 import rodneyDangerfieldPicture from "../media/rodney_final.png";
 import yakovSmirnoffPicture from "../media/yakov_final.png";
 import gallagherPicture from "../media/gallagher_final.png";
-import carrotTopPicture from "../media/carrot-top.png";
+import carrotTopPicture from "../media/carrotTop_8bit_final.png";
 
 
 const EnemyPicture = (enemy) => {

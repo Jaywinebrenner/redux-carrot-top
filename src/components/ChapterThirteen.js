@@ -32,10 +32,10 @@ const ChapterThirteen = () => {
   const armor = useSelector((state) => state.armor);
   const name = useSelector((state) => state.name);
 
-  console.log("one", one);
-   console.log("two", two);
-    console.log("three", three);
-    console.log("four", four);
+  // console.log("one", one);
+  //  console.log("two", two);
+  //   console.log("three", three);
+  //   console.log("four", four);
 
   const renderOne = () => {
     return (

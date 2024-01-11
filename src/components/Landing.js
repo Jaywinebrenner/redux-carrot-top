@@ -25,7 +25,7 @@ const Landing = () => {
   }
 
   return (
-    <Container className="landingWrapper">
+    <div className="landingWrapper">
       <h1 className="landingHeader">KILLING CARROT TOP</h1>
       <Link
         className="linkText"
@@ -48,7 +48,7 @@ const Landing = () => {
           ABOUT
         </h6>
       </Link>
-    </Container>
+    </div>
   );
 };
 

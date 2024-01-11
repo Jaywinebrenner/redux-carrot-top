@@ -51,16 +51,16 @@ const ChapterNine = () => {
         </h6>
         <Row>
           <Col>
-            <h5 onClick={victoriaDoor}>Enter Door #1</h5>
+            <h5 className="choice-btn" onClick={victoriaDoor}>Enter Door #1</h5>
           </Col>
           <Col>
-            <h5 onClick={rodneyDoor}>Enter Door #2</h5>
+            <h5 className="choice-btn" onClick={rodneyDoor}>Enter Door #2</h5>
           </Col>
           <Col>
-            <h5 onClick={yakovDoor}>Enter Door #3</h5>
+            <h5 className="choice-btn" onClick={yakovDoor}>Enter Door #3</h5>
           </Col>
           <Col>
-            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
+            <h5 className="choice-btn" onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>

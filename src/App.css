@@ -26,9 +26,10 @@ p {
 /* GAME WRAPPERS */
 
 .gameWrapper {
-  margin-top: 60px;
+  /* margin-top: 60px; */
   border: 5px double #5c5959;
   background-color: #1d211e;
+  height: 100vh;
 }
 
 .carrotTopLogo {
@@ -51,6 +52,7 @@ p {
 
 .comedianText {
   margin-top: 10px;
+  font-size: 25px;
 }
 
 /* ENEMY PICTURE DISPLAY */
@@ -62,7 +64,7 @@ p {
 }
 
 .enemyPicture {
-  height: 220px;
+  height: 360px;
 }
 
 .enemyPictureDisplay {
@@ -80,10 +82,14 @@ p {
 
 .mainDisplayOne {
   padding-top: 20px;
-  border: 5px double #5c5959;
+  /* border: 5px double #5c5959; */
+  border-top: 5px double #5c5959;;
+  border-left: 5px double #5c5959;;
+  border-right: 5px double #5c5959;;
   background-color: #1d211e;
   min-height: 270px;
   text-align: center;
+  min-height: 57vh;
 }
 
 
@@ -92,38 +98,47 @@ p {
 .gameTitleText {
   font-family: 'Metal Mania', cursive;
   text-align: center;
-  font-size: 48px;
+  font-size: 78px;
   color :#8a0303;
 }
 
 .carrotTopThumbNail {
-  height: 65px;
+  height: 100px;
 }
 
 .statText {
   line-height: .9;
+  font-size: 22px;
 }
-
+.startGameText:hover {
+  background-color: #8a0303;
+}
+.aboutTextOnLanding:hover {
+  color: #8a0303;
+}
 
 /* LANDING */
 
 .landingWrapper{
   border: 5px double #5c5959;
   background-color: #1d211e;
-  padding: 20px;
+  padding: 10%;
   text-align: center;
   border: 5px double white;
-  width: 1000px;
-  min-height: 550px;
+  /* width: 1000px;
+  min-height: 550px; */
   margin: 0 auto;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   background-image: url(./media/blood_pix.png);
+  background-size: cover;
+  background-position: 21vw center;
+  height: 100vh;;
 }
 
 .landingHeader {
   font-family: 'Metal Mania', cursive;
   letter-spacing: 23px;
-  font-size: 28px;
+  font-size: 68px;
   /* color :#8a0303; */
   color: white;
   margin-top: 300px;
@@ -140,7 +155,8 @@ p {
 .aboutHeader {
   font-family: 'Metal Mania', cursive;
   letter-spacing: 23px;
-  font-size: 28px;
+  font-size: 38px;
+  margin-bottom: 32px;
   /* color :#8a0303; */
   color: white;
   margin-top: 30px;
@@ -160,11 +176,24 @@ p {
   padding: 20px;
   text-align: center;
   border: 5px double white;
-  width: 1000px;
-  min-height: 550px;
+  /* width: 1000px;
+  min-height: 550px; */
   margin: 0 auto;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   background-image: url(./media/blood_pix.png);
+  background-size: cover;
+  background-position: 21vw center;
+  height: 100vh;
+  position: relative;
+}
+
+.introImageWrapper {
+  position: absolute;
+    bottom: 0;
+}
+
+.Typewriter__wrapper {
+  font-size: 35px;
 }
 
 
@@ -182,7 +211,7 @@ p {
 
 .introHeader {
   font-family: 'Metal Mania', cursive;
-  font-size: 58px;
+  font-size: 78px;
   letter-spacing: 12px;
 }
 
@@ -221,6 +250,43 @@ p {
   color: white;
   outline: 0;
   border-width: 0 0 2px;
+  cursor: pointer;
+}
+.buttonText:hover {
+  background-color: #8a0303;
+  cursor: pointer;
+}
+.setHealthButton, .setStrengthButton {
+  cursor: pointer;
+}
+.setHealthButton:hover, .setStrengthButton:hover {
+  background-color: #8a0303;
+}
+
+.beginThyAdventureButtonText {
+  cursor: pointer;
+  padding-top: 6px;
+}
+.beginThyAdventureButtonText:hover {
+  background-color:#8a0303;
+}
+
+.answerGridOne h5:hover, .buttonText h5:hover, .answerGridThree h5:hover, .answerGridFour h5:hover{
+  color:#8a0303;
+  cursor: pointer;
+}
+
+.answerGridOne h6:hover, .answerGridTwo h6:hover, .answerGridThree h6:hover, .answerGridFour h6:hover{
+  color:#8a0303;
+  cursor: pointer;
+}
+
+.battleButtonText {
+  cursor: pointer;
+}
+.battleButtonText:hover {
+  background-color: #8a0303;
+  color: white!important;
 }
 
 .mainDisplayOneText {
@@ -228,8 +294,21 @@ p {
   margin-bottom: 3;
   font-family: 'Red Rose', cursive;
 }
+.mainDisplayOne h6 {
+  font-size: 25px!important;
+}
 
 .mainDisplayTwoText {
+  
+}
+
+.row-one {
+
+}
+.row-two {
+  
+}
+.row-three {
   
 }
 
@@ -244,6 +323,11 @@ p {
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 10px;
+  
+}
+
+.buttonText:hover {
+  color: white!important;
 }
 
 .buttonTextIntro {
@@ -254,6 +338,10 @@ p {
   height: 40px;
   /* margin: 0 auto; */
   margin-top: 320px;
+  cursor: pointer;
+}
+.buttonTextIntro:hover{
+  background-color: #8a0303;
 }
 
 .beginThyAdventureButtonText {
@@ -384,4 +472,46 @@ p {
     background-color: #ffffff;
   border: 1px solid black;
   opacity: 0.8;
+}
+
+.chapterTwoWrapper h5{
+  font-size: 25px;
+}
+
+.chapterTwoWrapper h5:hover {
+  color: #8a0303;
+  cursor: pointer;
+}
+
+.row-two {
+  min-height: 300px;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 25px;
+  color: white!important;
+  font-size: 25px!important;
+}
+
+.btn:Hover {
+  background-color: #8a0303;
+}
+
+.choice-btn {
+  cursor: pointer;
+  font-size: 25px;
+  color: white!important;
+  font-size: 25px!important;
+}
+.choice-btn:hover {
+  color:#8a0303!important;
+}
+
+.col-choice-btn h6, .col-choice-btn h5 {
+  cursor: pointer;
+}
+
+.col-choice-btn h6:hover, .col-choice-btn h5:hover {
+  background-color: #8a0303;
 }

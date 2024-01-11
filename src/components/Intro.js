@@ -118,7 +118,7 @@ const renderIntroText = () => {
 };
 
     return (
-      <Container className="introWholeWrapper">
+      <div className="introWholeWrapper">
         <ReactHowler src={theme} volume={0.4} loop={true} />
         {renderIntroText()}
         <Row className="introImageWrapper">
@@ -127,7 +127,7 @@ const renderIntroText = () => {
           </Col>
           <Col>{isContinueVisible && renderIntroContinueButton()}</Col>
         </Row>
-      </Container>
+      </div>
     );
 }
 

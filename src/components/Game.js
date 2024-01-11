@@ -97,8 +97,8 @@ const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
 
   const renderGameWindow = () => {
     return (
-      <Container className="gameWrapper">
-        <Row>
+      <div className="gameWrapper">
+        <Row className="row-one">
           <Col className="carrotTopLogo" xs={1.5}>
             <img className="carrotTopThumbNail" src={carrotTop} />
           </Col>
@@ -106,7 +106,7 @@ const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
             <h1 className="gameTitleText">KILLING CARROT TOP</h1>
           </Col>
         </Row>
-        <Row>
+        <Row className="row-two">
           <Col className="stats">
             <Stats />
           </Col>
@@ -118,7 +118,7 @@ const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
             {enemyDisplayVisible && renderEnemyPicture()}
           </Col>
         </Row>
-        <Row>
+        <Row className="row-three">
           <Col className="mainDisplayOne">
             <MainDisplay />
             {createCharacter && <CreateCharacter />}
@@ -144,7 +144,7 @@ const isGameMusicPlaying = useSelector((state) => state.isGameMusicPlaying);
           loop={true}
           playing={isGameMusicPlaying}
         />
-      </Container>
+      </div>
     );
   }
 

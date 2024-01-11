@@ -64,7 +64,7 @@ const ChapterEight = () => {
       <Container>
         <h6></h6>
         <h6>
-          You enter the ceasless stairwell which seems to piece the sky itself.
+          You enter the ceasless stairwell which seems to pierce the sky itself.
           You walk for what seems to be days. Your legs ache. Your feet blister.
           Yet your sense of purpose is direct, unwaivering. It could crush worlds. You are close.
         </h6>
@@ -92,7 +92,7 @@ const ChapterEight = () => {
         </h6>
         <Row>
           <Col>
-            <h5
+            <h5 className="choice-btn"
               onClick={() => {
                 setThree(false);
                 setAttackVisible(true);
@@ -103,7 +103,7 @@ const ChapterEight = () => {
           </Col>
 
           <Col>
-            <h5
+            <h5 className="choice-btn"
               onClick={() => {
                 setThree(false);
                 setFour(true);
@@ -114,7 +114,7 @@ const ChapterEight = () => {
           </Col>
 
           <Col>
-            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
+            <h5 className="choice-btn" onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>

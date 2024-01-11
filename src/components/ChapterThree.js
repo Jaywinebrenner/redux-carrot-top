@@ -100,7 +100,7 @@ const ChapterThree = () => {
         <h6>
           "Hey Buuuuuuuudy," drawls Pauly Shore as he unsheaths a stiletto knife from the front pocket of his multi-colored drug rug poncho.
         </h6>
-        <h6>"The Weeeeasel is here to carve you into bite sized bits. I'm gonna suck the marrow from your bones and pop the eyes right out of your skull, buuuuuuuudy!" Pauly Shore shakes his curly tresses and lunges at you...</h6>
+        <h6 >"The Weeeeasel is here to carve you into bite sized bits. I'm gonna suck the marrow from your bones and pop the eyes right out of your skull, buuuuuuuudy!" Pauly Shore shakes his curly tresses and lunges at you...</h6>
         <h1 className="buttonText" onClick={beginBattle}>
           CONTINUE
         </h1>

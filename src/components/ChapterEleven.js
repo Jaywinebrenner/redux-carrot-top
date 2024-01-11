@@ -62,17 +62,17 @@ const ChapterEleven = () => {
         </h6>
 
         <Row>
-          <Col>
+          <Col className="choice-btn">
             <h5 onClick={encounterAndrewOne}>Investigate the room</h5>
           </Col>
           <Col>
-            <h5 onClick={encounterAndrewTwo}>
+            <h5 className="choice-btn" onClick={encounterAndrewTwo}>
               Stealthily sneak past through the edges of the room and enter a
               door at it's end
             </h5>
           </Col>
           <Col>
-            <h5 onClick={() => setIsRunVisible(true)}>Run</h5>
+            <h5 className="choice-btn" onClick={() => setIsRunVisible(true)}>Run</h5>
           </Col>
         </Row>
       </Container>

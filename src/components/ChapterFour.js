@@ -76,13 +76,13 @@ const ChapterFour = () => {
         </h6>
         <Row>
           <Col>
-            <h5 onClick={judyDoor}>Enter Door #1</h5>
+            <h5 className="choice-btn" onClick={judyDoor}>Enter Door #1</h5>
           </Col>
           <Col>
-            <h5 onClick={diceDoor}>Enter Door #2</h5>
+            <h5 className="choice-btn" onClick={diceDoor}>Enter Door #2</h5>
           </Col>
           <Col>
-            <h5 onClick={kinisonDoor}>Enter Door #3</h5>
+            <h5 className="choice-btn" onClick={kinisonDoor}>Enter Door #3</h5>
           </Col>
           <Col>
             <h5 onClick={() => setIsRunVisible(true)}>Run</h5>

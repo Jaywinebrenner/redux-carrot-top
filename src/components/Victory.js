@@ -336,7 +336,7 @@ console.log("Player defence", playerDefence);
   };
 
   return (
-    <Container className="gameWrapper">
+    <div className="gameWrapper">
       <Row>
         <Col className="carrotTopLogo" xs={1.5}>
           <img className="carrotTopThumbNail" src={carrotTopThumbnail} />
@@ -367,7 +367,7 @@ console.log("Player defence", playerDefence);
         loop={true}
         // playing={isGameMusicPlaying}
       />
-    </Container>
+    </div>
   );
 };
 

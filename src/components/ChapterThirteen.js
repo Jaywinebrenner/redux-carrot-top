@@ -100,25 +100,25 @@ const ChapterThirteen = () => {
         <h6>"For your health... please choose one."</h6>
         <Row>
           <Col>
-            <h6 onClick={() => eatFood()}>
+            <h6 className="choice-btn" onClick={() => eatFood()}>
               Mediteranean Couscous Salad with a Hummus charcuterie plate and
               lemon mint tea.
             </h6>
           </Col>
           <Col>
-            <h6 onClick={() => eatFood()}>
+            <h6 className="choice-btn" onClick={() => eatFood()}>
               Lamb Shank braised in an heirloom tomato and Barolo wine reduction
               with a side of sauteed snow pea tips.
             </h6>
           </Col>
           <Col>
-            <h6 onClick={() => eatFood()}>
+            <h6 className="choice-btn" onClick={() => eatFood()}>
               Garlic butter baked Salmon with grilled asparagus and fingerling
               potatos.
             </h6>
           </Col>
           <Col>
-            <h6 onClick={() => noFood()}>Do not accept the a gift.</h6>
+            <h6 className="choice-btn" onClick={() => noFood()}>Do not accept the a gift.</h6>
           </Col>
         </Row>
       </Container>
@@ -184,22 +184,22 @@ const renderFour = () => {
         <h6>"For your defense..."</h6>
         <Row>
           <Col>
-            <h6 onClick={() => wearArmor()}>
+            <h6 className="choice-btn" onClick={() => wearArmor()}>
               Miami Dolphins Football Helmet
             </h6>
           </Col>
           <Col>
-            <h6 onClick={() => wearArmor()}>
+            <h6 className="choice-btn" onClick={() => wearArmor()}>
               Sky Blue Sheepskin Suede Jacket
             </h6>
           </Col>
           <Col>
-            <h6 onClick={() => wearArmor()}>
+            <h6 className="choice-btn" onClick={() => wearArmor()}>
               Lavander colored Doc Martin Combat Boots
             </h6>
           </Col>
           <Col>
-            <h6 onClick={() => noArmor()}>Do not accept the a gift.</h6>
+            <h6 className="choice-btn" onClick={() => noArmor()}>Do not accept the a gift.</h6>
           </Col>
         </Row>
       </Container>

@@ -190,19 +190,19 @@ let healhRoll = Math.floor(Math.random() * 100) + 100;
 
         <Row>
           <Col className="answerGridOne" id="butterKnifeSelection">
-            <h5 onClick={()=> handleSetButterKnife()}>A butter knife</h5>
+            <h5 className="choice-btn" onClick={()=> handleSetButterKnife()}>A butter knife</h5>
           </Col>
 
          <Col className="answerGridTwo">
-            <h5 onClick={()=> handleSetTrashCanLid()}>A trash can lid</h5>
+            <h5 className="choice-btn" onClick={()=> handleSetTrashCanLid()}>A trash can lid</h5>
           </Col>
 
           <Col className="answerGridThree">
-            <h5 onClick={()=>handleSetTwoByFour()}>A broken 2x4</h5>
+            <h5 className="choice-btn" onClick={()=>handleSetTwoByFour()}>A broken 2x4</h5>
           </Col>
 
           <Col className="answerGridFour">
-            <h5 onClick={()=>handleTakeNothing()}>Take nothing</h5>
+            <h5 className="choice-btn" onClick={()=>handleTakeNothing()}>Take nothing</h5>
           </Col>  
         </Row>
       </Container>
@@ -291,19 +291,19 @@ let healhRoll = Math.floor(Math.random() * 100) + 100;
 
           <Row className="answerGridWrapper">
             <Col className="answerGridOne" id="butterKnifeSelection">
-              <h5 onClick={handleSetHelmet}>Garden Pail Bucket Helmet</h5>
+              <h5 className="choice-btn"  onClick={handleSetHelmet}>Garden Pail Bucket Helmet</h5>
             </Col>
 
             <Col className="answerGridTwo">
-              <h5 onClick={handleSetChestPlate}>Bubble Wrap Chest Plate</h5>
+              <h5 className="choice-btn"  onClick={handleSetChestPlate}>Bubble Wrap Chest Plate</h5>
             </Col>
 
             <Col className="answerGridThree">
-              <h5 onClick={handleSetGloves}>Garbage Bag Gloves</h5>
+              <h5 className="choice-btn"  onClick={handleSetGloves}>Garbage Bag Gloves</h5>
             </Col>
 
             <Col className="answerGridFour">
-              <h5 onClick={handleWearNothing}>You wear nothing</h5>
+              <h5 className="choice-btn" onClick={handleWearNothing}>You wear nothing</h5>
             </Col>
           </Row>
         </Container>

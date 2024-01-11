@@ -22,7 +22,7 @@ const About = () => {
   };
 
   return (
-    <Container className="landingWrapper">
+    <div className="landingWrapper">
       <h1 className="aboutHeader">KILLING CARROT TOP</h1>
       <h6>
         Killing Carrot Top is an old school RPG-inspired game set in a collapsed
@@ -46,7 +46,7 @@ const About = () => {
       <h5>jaywinebrenner@gmail.com</h5>
       <p>
         <a
-          style={{ textDecoration: "none", fontFamily: "Red Rose" }}
+          target="_blank" style={{ textDecoration: "none", fontFamily: "Red Rose" }}
           href="https://www.linkedin.com/in/jaywinebrenner/"
         >
           LinkedIn
@@ -54,6 +54,7 @@ const About = () => {
       </p>
       <p>
         <a
+          target="_blank"
           style={{ textDecoration: "none", fontFamily: "Red Rose" }}
           href="https://github.com/Jaywinebrenner"
         >
@@ -62,6 +63,7 @@ const About = () => {
       </p>
       <p>
         <a
+          target="_blank"
           style={{ textDecoration: "none", fontFamily: "Red Rose" }}
           href="https://jaywinebrenner.github.io/resume2020/"
         >
@@ -70,6 +72,7 @@ const About = () => {
       </p>
       <p>
         <a
+          target="_blank"
           style={{ textDecoration: "none", fontFamily: "Red Rose" }}
           href="https://jaywinebrenner.github.io/director-reel/#/"
         >
@@ -80,6 +83,7 @@ const About = () => {
       <h6>And wildly enough, the game has gotten some press.</h6>
       <p>
         <a
+          target="_blank"
           style={{ textDecoration: "none", fontFamily: "Red Rose" }}
           href="https://news.avclub.com/new-rpg-tasks-players-with-defeating-carrot-top-and-th-1844853866"
         >
@@ -89,6 +93,7 @@ const About = () => {
 
       <p>
         <a
+          target="_blank"
           style={{ textDecoration: "none", fontFamily: "Red Rose" }}
           href="https://vitalvegas.com/carrot-top-featured-in-unfortunately-named-videogame-killing-carrot-top/"
         >
@@ -108,7 +113,7 @@ const About = () => {
       </Link>
 
       <ReactHowler src={aboutMusic} volume={0.4} loop={true} />
-    </Container>
+    </div>
   );
 };
 

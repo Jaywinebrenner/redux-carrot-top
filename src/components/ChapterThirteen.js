@@ -34,8 +34,8 @@ const ChapterThirteen = () => {
 
   // console.log("one", one);
   //  console.log("two", two);
-  //   console.log("three", three);
-  //   console.log("four", four);
+    console.log("three", three);
+    console.log("four", four);
 
   const renderOne = () => {
     return (

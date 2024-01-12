@@ -184,7 +184,7 @@ let healhRoll = Math.floor(Math.random() * 100) + 100;
       <Container>
         <h6>
           {/* {dispatch(changeMainDisplayOne("Before you empark on your perilous journey, you must pick one of three weaons at your disposal."))} */}
-          Before you empark on your perilous journey, you must pick one of three
+          Before you embark on your perilous journey, you must pick one of three
           weaons at your disposal.
         </h6>
 

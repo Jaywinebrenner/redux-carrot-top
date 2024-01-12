@@ -190,7 +190,7 @@ export const emoPhilips = {
         died:
           'You connect a glancing blow to Bobcat Goldthwaits neck, sending a thick squirt of blood upwards. "Arrrahh," he cackles in his stilted cadence. "So HUNGRY." Bobcat Goldthwait falls to the ground and frantically begins eating his own arm, then his legs and feet until he begins to convulse in a pool of his own blood. He dies and you are ...',
         lootOne:
-          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
+          "You rifle through Bobcat's pockets find and a half eaten slice of pizza.",
         lootTwo: "Do you eat the pizza?",
         lootThree:
           'It is delicious. Why Bobcat did not eat it himself remains a mystery.' ,
@@ -337,7 +337,7 @@ export const emoPhilips = {
         died:
           'One last blow across Carrot Tops Skull fractures reality into one million pieces. "What is this?" you think to yourself as this vile muscular destroyer of worlds sprials into one million colors from beyond comprehensible places. It is beautful in an otherworldy and unknowing way. Reality folds in on itself. Time ceases to exist.',
         lootOne:
-          "You rifle through Bobcat's pockets and a half eaten slice of pizza.",
+          "You rifle through Bobcat's pockets find and a half eaten slice of pizza.",
         lootTwo: "Do you eat the pizza?",
         lootThree:
           "It is delicious. Why Bobcat did not eat it himself remains a mystery.",

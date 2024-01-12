@@ -445,15 +445,17 @@ p {
 .wonWrapper{
   border: 5px double #5c5959;
   background-color: #1d211e;
-  padding: 20px;
+  /* padding: 20px; */
   text-align: center;
   border: 5px double white;
-  width: 1000px;
-  min-height: 550px;
+  /* width: 1000px;
+  min-height: 550px; */
   margin: 0 auto;
-  margin-top: 60px;
+  /* margin-top: 60px; */
   background-image: url(./media/won3.png);
-
+  background-size: cover;
+  background-position: 21vw center;
+  height: 100vh;;
   
 }
 

@@ -75,7 +75,7 @@ const ChapterFourteen = () => {
           Your mind goes blank. You become nothing. Months pass. Years pass. Lifetimes pass.
         </h6>
         <h6>
-          And then you feel it. Just like that. You you are here. He is here.
+          And then you feel it. Just like that. You are here. He is here.
           
         </h6>
         <div

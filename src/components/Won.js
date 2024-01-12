@@ -49,7 +49,7 @@ const Won = () => {
   };
 
   return (
-    <Container className="wonWrapper">
+    <div className="wonWrapper">
       <h3>
         {" "}
         <Typewriter
@@ -102,7 +102,7 @@ const Won = () => {
             strings: ["Hello", "World"],
             autoStart: false,
           }}
-          wrapperClassName
+          // wrapperClassName
           onInit={(typewriter) => {
             typewriter
               .pauseFor(28000)
@@ -149,7 +149,7 @@ const Won = () => {
       </Link> */}
       {isStartButtonVisible && renderStartAgainButton()}
       <ReactHowler src={aboutMusic} volume={0.4} loop={true} />
-    </Container>
+    </div>
   );
 };
 

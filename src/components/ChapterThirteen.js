@@ -259,7 +259,7 @@ const renderFour = () => {
     return (
       <Container>
         <h6>
-          "Now {name} slayer of all false Comedians, let us venture forth to
+          "Now {name} slayer of all nefarious Comedians, let us venture forth to
           fulfill your destiny."
         </h6>
         <h6>

@@ -15,7 +15,7 @@ export const emoPhilips = {
          intro: "You stand face to face with the Lilth Menace himself...",
          imageName: "emoPhilipsImage",
          died:
-           'With one last crushing blow, Emo Philips lets out an ungodly shriek and begins to convulse. His marionette-like frame swivels in your direction. "You will never topple the Illuminati of Laughter," he squeaks with a mild smirk on his blood-soaked face. He shoots you on final wild-eyed stare and crumples to the ground. You are...',
+           'With one last crushing blow, Emo Philips lets out an ungodly shriek and begins to convulse. His marionette-like frame swivels in your direction. "You will never topple the Illuminati of Laughter," he squeaks with a mild smirk on his blood-soaked face. He shoots you one final wild-eyed stare and crumples to the ground. You are...',
          lootOne:
            "You stand triumphantly over this fallen Lilth Menace and pick up the severed human hand which he threw at your feet. All that make you human yearns to resist feasting on this wretched thing for sustanance, yet your stomach says otherwise...",
          lootTwo: "Do you eat the severed human hand?",

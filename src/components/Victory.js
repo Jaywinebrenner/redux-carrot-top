@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Redirect, Link } from "react-router-dom";
+import { Navigate, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -212,7 +212,7 @@ console.log("Player defence", playerDefence);
     const isPlayerDeadCheck = () => {
       if (playerHitpoints < 1) {
         return (
-          <Redirect
+          <Navigate
             to={{
               pathname: "/Dead",
             }}

@@ -1,6 +1,6 @@
 import { RUN } from "../constants/Story";
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   changeName,
@@ -64,7 +64,7 @@ const Run = () => {
         dispatch(toggleBattleDisplay(false));
         dispatch(toggleCreateCharacter(true));
       return (
-        <Redirect
+        <Navigate
           to={{
             pathname: "/",
           }}

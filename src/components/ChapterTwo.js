@@ -15,7 +15,7 @@ import {
   toggleChapterTwo,
   setEnemyHp
 } from "../actions";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const ChapterTwo = () => {
 
@@ -28,7 +28,7 @@ const ChapterTwo = () => {
 
     if (playerHitpoints < 1) {
       return (
-        <Redirect
+        <Navigate
           to={{
             pathname: "/Dead",
           }}
@@ -147,7 +147,7 @@ const ChapterTwo = () => {
 
       const renderRun = () => {
         return (
-          <Redirect
+          <Navigate
             to={{
               pathname: "/Run",
             }}

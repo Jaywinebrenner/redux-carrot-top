@@ -15,7 +15,7 @@ import {
   toggleChapterNine,
   setEnemyHp,
 } from "../actions";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const ChapterEight = () => {
   const dispatch = useDispatch();
@@ -125,7 +125,7 @@ const ChapterEight = () => {
 
   const renderRun = () => {
     return (
-      <Redirect
+      <Navigate
         to={{
           pathname: "/Run",
         }}

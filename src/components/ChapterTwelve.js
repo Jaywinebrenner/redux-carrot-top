@@ -12,7 +12,7 @@ import {
   toggleBattleDisplay,
   setEnemyHp,
 } from "../actions";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const ChapterTwelve = () => {
   const [one, setOne] = useState(true);
@@ -83,7 +83,7 @@ const ChapterTwelve = () => {
 
     const renderRun = () => {
       return (
-        <Redirect
+        <Navigate
           to={{
             pathname: "/Run",
           }}

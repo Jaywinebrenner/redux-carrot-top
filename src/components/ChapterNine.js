@@ -9,7 +9,7 @@ import {
   toggleChapterEleven,
   toggleChapterTwelve,
 } from "../actions";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const ChapterNine = () => {
   const [one, setOne] = useState(true);
@@ -71,7 +71,7 @@ const ChapterNine = () => {
 
   const renderRun = () => {
     return (
-      <Redirect
+      <Navigate
         to={{
           pathname: "/Run",
         }}

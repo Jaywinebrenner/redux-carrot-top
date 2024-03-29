@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setEnemyHp,
@@ -308,7 +308,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
   const isPlayerDeadCheck = () => {
     if (playerHitpoints < 1) {
       return (
-        <Redirect
+        <Navigate
           to={{
             pathname: "/Dead",
           }}
@@ -320,7 +320,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
   const isEnemyDeadCheck = () => {
     if ((enemyHitpoints < 1) && (chapterFourteen === true)) {
       return (
-        <Redirect
+        <Navigate
         to={{
           pathname: "/Won",
         }}
@@ -329,7 +329,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
       }
     if (enemyHitpoints < 1) {
       return (
-          <Redirect
+          <Navigate
             to={{
               pathname: "/Victory",
             }}
@@ -365,7 +365,7 @@ console.log("Chapter 14 on BATTLE", chapterFourteen);
 
   const renderRun = () => {
     return (
-      <Redirect
+      <Navigate
         to={{
           pathname: "/Run",
         }}
